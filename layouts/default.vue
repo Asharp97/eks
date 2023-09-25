@@ -1,6 +1,6 @@
 <template>
   <div>
-    <navbar />
+    <navbar class="navbar" />
     <slot />
     <foot />
   </div>
@@ -12,4 +12,10 @@ export default {
 }
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.navbar {
+  position: absolute;
+  z-index: 10;
+  width: 100%;
+}
+</style>
