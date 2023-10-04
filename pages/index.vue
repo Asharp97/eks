@@ -250,7 +250,10 @@ const submit = async () => {
         country: country.value
       })
       .select()
-    if (data) console.log('succ')
+    if (data) {
+      // console.log('succ' + JSON.stringify(data))
+      
+    }
     if (err) throw err
   }
   catch (error) {
