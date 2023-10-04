@@ -219,7 +219,7 @@
   </div>
 </template>
 
-<script setup lang="ts">
+<script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Mousewheel, Keyboard, Scrollbar, Pagination, Navigation } from 'swiper/modules';
 import 'swiper/css';
@@ -241,21 +241,17 @@ const supabase = useSupabaseClient()
 const submit = async () => {
   try {
     loading.value = true
-    const { data, error } = await supabase
+    const { data, err } = await supabase
       .from('contact')
-      .insert(
-        {
-          name: 'i am now entering new data',
-          email: 'th si is my email ',
-          telephone: '1230984323',
-          country: 'i live in qualalambore'
-        }
-      )
+      .insert({
+        name: name.value,
+        email: email.value,
+        telephone: telephone.value,
+        country: country.value
+      })
       .select()
-    if (data) console.log('th is dat ' + JSON.stringify(data))
-    if (!data) console.log('no bitches no data ')
-    if (error) throw error
-
+    if (data) console.log('succ')
+    if (err) throw err
   }
   catch (error) {
     console.log(error)
