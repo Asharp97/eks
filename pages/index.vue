@@ -23,7 +23,7 @@
                 <input type="number" placeholder="Telefon numaranız" v-model="telephone" name="telephone">
                 <input type="text" placeholder="Hangi ülkede yaşıyorsunuz?" v-model="country" name="country">
               </form>
-              <button>Benimle İletişime Geç</button>
+              <button @click="submit()">Benimle İletişime Geç</button>
             </div>
           </div>
         </div>
@@ -212,42 +212,7 @@
           </div>
         </div>
       </swiper-slide>
-      <swiper-slide class="frame3 white">
-        <div class="bg">
-          <div class="container frame">
-            <h2>EKSLAND ile <br> <span>Sınırları Olmadan Yatırım</span> </h2>
-            <hr>
-            <div class="steps">
-              <div class="step">
-                <div class="text">
-                  <h5>1.Adım</h5>
-                  <h6>Lorep Ipsum Dolor Consectetur </h6>
-                  <p>Lorem ipsum dolor sit amet consectetur. Habitant a pulvinar nisi eget nec. </p>
-                </div>
-                <Icon name="healthicons:1-outline" class="icon" />
-              </div>
-              <div class="step">
-                <div class="text">
-                  <h5>1.Adım</h5>
-                  <h6>Lorep Ipsum Dolor Consectetur </h6>
-                  <p>Lorem ipsum dolor sit amet consectetur. Habitant a pulvinar nisi eget nec. </p>
-                </div>
-                <Icon name="healthicons:2-outline" class="icon" />
-              </div>
-              <div class="step">
-                <div class="text">
-                  <h5>1.Adım</h5>
-                  <h6>Lorep Ipsum Dolor Consectetur </h6>
-                  <p>Lorem ipsum dolor sit amet consectetur. Habitant a pulvinar nisi eget nec. </p>
-                </div>
-                <Icon name="healthicons:3-outline" class="icon" />
-              </div>
-            </div>
 
-
-          </div>
-        </div>
-      </swiper-slide>
     </swiper>
 
 
@@ -257,97 +222,50 @@
 <script setup lang="ts">
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Mousewheel, Keyboard, Scrollbar, Pagination, Navigation } from 'swiper/modules';
-
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import 'swiper/css/navigation';
 
-const loading = ref(false)
-
 const modules = ref([Mousewheel, Keyboard])
 const moduleLand = ref([Scrollbar, Navigation])
+
+
+const loading = ref(false)
 
 const name = ref()
 const email = ref()
 const telephone = ref()
 const country = ref()
 
-// const { supabase } = useSupabase()
+const supabase = useSupabaseClient()
+const submit = async () => {
+  try {
+    loading.value = true
+    const { data, error } = await supabase
+      .from('contact')
+      .insert(
+        {
+          name: 'i am now entering new data',
+          email: 'th si is my email ',
+          telephone: '1230984323',
+          country: 'i live in qualalambore'
+        }
+      )
+      .select()
+    if (data) console.log('th is dat ' + JSON.stringify(data))
+    if (!data) console.log('no bitches no data ')
+    if (error) throw error
 
-// const submit = async () => {
-//   try {
-//     loading.value = true
-//     const { data, err } = await supabase
-//       .from('contact')
-//       .insert(
-//         {
-//           name: name.value,
-//           email: email.value,
-//           telephone: telephone.value,
-//           country: country.value,
-//         }
-//       )
-//     if (data)
-//       console.log(data[0])
-//     if (err) throw err
-//   }
-//   catch (err) {
-//     console.log(err)
-//   }
-//   finally {
-//     loading.value = false
-//   }
-// }
-</script>
-
-<!-- <script>
-import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Mousewheel, Keyboard } from 'swiper/modules';
-
-import { createClient } from "@supabase/supabase-js";
-
-// const { supabase } = useSupabase()
-
-
-export default {
-  components: {
-    Swiper,
-    SwiperSlide
-  },
-  data() {
-    return {
-      modules: [Mousewheel, Keyboard],
-      name: "",
-      email: "",
-      telephone: "",
-      country: "",
-    }
-  },
-  methods: {
-    async submit() {
-      const supabase = createClient('https://yriltvuehzqbfkrctqbg.supabase.co', 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InlyaWx0dnVlaHpxYmZrcmN0cWJnIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTU3NDc1NjAsImV4cCI6MjAxMTMyMzU2MH0.RvbgIAgGiE7VQvWefDpReiFNkwV_Eu0a9xgVXcI3hNs');
-      try {
-        const { data, err } = await supabase
-          .from('contact')
-          .insert(
-            {
-              name: this.name,
-              email: this.email,
-              telephone: this.telephone,
-              country: this.country,
-            }
-          )
-        if (data)
-          console.log(data)
-        if (err) throw err
-      }
-      catch (err) {
-        console.log(err)
-      }
-    }
+  }
+  catch (error) {
+    console.log(error)
+  }
+  finally {
+    loading.value = false
   }
 }
-</script> -->
+
+</script>
 
 <style lang="scss" scoped>
 @import "../assets/style/variables.scss";
@@ -612,8 +530,6 @@ export default {
       }
     }
 
-
-
     .steps {
       display: flex;
       flex-wrap: wrap;
@@ -627,6 +543,7 @@ export default {
           display: flex;
           flex-direction: column;
           width: fit-content;
+
           h5 {
             font-size: 15px;
             color: $primary;
