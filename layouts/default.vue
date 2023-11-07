@@ -1,21 +1,13 @@
 <template>
   <div>
-    <navbar class="navbar" />
+    <navbar />
     <slot />
     <foot />
   </div>
 </template>
 
-<script>
-export default {
+<script setup>
 
-}
 </script>
 
-<style lang="scss" scoped>
-.navbar {
-  position: absolute;
-  z-index: 10;
-  width: 100%;
-}
-</style>
+<style lang="scss"></style>

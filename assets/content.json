@@ -1,0 +1,199 @@
+{
+  "features": [
+    {
+      "title": "Hemen Tapu Teslim",
+      "icon": "",
+      "text": "Satış işlemlerini adım adım takip etmeniz ile EKSLAND güvencesiyle tapu teslimi artık çok kolay."
+    },
+    {
+      "title": "%100 Gerçek Değer",
+      "icon": "",
+      "text": "Bizimle yatırımlarınıza güvenin. Sizlere %100 gerçek değer vadediyoruz."
+    },
+    {
+      "title": "Kolay ve Hızlı İşlem",
+      "icon": "",
+      "text": "Her adımda çok kolay ve hızlı işlemler EKSLAND ile mümkün."
+    },
+    {
+      "title": "Fırsat Araziler",
+      "icon": "",
+      "text": "Eşsiz portföyümüz ile sizlere fırsat arazileri sunuyor ve yatırımlarınızı sağlamlaştırıyoruz."
+    }
+  ],
+  "steps": [
+    {
+      "title": "Bizimle İletişime Geçin",
+      "ps": [
+        "Sitemizde iletişim bölümünde bulunan formu doldurmanız sizinle iletişim kurmamız için yeterli olacaktır ",
+        "Ardından zoom toplantısı planlayıp sizleri",
+        "daha yakından tanıma fırsatı bulmuş olacağız."
+      ]
+    },
+    {
+      "title": "Evrakları hazırlayın",
+      "ps": [
+        "Beğendiğiniz arsa için depozito göndermeniz ve bulunduğunuz ülkenin ",
+        "büyük elçiliğinden satış için vekaletname vermeniz işlemleri başlatmanız ve satış için gerekli olan evrakları hazırlamanız ",
+        "adına yeterli olacaktır."
+      ]
+    },
+    {
+      "title": "Tapu sahibi olun",
+      "ps": [
+        "Evrak işlemleri ardından sizin için tapu dairesinde randevu oluşturacağız. Satış işleminizi randevu tarihinde gerçekleştirip tapunuzu sizlere teslim edeceğiz. Artık arsa sahibi oldunuz! İstediğiniz gibi değerlendirmeye hazırsınız.",
+        "Şimdi form doldurun!"
+      ]
+    }
+  ],
+  "footer": [
+    {
+      "title": "Sayfalar",
+      "links": [
+        {
+          "name": "Anasayfa",
+          "url": "/"
+        },
+        {
+          "name": "Arsa&Araziler",
+          "url": "/"
+        },
+        {
+          "name": "Nasıl Arsa Alırım",
+          "url": "/"
+        },
+        {
+          "name": "Neden Eskişehir",
+          "url": "/"
+        }
+      ]
+    },
+    {
+      "title": "Hakkımızda",
+      "links": [
+        {
+          "name": "Biz kimiz?",
+          "url": "/"
+        },
+        {
+          "name": "Sık Sorulan Sorular",
+          "url": "/"
+        },
+        {
+          "name": "Gizlilik Politikamız",
+          "url": "/"
+        },
+        {
+          "name": "Bize Ulaşın",
+          "url": "/"
+        }
+      ]
+    }
+  ],
+  "icon": [
+    { "name": "ic:baseline-wechat", "url": "" },
+    { "name": "logos:telegram", "url": "" },
+    { "name": "logos:whatsapp-icon", "url": "" }
+  ],
+  "socials": [
+    { "name": "ic:baseline-facebook", "url": "" },
+    { "name": "ph:instagram-logo-fill", "url": "" },
+    { "name": "entypo-social:linkedin-with-circle", "url": "" }
+  ],
+  "invests": [
+    {
+      "title": "Tecrübemizden İlham alın",
+      "icon": "teenyicons:tick-circle-solid",
+      "p": "50 yılı aşkın tecrübelerimiz, onlarca projelerimiz ile sizlere fırsatlar oluşturuyoruz."
+    },
+    {
+      "title": "Portföyümüzdeki çeşitlilik",
+      "icon": "ic:sharp-window",
+      "p": "Türkiye’de sizlere sunduğumuz yüzlerce yatırım fırsatı ile seçenekleri çeşitlendiriyoruz."
+    },
+    {
+      "title": "Tecrübemizden İlham alın",
+      "icon": "typcn:plus",
+      "p": "lorem ipsu"
+    },
+    {
+      "title": "Portföyümüzdeki çeşitlilik",
+      "icon": "typcn:plus",
+      "p": "lorem ipsu"
+    }
+  ],
+  "faqs": [
+    {
+      "label": "Arazi alımı için gerekli belgeler nelerdir?",
+      "defaultOpen": true,
+      "content": "Arazi alımı için gerekli olan belgeler arazi tapusu, kimlik belgesi, ikametgah belgesi, vergi numarası ve gerekirse vekâletname gibi belgeleri içerebilir. Tam bir liste ve gerekli adımlar hakkında bilgi almak için bizimle iletişime geçebilirsiniz."
+    },
+    {
+      "label": "Installation",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate."
+    },
+    {
+      "label": "Theming",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate."
+    },
+    {
+      "label": "Layouts",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate."
+    },
+    {
+      "label": "Components",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate."
+    },
+    {
+      "label": "Utilities",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate."
+    }
+  ],
+  "sliders": [
+    {
+      "icon": "bxs:plane-land",
+      "param": "",
+      "number": ""
+    },
+    {
+      "icon": "fa6-solid:map-location-dot",
+      "param": "",
+      "number": ""
+    },
+    {
+      "icon": "wpf:statistics",
+      "param": "",
+      "number": ""
+    },
+    {
+      "icon": "material-symbols:factory",
+      "param": "",
+      "number": ""
+    },
+    {
+      "icon": "mdi:city",
+      "param": "",
+      "number": ""
+    },
+    {
+      "icon": "vaadin:road",
+      "param": "",
+      "number": ""
+    },
+    {
+      "icon": "mdi:city",
+      "param": "",
+      "number": ""
+    },
+    {
+      "icon": "game-icons:village",
+      "param": "",
+      "number": ""
+    },
+    {
+      "icon": "mdi:cloud-percent",
+      "param": "",
+      "number": ""
+    }
+  ]
+}
