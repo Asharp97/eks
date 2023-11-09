@@ -1,6 +1,6 @@
 <template>
   <div class="hero">
-    <nuxt-img class="landing-image" :src="`eks/${img}.png`" provider="imagekit" />
+    <nuxt-img class="landing-image" :src="`${img}.png`" provider="imagekit" />
     <div class="landing-page container">
       <div class="landing-text ">
         <div class="display">
@@ -28,6 +28,12 @@
 
 <script setup>
 defineProps(['text', 'img']);
+
+const name = ref()
+const email = ref()
+const telephone = ref()
+const country = ref()
+
 </script>
 
 <style lang="scss" scoped></style>

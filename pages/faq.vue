@@ -1,15 +1,14 @@
 <template>
-  <div class="about gap">
+  <div class="faq gap">
     <section>
-      <hero img="hero-aboutus" text="Hakkımızda" />
+      <hero img="hero-faq" text="Aklınızda soru kalmasın." />
     </section>
+
   </div>
 </template>
 
-<script>
-export default {
+<script setup>
 
-}
 </script>
 
 <style lang="scss" scoped></style>

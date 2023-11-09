@@ -23,6 +23,7 @@
   ],
   "steps": [
     {
+      "img": "step-1",
       "title": "Bizimle İletişime Geçin",
       "ps": [
         "Sitemizde iletişim bölümünde bulunan formu doldurmanız sizinle iletişim kurmamız için yeterli olacaktır ",
@@ -31,6 +32,7 @@
       ]
     },
     {
+      "img": "step-2",
       "title": "Evrakları hazırlayın",
       "ps": [
         "Beğendiğiniz arsa için depozito göndermeniz ve bulunduğunuz ülkenin ",
@@ -39,6 +41,7 @@
       ]
     },
     {
+      "img": "step-3",
       "title": "Tapu sahibi olun",
       "ps": [
         "Evrak işlemleri ardından sizin için tapu dairesinde randevu oluşturacağız. Satış işleminizi randevu tarihinde gerçekleştirip tapunuzu sizlere teslim edeceğiz. Artık arsa sahibi oldunuz! İstediğiniz gibi değerlendirmeye hazırsınız.",
@@ -52,19 +55,19 @@
       "links": [
         {
           "name": "Anasayfa",
-          "url": "/"
+          "url": ""
         },
         {
           "name": "Arsa&Araziler",
-          "url": "/"
+          "url": ""
         },
         {
           "name": "Nasıl Arsa Alırım",
-          "url": "/"
+          "url": ""
         },
         {
           "name": "Neden Eskişehir",
-          "url": "/"
+          "url": ""
         }
       ]
     },
@@ -73,19 +76,19 @@
       "links": [
         {
           "name": "Biz kimiz?",
-          "url": "/"
+          "url": ""
         },
         {
           "name": "Sık Sorulan Sorular",
-          "url": "/"
+          "url": ""
         },
         {
           "name": "Gizlilik Politikamız",
-          "url": "/"
+          "url": ""
         },
         {
           "name": "Bize Ulaşın",
-          "url": "/"
+          "url": ""
         }
       ]
     }
@@ -152,48 +155,93 @@
   "sliders": [
     {
       "icon": "bxs:plane-land",
-      "param": "",
-      "number": ""
+      "param": "istanbul",
+      "number": "200KM"
     },
     {
       "icon": "fa6-solid:map-location-dot",
-      "param": "",
-      "number": ""
+      "param": "istanbul",
+      "number": "200KM"
     },
     {
       "icon": "wpf:statistics",
-      "param": "",
-      "number": ""
+      "param": "istanbul",
+      "number": "200KM"
     },
     {
       "icon": "material-symbols:factory",
-      "param": "",
-      "number": ""
+      "param": "istanbul",
+      "number": "200KM"
     },
     {
       "icon": "mdi:city",
-      "param": "",
-      "number": ""
+      "param": "istanbul",
+      "number": "200KM"
     },
     {
       "icon": "vaadin:road",
-      "param": "",
-      "number": ""
+      "param": "istanbul",
+      "number": "200KM"
     },
     {
       "icon": "mdi:city",
-      "param": "",
-      "number": ""
+      "param": "istanbul",
+      "number": "200KM"
     },
     {
       "icon": "game-icons:village",
-      "param": "",
-      "number": ""
+      "param": "istanbul",
+      "number": "200KM"
     },
     {
       "icon": "mdi:cloud-percent",
-      "param": "",
-      "number": ""
+      "param": "istanbul",
+      "number": "200KM"
+    }
+  ],
+  "eskisehirSlide": [
+    {
+      "img": "eskisehir-swiper-1"
+    },
+    {
+      "img": "eskisehir-swiper-1"
+    },
+    {
+      "img": "eskisehir-swiper-1"
+    },
+    {
+      "img": "eskisehir-swiper-1"
+    },
+    {
+      "img": "eskisehir-swiper-1"
+    },
+    {
+      "img": "eskisehir-swiper-1"
+    },
+    {
+      "img": "eskisehir-swiper-1"
+    }
+  ],
+  "lookcloser": [
+    {
+      "title": "Fotoğraf Galerisi",
+      "subtitle": "Eksland ile arazi ayrıntılarını inceleyin.",
+      "text": [
+        "Eşsiz doğal güzellikleri ve stratejik konumuyla bu arazi, hayalinizdeki mükemmel yatırımı sunuyor. 10 dönümlük bu arazi, yatırım fırsatını kaçırmamak ve aynı zamanda şehre kolay erişim sağlamak isteyenler için ideal bir seçenek sunmaktadır. ",
+        "Yemyeşil ormanlar ve panoramik dağ manzaraları, bu araziyi bir cennet gibi yapmaktadır. Ayrıca, su kaynaklarına erişim imkanı sunan bu arazi, tarım veya bahçecilik için büyük bir potansiyele sahiptir. "
+      ]
+    }
+  ],
+  "minerals": [
+    {
+      "title": "01. Eskişehir",
+      "subtitle": "Madenleri ile zengin Şehir",
+      "text": [
+        "Eskişehir, maden potansiyeli açısından oldukça zengin bir bölge olarak bilinir. Özellikle linyit kömürü, bor, manyezit, talk, zeolit ve trona gibi çeşitli maden kaynaklarına sahip olan şehir, bu hammaddelerin çıkarılması ve işlenmesi konusunda önemli bir rol oynamaktadır. ",
+        "Türkiye’de rezerv açısından en çok bulunan bor cevherleri tinkal ve kolemanit’tir. Türkiye’de önemli tinkal yatakları Seyitgazi’ye bağlı Kırka’da bulunuyor."
+      ],
+      "img1": "mineral-1",
+      "img2": ["mineral-2", "mineral-3"]
     }
   ]
 }

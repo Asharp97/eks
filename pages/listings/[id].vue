@@ -1,44 +1,158 @@
 <template>
   <div>
-    <div class="listing-details ">
-      <div class="white-bg">
-        <div class="container">
-          <div class="details">
-            <div class="imgDiv">
-              <h2>EKSLAND güvencesiyle yatırım fırsatı</h2>
-              <nuxt-img class="img" src="listing-img.png" provider="imagekit" />
+    <div class="listing-details gap">
+      <section>
+        <div class="white-bg">
+          <div class="container">
+            <div class="details">
+              <div class="imgDiv">
+                <h2>EKSLAND güvencesiyle yatırım fırsatı</h2>
+                <nuxt-img class="img" src="listing-img.png" provider="imagekit" />
 
-            </div>
-            <div class="textDiv">
-              <h4>Arazi Detayları</h4>
-              <p>Eskişehir’de bulunan fırsat araziler için bizlerle hemen iletişim kurun.</p>
-              <hr>
-              <div class="params">
-                <div class="title" v-for="n in 7"> Metrekare: <div class="param"> &nbsp;512m2 </div>
-                </div>
               </div>
-              <btn2 text="İletişime Geç" />
+              <div class="textDiv">
+                <h4>Arazi Detayları</h4>
+                <p>Eskişehir’de bulunan fırsat araziler için bizlerle hemen iletişim kurun.</p>
+                <hr>
+                <div class="params">
+                  <div class="title" v-for="n in 7"> Metrekare: <div class="param"> &nbsp;512m2 </div>
+                  </div>
+                </div>
+                <btn2 text="İletişime Geç" />
+              </div>
             </div>
-          </div>
-          <div class="price">
-            <h4>Arazi fiyatı: 15.000 €</h4>
-            <span>Satın almak için hemen iletişime geçin.</span>
+            <div class="price">
+              <h4>Arazi fiyatı: 15.000 €</h4>
+              <span>Satın almak için hemen iletişime geçin.</span>
+            </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div class="container">
-        <features />
-      </div>
+      <section>
+        <div class="container">
+          <features />
+        </div>
+      </section>
+
+      <section class="container">
+        <onetwolayout :text="lookcloser[0].text" :title="lookcloser[0].title" :titlesub="lookcloser[0].subtitle" />
+        <!--  :img1="" :img2=""  -->
+      </section>
+
+      <section class="white-bg">
+        <div class="graph1 container">
+
+          <div class="logo">
+            EKS <span>LAND</span>
+          </div>
+          <h4>Eskişehir </h4>
+          <div class="display">
+            Metrekare başına arsa fiyat endeksi
+          </div>
+          <div class="p1">
+            Metrekare başına arsa fiyat endeksi, her sene artış gösteren bu özel araziyi yatırımcılar için vazgeçilmez
+            kılıyor. Bu dinamik endeks, yatırımınızın gelecekteki getirisini garanti altına alıyor.
+          </div>
+          <nuxt-img class="img" src="graph1.png" provider="imagekit" />
+          <div class="footer">
+            <div class="p1">
+              <b>
+                Endeksa’dan 
+              </b><br>
+              alınmış veriler.
+            </div>
+            <div class="roi">
+              <div class="text">
+
+                <div class="p1">
+                  %112.00
+                </div>
+                <div class="p2"></div>
+                1 Yıllık Değişim
+              </div>
+              <div class="separator">
+              </div>
+              <div class="text">
+                <div class="p1">
+                  %241.94
+                </div>
+                <div class="p2">
+                  2 Yıllık Değişim
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </section>
+
+      <section>
+        <div class="closer-look container">
+          <h1>Araziye yakından bakın</h1>
+          <swiper :navigation="true" :loop="true" :modules="modules" class="swiper single-nav"
+            @slideNextTransitionStart="nextEnd">
+            <swiper-slide v-for="n in 4" class="slide">
+              <nuxt-img class="img" src="closer-look.png" provider="imagekit" />
+            </swiper-slide>
+          </swiper>
+          <div class="pagination">
+            <div class="dots" v-for="(pag, n) in  4" :class="{ 'active-pagination': n == activePag }"></div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="title">
+            <div class="display">
+              Eskişehir
+            </div>
+            <div class="p1">
+              <b> Eskişehir</b>, tarihi zenginliği, kültürel mirası ve modern yaşam tarzının mükemmel bir birleşimini
+              sunan
+              gelecek
+              için <b> yatırım</b> fırsatları barındıran bir şehirdi.
+            </div>
+          </div>
+          <slider :swiper="swipedata" />
+        </div>
+      </section>
+
+      <section class="container">
+        <TapuSteps />
+      </section>
     </div>
   </div>
 </template>
 
 <script setup>
+//swiper
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import { Navigation } from 'swiper/modules';
+const modules = [Navigation]
+
+//patination
+const activePag = ref(0)
+
+const nextEnd = () => {
+  activePag.value += 1
+  if (activePag.value == 4)
+    activePag.value = 0
+
+}
+
 const id = useRoute().params.id
-definePageMeta({
-  layout: 'invert-nav-color'
-})
+definePageMeta({ layout: 'invert-nav-color' })
+
+//content import
+import content from "../../assets/content.json"
+const swipedata = content.eskisehirSlide
+const lookcloser = content.lookcloser
+
 </script>
 
 <style lang="scss" scoped></style>

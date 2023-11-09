@@ -1,15 +1,15 @@
 <template>
-  <div>
-    contact
+  <div class="contact gap">
+    <section>
+      <hero img="hero-contactus" text="Biz Ulaşın." />
+    </section>
   </div>
 </template>
 
 <script>
-  export default {
-    
-  }
+export default {
+
+}
 </script>
 
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

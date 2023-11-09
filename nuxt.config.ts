@@ -1,6 +1,6 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  devtools: { enabled: true },
+  devtools: { enabled: false },
   modules: [
     "nuxt-icon",
     "@nuxt/image",
@@ -12,9 +12,6 @@ export default defineNuxtConfig({
     imagekit: {
       baseURL: "https://ik.imagekit.io/sharp/eks/",
     },
-  },
-  antd: {
-    imports: ["a-slider"],
   },
   supabase: {
     redirect: false,

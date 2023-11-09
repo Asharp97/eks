@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home gap">
 
     <section>
       <hero class="hero" text="EKSLAND ile toprakta büyüyen yatırımlar" img="hero-home" />
@@ -57,28 +57,7 @@
     </section>
 
     <section>
-      <div class="tapu-steps  container">
-        <div class="p1">3 aşamada yatırımınızı gerçekleştirin.</div>
-        <div class="steps-img-container white-bg">
-
-          <h1>3 Adımda EKSLAND ile Tapu
-            Sahibi Olun</h1>
-
-
-
-        </div>
-        <div class="steps">
-          <div class="step" v-for="step in steps">
-            <div class="t1">{{ step.title }}</div>
-            <div class="t2" v-for="p in step.ps"> {{ p }}</div>
-          </div>
-        </div>
-
-        <div class="how-to-buy-button">
-          <btn text="Nasıl Satın Alırım" icon="octicon:feed-plus-16" destination="howtobuy" />
-        </div>
-
-      </div>
+      <TapuSteps />
     </section>
 
     <section>
@@ -116,7 +95,7 @@
           yükselten faktörlere sahiptir. Bu nedenle Eskişehir'deki araziler, uzun vadeli yatırımlar için çekici bir fırsat
           olarak kabul edilir.</div>
         <nuxt-img class="why-image" src="whyeskisehir.png" provider="imagekit" />
-        <btn text="Neden Eskişehir" icon="octicon:feed-plus-16" destination="" />
+        <btn text="Neden Eskişehir" icon="octicon:feed-plus-16" destination="whyeskisehir" />
       </div>
     </section>
 
