@@ -3,14 +3,14 @@
     <NuxtLink :to="`${destination ? '/' + destination : ''}`">
       <button>
         <span> {{ text }} </span>
-        <Icon :name="`${icon}`" />
+        <Icon name="octicon:feed-plus-16" />
       </button>
     </NuxtLink>
   </div>
 </template>
 
 <script setup>
-defineProps(['text', 'icon', 'destination']);
+defineProps(['text', 'destination']);
 </script>
 
 <style lang="scss" scoped>

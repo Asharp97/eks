@@ -557,63 +557,6 @@
         width: 100%;
       }
     }
-    .faq-wrapper {
-      width: 900px;
-      margin-inline: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      .faq {
-        .question {
-          border-radius: 8px;
-          background: white;
-          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-          display: flex;
-          padding: 15px 25px;
-          justify-content: space-between;
-          align-items: center;
-          cursor: pointer;
-          &:hover {
-            box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
-          }
-          .t2 {
-            span {
-              color: $orange;
-            }
-          }
-          .icons {
-            position: relative;
-            width: 15px;
-            height: 15px;
-            .icon {
-              position: absolute;
-            }
-            .right-icon {
-              transform: rotate(90deg);
-            }
-          }
-          .open-icons {
-            .right-icon {
-              transform: rotate(180deg);
-              scale: 0;
-            }
-            .left-icon {
-              transform: rotate(180deg);
-            }
-          }
-        }
-        .answer {
-          display: grid;
-          grid-template-rows: 0fr;
-          .p2 {
-            overflow: hidden;
-          }
-        }
-        .open {
-          grid-template-rows: 1fr !important;
-        }
-      }
-    }
   }
 }
 
@@ -874,6 +817,135 @@
 }
 
 .about {
+  .bizkimiz {
+    .white-bg {
+      padding-block: 32px;
+    }
+    .p1 {
+      color: $gray;
+      margin-bottom: 172px;
+      text-align: center;
+    }
+    .content {
+      padding: 85px 0px;
+      .cols {
+        display: flex;
+        margin-top: 85px;
+        text-align: center;
+        justify-content: space-evenly;
+        .column {
+          display: flex;
+          flex-direction: column;
+          gap: 34px;
+          width: 35.5%;
+          .img {
+            width: 100%;
+          }
+          .names {
+            color: #424242;
+            font-size: 21px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+    h4 {
+      color: $darkGray;
+      text-align: center;
+    }
+  }
+  .we-are-here {
+    .white-bg {
+      .icons {
+        display: flex;
+        gap: 12px;
+        .world {
+          color: #2e42a5;
+        }
+        .help {
+          color: #3b510a;
+        }
+        .map {
+          color: #f17809;
+        }
+        .icon {
+          font-size: 34px;
+        }
+      }
+      .title {
+        font-size: 64px;
+        font-weight: 600;
+      }
+      hr {
+        border: 1px solid $darkGray;
+      }
+      .text {
+        display: flex;
+        justify-content: space-between;
+        .half {
+          width: 45%;
+          span {
+            margin-top: 0;
+            font-size: 21px;
+            font-weight: 500;
+            color: $darkGray;
+          }
+        }
+      }
+      .exp {
+        padding: 15px 40px;
+        background-color: $offwhite;
+        width: fit-content;
+        border-radius: 20px;
+        margin-inline: auto;
+        .p2 {
+          color: $darkGray;
+        }
+      }
+    }
+    .content {
+      padding-top: 150px;
+      padding-inline: 125px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+  }
+  .services {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    h4 {
+      color: $darkGray;
+    }
+    .img {
+      width: 100%;
+    }
+    .cols {
+      display: flex;
+      justify-content: space-between;
+      .column {
+        width: 45%;
+      }
+    }
+    .btn {
+      margin-inline: auto;
+    }
+  }
+  h4{
+    text-align: center;
+  }
+  .office {
+    .img {
+      width: 100%;
+    }
+    .p1 {
+      width: 80%;
+      text-align: center;
+      margin-inline: auto;
+      padding-block: 78px;
+    }
+  }
 }
 
 .contact {
@@ -938,6 +1010,7 @@
 .white-bg {
   background-color: white;
 }
+
 .logo {
   font-size: 45px;
   font-weight: 700;
@@ -960,26 +1033,18 @@
 // reusable compnents
 .slider {
   .swiper {
+    overflow-x: visible;
     padding-block: 150px;
-    .slide {
-    }
   }
   .swiper-slide-active {
     z-index: 10;
-    // margin-right: 102px;
-    margin-left: 102px;
-    opacity: 1 !important;
     .img {
-      scale: 1.5;
+      scale: 1.4;
       filter: brightness(100%) !important;
     }
-  }
-  .swiper-slide-next,
-  .swiper-slide-prev {
-    opacity: 1 !important;
-  }
-  .swiper-slide {
-    opacity: 0;
+    .p1 {
+      display: block !important;
+    }
   }
   .slide {
     .img {
@@ -988,6 +1053,8 @@
   }
   .swiper-button-prev {
     display: none;
+    right: 80px !important;
+    left: auto;
   }
   .swiper-button-next {
     top: auto !important;
@@ -1002,14 +1069,19 @@
       padding-block: 10px;
     }
   }
-
-  .swiper-button-prev {
-    right: 80px !important;
-    left: auto;
+  .swiper-slide {
+    .p1 {
+      display: none;
+    }
   }
-
   .swiper-wrapper {
     padding-bottom: 78px;
+    // display: flex;
+    // align-items: center;
+  }
+  .p1 {
+    margin-top: 100px;
+    color: $darkGray;
   }
 }
 
@@ -1070,3 +1142,63 @@
     margin-block: 100px;
   }
 }
+
+.faq-wrapper {
+  width: 900px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  .faq {
+    .question {
+      border-radius: 8px;
+      background: white;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      display: flex;
+      padding: 15px 25px;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      &:hover {
+        box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25);
+      }
+      .t2 {
+        span {
+          color: $orange;
+        }
+      }
+      .icons {
+        position: relative;
+        width: 15px;
+        height: 15px;
+        .icon {
+          position: absolute;
+        }
+        .right-icon {
+          transform: rotate(90deg);
+        }
+      }
+      .open-icons {
+        .right-icon {
+          transform: rotate(180deg);
+          scale: 0;
+        }
+        .left-icon {
+          transform: rotate(180deg);
+        }
+      }
+    }
+    .answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      .p2 {
+        overflow: hidden;
+      }
+    }
+    .open {
+      grid-template-rows: 1fr !important;
+    }
+  }
+}
+
+@import "./media";

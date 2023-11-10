@@ -34,9 +34,7 @@
             <div class="land">
               <nuxt-img class="land-img" src="land-1.png" provider="imagekit" />
               <div class="text">
-                <div class="t2">
-                  EKS Land ile Eskişehir’den Yatırımlık Arsa
-                </div>
+                <div class="t2"> EKS Land ile Eskişehir’den Yatırımlık Arsa </div>
                 <div class="measurement">
                   <Icon class="icon" name="arcticons:tapemeasure" />
                   <div class="p2">345 m</div>
@@ -56,26 +54,20 @@
       </div>
     </section>
 
-    <section>
+    <section class="container">
       <TapuSteps />
     </section>
 
     <section>
       <div class="invest-bg white-bg">
-
         <div class="invest container">
           <h1>Yatırımınıza değer katmak için yanınızdayız!</h1>
           <hr class="separator">
           <div class="boxes">
-
             <div class="box" v-for="item in invests">
               <Icon :name="item.icon" class="icons" />
-              <div class="t1">
-                {{ item.title }}
-              </div>
-              <div class="t2">
-                {{ item.p }}
-              </div>
+              <div class="t1"> {{ item.title }} </div>
+              <div class="t2"> {{ item.p }} </div>
             </div>
 
           </div>
@@ -95,30 +87,12 @@
           yükselten faktörlere sahiptir. Bu nedenle Eskişehir'deki araziler, uzun vadeli yatırımlar için çekici bir fırsat
           olarak kabul edilir.</div>
         <nuxt-img class="why-image" src="whyeskisehir.png" provider="imagekit" />
-        <btn text="Neden Eskişehir" icon="octicon:feed-plus-16" destination="whyeskisehir" />
+        <btn text="Neden Eskişehir" destination="whyeskisehir" />
       </div>
     </section>
 
     <section>
-      <div class="faq-wrapper">
-        <div class="faq" @click="openFaq[n] = !openFaq[n]" v-for="(faq, n) in faqs">
-          <div class="question">
-            <div class="t2">
-              <span>
-                0{{ n + 1 }}.
-              </span>
-              {{ faq.label }}
-            </div>
-            <div class="icons" :class="openFaq[n] ? 'open-icons' : ''">
-              <Icon name="octicon:dash-16" class="right-icon icon" />
-              <Icon name="octicon:dash-16" class="left-icon icon" />
-            </div>
-          </div>
-          <div class="answer" :class="openFaq[n] ? 'open' : ''">
-            <div class="p2"><br> {{ faq.content }}</div>
-          </div>
-        </div>
-      </div>
+      <FaqComponent :faq="faq" />
     </section>
 
   </div>
@@ -126,57 +100,16 @@
 
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Mousewheel, Keyboard, Scrollbar, Navigation } from 'swiper/modules';
+import { Scrollbar, Navigation } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import 'swiper/css/navigation';
-
-const moduleLand = ref([Scrollbar, Navigation,])
-
-
-const loading = ref(false)
-
-const openFaq = ref([true, false, false, false, false, false])
-
-const name = ref()
-const email = ref()
-const telephone = ref()
-const country = ref()
+const moduleLand = [Scrollbar, Navigation]
 
 import content from "../assets/content.json"
 const feature = content.features
-const steps = content.steps
-const faqs = content.faqs
 const invests = content.invests
-
-const supabase = useSupabaseClient()
-const submit = async () => {
-  try {
-    loading.value = true
-    const { data, err } = await supabase
-      .from('contact')
-      .insert({
-        name: name.value,
-        email: email.value,
-        telephone: telephone.value,
-        country: country.value
-      })
-      .select()
-    if (data) {
-      // console.log('succ' + JSON.stringify(data))
-
-    }
-    if (err) throw err
-  }
-  catch (error) {
-    console.log(error)
-  }
-  finally {
-    loading.value = false
-  }
-}
-
-
+const faq = content.faq
 
 </script>
 

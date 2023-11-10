@@ -2,22 +2,22 @@
   "features": [
     {
       "title": "Hemen Tapu Teslim",
-      "icon": "",
+      "icon": "solar:document-text-bold",
       "text": "Satış işlemlerini adım adım takip etmeniz ile EKSLAND güvencesiyle tapu teslimi artık çok kolay."
     },
     {
       "title": "%100 Gerçek Değer",
-      "icon": "",
+      "icon": "streamline:money-graph-bar-increase-up-product-performance-increase-arrow-graph-business-chart",
       "text": "Bizimle yatırımlarınıza güvenin. Sizlere %100 gerçek değer vadediyoruz."
     },
     {
       "title": "Kolay ve Hızlı İşlem",
-      "icon": "",
+      "icon": "akar-icons:paper-airplane",
       "text": "Her adımda çok kolay ve hızlı işlemler EKSLAND ile mümkün."
     },
     {
       "title": "Fırsat Araziler",
-      "icon": "",
+      "icon": "material-symbols:map-outline-rounded",
       "text": "Eşsiz portföyümüz ile sizlere fırsat arazileri sunuyor ve yatırımlarınızı sağlamlaştırıyoruz."
     }
   ],
@@ -59,15 +59,15 @@
         },
         {
           "name": "Arsa&Araziler",
-          "url": ""
+          "url": "listings"
         },
         {
           "name": "Nasıl Arsa Alırım",
-          "url": ""
+          "url": "howtobuy"
         },
         {
           "name": "Neden Eskişehir",
-          "url": ""
+          "url": "whyeskisehir"
         }
       ]
     },
@@ -76,7 +76,7 @@
       "links": [
         {
           "name": "Biz kimiz?",
-          "url": ""
+          "url": "aboutus#bizKimiz"
         },
         {
           "name": "Sık Sorulan Sorular",
@@ -88,7 +88,7 @@
         },
         {
           "name": "Bize Ulaşın",
-          "url": ""
+          "url": "contact"
         }
       ]
     }
@@ -125,7 +125,7 @@
       "p": "lorem ipsu"
     }
   ],
-  "faqs": [
+  "faq": [
     {
       "label": "Arazi alımı için gerekli belgeler nelerdir?",
       "defaultOpen": true,
@@ -242,6 +242,24 @@
       ],
       "img1": "mineral-1",
       "img2": ["mineral-2", "mineral-3"]
+    }
+  ],
+  "oldpics": [
+    {
+      "img": "old1",
+      "label": "Bağdat Caddesi - 1967 Ekşioğlu İnşaat"
+    },
+    {
+      "img": "old1",
+      "label": "Bağdat Caddesi - 1967 Ekşioğlu İnşaat"
+    },
+    {
+      "img": "old1",
+      "label": "Bağdat Caddesi - 1967 Ekşioğlu İnşaat"
+    },
+    {
+      "img": "old1",
+      "label": "Bağdat Caddesi - 1967 Ekşioğlu İnşaat"
     }
   ]
 }

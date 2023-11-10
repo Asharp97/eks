@@ -22,6 +22,7 @@
           <btn2 @click="submit()" text="Benimle İletişime Geç" />
         </div>
       </div>
+      
     </div>
   </div>
 </template>
@@ -34,6 +35,29 @@ const email = ref()
 const telephone = ref()
 const country = ref()
 
+const supabase = useSupabaseClient()
+const submit = async () => {
+  try {
+    loading.value = true
+    const { data, err } = await supabase
+      .from('contact')
+      .insert({
+        name: name.value,
+        email: email.value,
+        telephone: telephone.value,
+        country: country.value
+      })
+      .select()
+    if (data) {
+      console.log('succ' + JSON.stringify(data))
+    }
+    if (err) throw err
+  }
+  catch (error) { console.log(error) }
+  finally {
+    loading.value = false
+  }
+}
 </script>
 
 <style lang="scss" scoped></style>
