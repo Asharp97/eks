@@ -109,7 +109,7 @@
 
         </div>
       </div>
-      <btn text="Aktif projeler" class="btn"/>
+      <btn text="Aktif projeler" class="btn" />
     </section>
 
     <section class="office container">
@@ -119,8 +119,7 @@
         Bekliyoruz!
       </div>
       <div class="white-bg">
-      <nuxt-img src="office.png" class="img" provider="imagekit" />
-
+        <nuxt-img src="office.png" class="img" provider="imagekit" />
         <div class="p1">
           Fikirtepe'deki ofisimiz, sizi iş dünyasının dinamiklerini yakından deneyimlemeye davet ediyor. Modern, konforlu
           ve

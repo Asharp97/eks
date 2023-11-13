@@ -10,7 +10,7 @@
         <div class="card" v-for="item in feature">
           <div class="title">
             <div class="t1">{{ item.title }}</div>
-            <Icon :name="item.icon" />
+            <Icon :name="item.icon" class="icons" />
           </div>
           <div class="p2">{{ item.text }}</div>
         </div>
