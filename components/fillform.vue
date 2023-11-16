@@ -2,7 +2,7 @@
   <div>
     <div class="contact-us-form">
       <div class="half swiper-quote">
-        <nuxt-img class="backgroundImg" src="fillform.png" provider="imagekit" />
+        <nuxt-img class="backgroundImg" src="fillform.png" />
         <swiper :navigation="true" :modules="modules" class="swiper" :loop="true" :space-between="70">
           <swiper-slide>
             <div class="text-bg">

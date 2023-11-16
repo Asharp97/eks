@@ -32,7 +32,7 @@
           :scrollbar="{ hide: true }" class="swiper">
           <swiper-slide v-for="n in 8">
             <div class="land">
-              <nuxt-img class="land-img" src="land-1.png" provider="imagekit" />
+              <nuxt-img class="land-img" src="land-1.png" />
               <div class="text">
                 <div class="t2"> EKS Land ile Eskişehir’den Yatırımlık Arsa </div>
                 <div class="measurement">
@@ -86,13 +86,13 @@
           potansiyeli sunar. Eskişehir, eğitim kurumları, kültürel etkinlikler ve sağlık hizmetleri gibi yaşam kalitesini
           yükselten faktörlere sahiptir. Bu nedenle Eskişehir'deki araziler, uzun vadeli yatırımlar için çekici bir fırsat
           olarak kabul edilir.</div>
-        <nuxt-img class="why-image" src="whyeskisehir.png" provider="imagekit" />
+        <nuxt-img class="why-image" src="whyeskisehir.png" />
         <btn text="Neden Eskişehir" destination="whyeskisehir" />
       </div>
     </section>
 
-    <section>
-      <FaqComponent :faq="faq" />
+    <section class="container">
+      <FaqComponent :faq="faq" class="FaqComponent" />
     </section>
 
   </div>

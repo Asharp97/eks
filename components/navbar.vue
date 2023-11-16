@@ -19,9 +19,9 @@
                 İlanlar
               </li>
             </NuxtLink>
-            <NuxtLink to="/howtobuy">
+            <NuxtLink to="/invest">
               <li>
-                Nasıl Satın Alırım
+                Nasıl yatırım yapabilirim?
               </li>
             </NuxtLink>
             <NuxtLink to="/aboutus">

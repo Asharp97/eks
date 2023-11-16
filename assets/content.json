@@ -63,7 +63,7 @@
         },
         {
           "name": "Nasıl Arsa Alırım",
-          "url": "howtobuy"
+          "url": "invest"
         },
         {
           "name": "Neden Eskişehir",
@@ -80,11 +80,11 @@
         },
         {
           "name": "Sık Sorulan Sorular",
-          "url": ""
+          "url": "faq"
         },
         {
           "name": "Gizlilik Politikamız",
-          "url": ""
+          "url": "policy"
         },
         {
           "name": "Bize Ulaşın",
@@ -149,6 +149,21 @@
     },
     {
       "label": "Utilities",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate."
+    }
+  ],
+  "honorableMentions": [
+    {
+      "label": "Termal Kaynaklar",
+      "defaultOpen": true,
+      "content": "Eskişehir, bulunduğu yerleşim yeri itibariyle sıcak su kaynaklarının tam üzerinde bulunmaktadır. Şehir merkezinde, \"Sıcak Sular\" olarak isimlendiren bölgede, doğal termal kaynaklar bulunmakta, çok sayıda hamam hizmet vermektedir. "
+    },
+    {
+      "label": "Installation",
+      "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate."
+    },
+    {
+      "label": "Theming",
       "content": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed neque elit, tristique placerat feugiat ac, facilisis vitae arcu. Proin eget egestas augue. Praesent ut sem nec arcu pellentesque aliquet. Duis dapibus diam vel metus tempus vulputate."
     }
   ],
@@ -284,8 +299,8 @@
       "label": "metro??"
     },
     {
-      "img": "old1",
-      "label": "Bağdat Caddesi - 1967 Ekşioğlu İnşaat"
+      "img": "metro2",
+      "label": "another metro"
     },
     {
       "img": "old1",
@@ -302,6 +317,20 @@
     {
       "img": "old1",
       "label": "Bağdat Caddesi - 1967 Ekşioğlu İnşaat"
+    }
+  ],
+  "contactDetails": [
+    {
+      "title": "Adres",
+      "adres": "Lorem ipsum dolor sit amet consectetur. Rhoncus dictum erat ult"
+    },
+    {
+      "title": "E-Mail",
+      "adres": "destek@eksland.com.tr"
+    },
+    {
+      "title": "iletişim Numarası",
+      "adres": "0555 555 55 55"
     }
   ]
 }

@@ -22,7 +22,7 @@
 
 
         </div>
-        <nuxt-img provider="imagekit" class="img" src="graph2.png" />
+        <nuxt-img class="img" src="graph2.png" />
         <div class="text">
           <div class="p1">
             Hem eğitim hem de sanayi alanındaki büyüme, şehre olan göçü artırmış ve nüfusu hızla yükseltmiştir. <span>
@@ -51,46 +51,50 @@
     </section>
 
 
-    <section class="young white-bg container">
-      <div class="p1">Eskişehir’de öne çıkan başlıklar</div>
-      <div class="display">Genç Nüfuslu Şehir </div>
-      <div class="columns">
-        <div class="column">
-          <div class="piechart malefemale">
-            <div class="man label">
-              49.78% <br>
-              Erkek Nüfus
+    <section class="white-bg">
+      <div class="young container">
+
+        <div class="p1">Eskişehir’de öne çıkan başlıklar</div>
+        <div class="display">Genç Nüfuslu Şehir </div>
+        <div class="columns">
+          <div class="column">
+            <div class="piechart malefemale">
+              <div class="man label">
+                49.78% <br>
+                Erkek Nüfus
+              </div>
+              <div class="woman label">
+                50.22% <br>
+                Kadın Nüfus
+              </div>
             </div>
-            <div class="woman label">
-              50.22% <br>
-              Kadın Nüfus
-            </div>
-          </div>
-          <div class="p2">Bölgedeki Cinsiyet Dağılımı</div>
-          <div class="p1">Eskişehir, genç ve dinamik bir nüfusa ev sahipliği yapmaktadır. Şehir, birçok üniversite ve
-            yüksek öğrenim kurumu barındırması nedeniyle gençlerin yoğun olarak bulunduğu bir yerdir. Eskişehir, öğrenci
-            nüfusu, genç girişimciler ve profesyoneller için cazip bir yaşam ve kariyer merkezi olma özelliğine sahiptir.
-          </div>
-        </div>
-        <div class="column">
-          <div class="piechart age">
-            <div class="label mid">
-              64,07% <br>
-              15-59 yaş aralığı
-            </div>
-            <div class="label max">
-              18,57% <br>
-              60-90 yaş aralığı
-            </div>
-            <div class="label min">
-              17,36% <br>
-              0-14 yaş aralığı
+            <div class="p2">Bölgedeki Cinsiyet Dağılımı</div>
+            <div class="p1">Eskişehir, genç ve dinamik bir nüfusa ev sahipliği yapmaktadır. Şehir, birçok üniversite ve
+              yüksek öğrenim kurumu barındırması nedeniyle gençlerin yoğun olarak bulunduğu bir yerdir. Eskişehir, öğrenci
+              nüfusu, genç girişimciler ve profesyoneller için cazip bir yaşam ve kariyer merkezi olma özelliğine
+              sahiptir.
             </div>
           </div>
-          <div class="p2">Bölgedeki Cinsiyet Dağılımı</div>
-          <div class="p1"> Bu dinamik nüfus, kültürel etkinlikleri, sanat sahnelerini, kafe ve restoranları
-            canlandırırken, şehre enerji ve yenilik getirir. Ayrıca, genç nüfus, Eskişehir'in geleceğini şekillendirme
-            potansiyeli taşır ve şehirdeki sosyal ve ekonomik gelişmelere önemli katkılar sunar.
+          <div class="column">
+            <div class="piechart age">
+              <div class="label mid">
+                64,07% <br>
+                15-59 yaş aralığı
+              </div>
+              <div class="label max">
+                18,57% <br>
+                60-90 yaş aralığı
+              </div>
+              <div class="label min">
+                17,36% <br>
+                0-14 yaş aralığı
+              </div>
+            </div>
+            <div class="p2">Bölgedeki Cinsiyet Dağılımı</div>
+            <div class="p1"> Bu dinamik nüfus, kültürel etkinlikleri, sanat sahnelerini, kafe ve restoranları
+              canlandırırken, şehre enerji ve yenilik getirir. Ayrıca, genç nüfus, Eskişehir'in geleceğini şekillendirme
+              potansiyeli taşır ve şehirdeki sosyal ve ekonomik gelişmelere önemli katkılar sunar.
+            </div>
           </div>
         </div>
       </div>
@@ -115,7 +119,7 @@
         <div class="p1">Ayrıca, Eskişehir'deki organize sanayi bölgeleri ve endüstriyel alanlar, yatırımcılar için uygun
           altyapı ve destek sunmaktadır.</div>
       </div>
-      <nuxt-img provider="imagekit" class="img" src="nuclear.png" />
+      <nuxt-img class="img" src="nuclear.png" />
 
 
     </section>
@@ -124,7 +128,7 @@
       <div class="p2">Türkiye'de Arsa Yatırımı: </div>
       <div class="display">Arsa değerlerinde
         %1071 artış</div>
-      <nuxt-img provider="imagekit" class="img" src="graph3.png" />
+      <nuxt-img class="img" src="graph3.png" />
 
       <div class="columns">
         <div class="column text">
@@ -169,8 +173,18 @@
       <div class="display">
         Şehrin öne çıkanları
       </div>
-      <div class="white-bg">
-        
+      <div class="white-bg container">
+        <div class="content">
+          <faqComponent :faq="faq" class="Faqcontainer" />
+          <div class="listed-images">
+            <span>
+              <nuxt-img class="img" v-for="n in 7" :src='`listed-imgs/${n}.jfif`' />
+            </span>
+            <span>
+              <nuxt-img class="img" v-for="n in 7" :src='`listed-imgs/${n}.jfif`' />
+            </span>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -181,6 +195,7 @@
 import content from "../assets/content.json"
 const layout = content.minerals
 const trans = content.transport
+const faq = content.honorableMentions
 
 </script>
 

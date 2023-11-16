@@ -7,7 +7,7 @@
             <div class="details">
               <div class="imgDiv">
                 <h2>EKSLAND güvencesiyle yatırım fırsatı</h2>
-                <nuxt-img class="img" src="listing-img.png" provider="imagekit" />
+                <nuxt-img class="img" src="listing-img.png" />
 
               </div>
               <div class="textDiv">
@@ -51,7 +51,7 @@
           <swiper :navigation="true" :loop="true" :modules="modules" class="swiper single-nav"
             @slideNextTransitionStart="nextEnd">
             <swiper-slide v-for="n in 4" class="slide">
-              <nuxt-img class="img" src="closer-look.png" provider="imagekit" />
+              <nuxt-img class="img" src="closer-look.png" />
             </swiper-slide>
           </swiper>
           <div class="pagination">

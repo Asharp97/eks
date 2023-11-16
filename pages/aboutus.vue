@@ -18,7 +18,7 @@
           Tüm hizmetleri ile EKSLAND yatırımlarınıza öncü olmak için burada!</div>
         <div class="cols">
           <div class="column">
-            <nuxt-img provider="imagekit" class="img" src="nazim.png" />
+            <nuxt-img class="img" src="nazim.png" />
             <div class="names">
               Nazım Ekşioğlu
             </div>
@@ -30,7 +30,7 @@
           </div>
           <div class="column">
 
-            <nuxt-img provider="imagekit" class="img" src="nazim.png" />
+            <nuxt-img class="img" src="nazim.png" />
             <div class="names">
               Nazım Ekşioğlu
             </div>
@@ -84,7 +84,7 @@
 
     <section class="services container">
       <h4> Hizmetlerimiz</h4>
-      <nuxt-img src="tower.png" class="img" provider="imagekit" />
+      <nuxt-img src="tower.png" class="img" />
       <div class="cols">
         <div class="column">
           <div class="p1">
@@ -119,7 +119,7 @@
         Bekliyoruz!
       </div>
       <div class="white-bg">
-        <nuxt-img src="office.png" class="img" provider="imagekit" />
+        <nuxt-img src="office.png" class="img" />
         <div class="p1">
           Fikirtepe'deki ofisimiz, sizi iş dünyasının dinamiklerini yakından deneyimlemeye davet ediyor. Modern, konforlu
           ve

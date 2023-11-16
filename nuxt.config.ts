@@ -6,11 +6,16 @@ export default defineNuxtConfig({
     "@nuxt/image",
     "@nuxtjs/supabase",
     "@ant-design-vue/nuxt",
-    'nuxt-quasar-ui',
+    "nuxt-quasar-ui",
+    "@vueuse/nuxt",
   ],
   image: {
+    provider: "imagekit",
     imagekit: {
       baseURL: "https://ik.imagekit.io/sharp/eks/",
+      modifiers: {
+        format: "webp",
+      },
     },
   },
   supabase: {

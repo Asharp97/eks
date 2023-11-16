@@ -1,6 +1,6 @@
 <template>
   <div class="hero">
-    <nuxt-img class="landing-image" :src="`${img}.png`" provider="imagekit" />
+    <nuxt-img class="landing-image" :src="`${img}.png`" />
     <div class="landing-page container">
       <div class="landing-text ">
         <div class="display">
@@ -22,7 +22,7 @@
           <btn2 @click="submit()" text="Benimle İletişime Geç" />
         </div>
       </div>
-      
+
     </div>
   </div>
 </template>

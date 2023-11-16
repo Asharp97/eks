@@ -12,6 +12,7 @@
   font-family: "Poppins", sans-serif;
   transition: 200ms;
   box-sizing: border-box;
+  scroll-behavior: smooth;
   body {
     // overflow: hidden;
     background-color: $offwhite;
@@ -787,6 +788,32 @@
 }
 
 .faq {
+  .hideup {
+    opacity: 0;
+    visibility: hidden;
+  }
+  .up {
+    position: fixed;
+    bottom: 100px;
+    right: 76px;
+    font-size: 60px;
+    color: white;
+    background-color: $orange;
+    border-radius: 50%;
+    &:hover {
+      scale: 1.1;
+    }
+  }
+
+  h1 {
+    width: 61%;
+    margin-inline: auto;
+    margin-block: 22px;
+  }
+  .white-bg {
+    padding-block: 100px;
+    border-radius: 20px;
+  }
 }
 
 .about {
@@ -922,12 +949,36 @@
 }
 
 .contact {
+  .contact-details {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+    iframe {
+      flex-grow: 1;
+    }
+    .details {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      max-width: 471px;
+      .t2 {
+        color: $gray;
+      }
+    }
+  }
 }
 
 .invest {
+  .firststep {
+    
+  }
 }
 
 .whyeskisehir {
+  .white-bg {
+    // padding-block: 100px;
+  }
   .population {
     .title {
       display: flex;
@@ -956,6 +1007,7 @@
   }
   .young {
     text-align: center;
+    margin-block: 100px;
     .columns {
       display: flex;
       justify-content: space-evenly;
@@ -1036,6 +1088,9 @@
   }
   .increase {
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
     .img {
       width: 100%;
     }
@@ -1060,6 +1115,28 @@
   .honorable-mentions {
     .white-bg {
       border-radius: 20px;
+      height: 500px;
+      overflow-y: hidden;
+      .content {
+        display: flex;
+        padding-inline: 100px;
+        .faqcontainer {
+          margin-block: 100px;
+        }
+        .listed-images {
+          display: flex;
+          gap: 42px;
+          span {
+            display: flex;
+            flex-direction: column;
+            .img {
+              width: 200px;
+              height: 123px;
+              object-fit: cover;
+            }
+          }
+        }
+      }
     }
   }
 }
@@ -1136,9 +1213,46 @@
   margin-inline: auto;
   max-width: 1271px;
 }
+.titles {
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  text-align: center;
+  .p1 {
+    margin-top: 43px;
+    margin-bottom: 126px;
+  }
+  .p1,
+  h4 {
+    color: $gray;
+  }
+  .nav {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+    a {
+      background-color: white;
+      padding: 15px 40px;
+      border-radius: 20px;
+      &:hover {
+        background-color: $orange;
+        color: white;
+      }
+    }
+  }
+  .title {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
 
 // reusable compnents
 .slider {
+  .img {
+    object-fit: cover;
+  }
   .swiper {
     overflow-x: visible;
     padding-block: 150px;
@@ -1156,6 +1270,9 @@
   .slide {
     .img {
       filter: brightness(50%);
+      width: 600px;
+      height: 330px;
+      border-radius: 10px;
     }
   }
   .swiper-button-prev {
@@ -1190,6 +1307,11 @@
     margin-top: 100px;
     color: $darkGray;
   }
+}
+
+.FaqComponent {
+  display: flex;
+  justify-content: center;
 }
 
 .tapu-steps {
@@ -1251,8 +1373,8 @@
 }
 
 .faq-wrapper {
-  width: 900px;
-  margin-inline: auto;
+  width: 70%;
+  // margin-inline: auto;
   display: flex;
   flex-direction: column;
   gap: 20px;

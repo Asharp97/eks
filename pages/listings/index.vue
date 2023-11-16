@@ -75,7 +75,7 @@
         <div class="white-bg" v-for="n in 14">
           <NuxtLink :to="`listings/${n}`" class="land">
             <div class="left">
-              <nuxt-img class="land-img" src="fillform.png" provider="imagekit" />
+              <nuxt-img class="land-img" src="fillform.png" />
               <div class="title">
                 <div class="p2 gray">
                   #Eskisehir

@@ -1,6 +1,6 @@
 <template>
   <div>
-    <NuxtLink :to="`${destination ? '/' + destination : ''}`">
+    <NuxtLink :to="`${destination ? '/' + destination : ''}`" :class="{ 'inverse': inv }">
       <button>
         {{ text }}
       </button>
@@ -15,8 +15,11 @@ defineProps(['text', 'destination']);
 <style lang="scss" scoped>
 @import "../assets/style/variables.scss";
 
+
+
 button {
   background-color: $orange;
+  border: 2px solid $orange;
   color: white;
   width: 100%;
   border-radius: 7px;

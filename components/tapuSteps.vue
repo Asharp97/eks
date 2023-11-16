@@ -5,7 +5,7 @@
       <h1>3 Adımda EKSLAND ile Tapu
         Sahibi Olun</h1>
       <div class="images">
-        <nuxt-img provider="imagekit" v-for="step in steps" :src="step.img + `.png`" class="img" />
+        <nuxt-img v-for="step in steps" :src="step.img + `.png`" class="img" />
       </div>
     </div>
     <div class="steps">
@@ -16,7 +16,7 @@
     </div>
 
     <div class="how-to-buy-button">
-      <btn text="Nasıl Satın Alırım" icon="octicon:feed-plus-16" destination="howtobuy" />
+      <btn text="Nasıl Satın Alırım" icon="octicon:feed-plus-16" destination="invest" />
     </div>
 
   </div>

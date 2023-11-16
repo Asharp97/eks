@@ -1,9 +1,9 @@
 <template>
   <div class="slider">
     <swiper :space-between="space ? space : -200" :scrollbar="{ hide: true }" :slidesPerView="2" :modules="modules"
-      :navigation="true" :loop="true" class="swiper" @slideNextTransitionStart="next">
+      :navigation="true" :loop="true" class="swiper">
       <swiper-slide v-for="(x, n) in swiper" class="slide">
-        <nuxt-img class="img" :src="`${x.img}.png`" provider="imagekit" />
+        <nuxt-img class="img" :src="`${x.img}.jfif`" />
         <div class="p1"> {{ x.label }} </div>
       </swiper-slide>
     </swiper>
@@ -19,7 +19,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/scrollbar';
 import { Scrollbar, Navigation } from 'swiper/modules';
 const modules = [Scrollbar, Navigation]
-
 
 </script>
 
