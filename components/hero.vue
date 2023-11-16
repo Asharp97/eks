@@ -19,7 +19,7 @@
             <input type="number" placeholder="Telefon numaranız" v-model="telephone" name="telephone">
             <input type="text" placeholder="Hangi ülkede yaşıyorsunuz?" v-model="country" name="country">
           </form>
-          <btn2 @click="submit()" text="Benimle İletişime Geç" />
+          <btn2 @click="submit()" :full="true" text="Benimle İletişime Geç" />
         </div>
       </div>
 

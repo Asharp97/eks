@@ -1,29 +1,88 @@
 <template>
-  <div class="invest gap">
+  <div class="invest ">
     <section>
-      <hero img="hero-invest" text="Nasıl yatırım yapabilirim?" />
+      <hero img="hero-invest" text="Nasıl yatırım yapabilirim?" id="form" />
     </section>
+    <div class="gap">
+      <section class="titles white-bg">
+        <div class="p1">3 aşamada yatırımınızı gerçekleştirin.</div>
 
-    <section class="titles white-bg">
-      <div class="p1">3 aşamada yatırımınızı gerçekleştirin.</div>
+        <div class="title" id="nav">
+          <div class="logo"> EKS <span>LAND</span> </div>
+          <h4>Eskişehir</h4>
+          <div class="display">3 adımda yatırımınızı <br> kolayca <br> gerçekleştirebilirsiniz.</div>
+        </div>
+      </section>
+      <section class="firststep container">
+        <div class="display">
+          Bizimle iletişim <br> Kurun
+        </div>
+        <div class="number">1</div>
+        <nuxt-img class="img" src="arrow.png" />
+        <div class="zoom">
+          <div class="p1">
+            Sitemizde iletişim bölümünde bulunan formu doldurmanız sizinle iletişim kurmamız için yeterli olacaktır.
+            <b>
+              Ardından zoom toplantısı
+            </b>
+            planlayıp sizleri daha yakından tanıma fırsatı bulmuş olacağız.
+          </div>
+          <div class="btns">
+            <a href="mailto:destek@eksland.com.tr">
+              <btn2 text="destek@eksland.com.tr" />
+            </a>
+            <btn2 :inv="true" text="Form Doldur" destination="invest#form" />
+          </div>
+        </div>
+      </section>
 
-      <div class="title" id="nav">
-        <div class="logo"> EKS <span>LAND</span> </div>
-        <h4>Eskişehir</h4>
-        <div class="display">3 adımda yatırımınızı <br> kolayca <br> gerçekleştirebilirsiniz.</div>
-      </div>
-    </section>
-    <section class="firststep container">
-      <div class="display">
-        Bizimle iletişim <br> Kurun
-      </div>
-      <nuxt-img class="img" src="arrow.png" />
-      <a href="mailto:destek@eksland.com.tr">
-        <btn2 text="destek@eksland.com.tr" />
-      </a>
-      <btn2 text="Form Doldur" />
-    </section>
+      <section class="secondstep white-bg">
+        <div class="container">
+          <div class="part1">
 
+            <div class="display">Gerekli Evrakları <br> Hazırlayın</div>
+            <div class="p1">Beğendiğiniz arsa için depozito göndermeniz ve bulunduğunuz ülkenin büyük elçiliğinden satış
+              için
+              <b> vekaletname vermeniz</b> işlemleri başlatmanız ve satış için gerekli olan evrakları hazırlamanız adına
+              yeterli olacaktır.
+            </div>
+          </div>
+          <div class="part2">
+
+            <div class="display">Arsa Sahibi Olun</div>
+            <div class="p1">Evrak işlemleri ardından sizin için tapu dairesinde randevu oluşturacağız. </div>
+          </div>
+          <div class="number">2</div>
+        </div>
+
+      </section>
+
+      <section class="thirdstep">
+        <div class="sector double">
+          <nuxt-img class="img" src="own1.png" />
+          <div class="p1">Satış işleminizi randevu tarihinde gerçekleştirip tapunuzu sizlere teslim edeceğiz. Artık arsa
+            sahibi oldunuz! İstediğiniz gibi değerlendirmeye hazırsınız. Şimdi form doldurun!</div>
+          <btn2 :inv="true" text="form doldur" />
+        </div>
+        <div class="sector2">
+          <nuxt-img class="img" src="own2.png" />
+          <nuxt-img class="img" src="own3.png" />
+        </div>
+
+        <div class="number">
+          3
+        </div>
+
+      </section>
+
+
+      <section class="decks">
+        <div class="deck">
+          
+        </div>
+
+      </section>
+    </div>
   </div>
 </template>
 
