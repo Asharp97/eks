@@ -2,12 +2,15 @@
   <div class="navbar">
     <div class="header-bg">
       <div class="header container">
+        <Icon name="game-icons:hamburger-menu" class="hamburger" />
+
         <NuxtLink to="/">
           <div class="logo">
             EKS<span>LAND</span>
           </div>
         </NuxtLink>
-        <nav>
+
+        <nav class="mobile-hide">
           <ul>
             <NuxtLink to="/">
               <li>

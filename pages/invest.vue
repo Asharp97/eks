@@ -5,7 +5,7 @@
     </section>
     <div class="gap">
       <section class="titles white-bg">
-        <div class="p1">3 aşamada yatırımınızı gerçekleştirin.</div>
+        <div class="p1 mpi">3 aşamada yatırımınızı gerçekleştirin.</div>
 
         <div class="title" id="nav">
           <div class="logo"> EKS <span>LAND</span> </div>
@@ -57,8 +57,8 @@
 
       </section>
 
-      <section class="thirdstep">
-        <div class="sector double">
+      <section class="thirdstep big-container">
+        <div class="sector">
           <nuxt-img class="img" src="own1.png" />
           <div class="p1">Satış işleminizi randevu tarihinde gerçekleştirip tapunuzu sizlere teslim edeceğiz. Artık arsa
             sahibi oldunuz! İstediğiniz gibi değerlendirmeye hazırsınız. Şimdi form doldurun!</div>
@@ -68,26 +68,59 @@
           <nuxt-img class="img" src="own2.png" />
           <nuxt-img class="img" src="own3.png" />
         </div>
+        <div class="sector3">
+          <div class="three">
 
-        <div class="number">
-          3
+            3
+          </div>
         </div>
 
       </section>
 
 
-      <section class="decks">
+      <section class="decks big-container">
         <div class="deck">
-          
+          <swiper :effect="'cards'" :grabCursor="true" :modules="modules" class="cards">
+            <swiper-slide class="card" v-for="card in cards1">
+              <Icon :name="`${card.icon}`" class="icon" />
+              <div class="p1">{{ card.title }}</div>
+              <div class="p2">{{ card.details }}</div>
+            </swiper-slide>
+          </swiper>
+          <div class="p1 subtitle">
+            Arazi yatırımı, uzun vadeli bir yatırım stratejisi olarak dikkat çekiyor. Doğru seçilen bir arazi, <b>
+              gelecekte değer kazanabilir ve farklı kullanım amaçlarına hizmet edebilir.</b>
+          </div>
         </div>
-
+        <div class="deck">
+          <swiper :effect="'cards'" :grabCursor="true" :modules="modules" class="cards">
+            <swiper-slide class="card card2" v-for="card in cards2">
+              <Icon :name="`${card.icon}`" class="icon" />
+              <div class="p1">{{ card.title }}</div>
+              <div class="p2">{{ card.details }}</div>
+            </swiper-slide>
+          </swiper>
+          <div class="p1 subtitle">
+            Ancak, başarılı bir arazi yatırımı <b> için dikkatli bir araştırma, bütçe planlaması ve yerel yasal
+              düzenlemelere uyum önemlidir.
+            </b>
+          </div>
+        </div>
       </section>
     </div>
   </div>
 </template>
 
 <script setup>
+import { Swiper, SwiperSlide } from 'swiper/vue';
+import 'swiper/css';
+import 'swiper/css/effect-cards';
+import { EffectCards } from 'swiper/modules';
+const modules = [EffectCards]
 
+import content from "../assets/content.json"
+const cards1 = content.cards1
+const cards2 = content.cards2
 </script>
 
 <style lang="scss" scoped></style>

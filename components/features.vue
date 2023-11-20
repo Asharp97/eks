@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="mpi">
     <h1>Öne çıkan başlıklar</h1>
     <div class="features white-bg">
       <div class="p1">Yatırımınız ile ilgili başlıklar. <br>

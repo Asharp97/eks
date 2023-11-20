@@ -36,13 +36,11 @@
       </section>
 
       <section class="container">
-        <onetwolayout :text="lookcloser[0].text" :title="lookcloser[0].title" :titlesub="lookcloser[0].subtitle" />
-        <!--  :img1="" :img2=""  -->
+        <onetwolayout :text="lookcloser[0].text" :title="lookcloser[0].title" :titlesub="lookcloser[0].subtitle" :img1="'own1'" :img2="img2"/>
       </section>
 
       <section class="white-bg">
         <metrekare />
-
       </section>
 
       <section>
@@ -73,7 +71,7 @@
               için <b> yatırım</b> fırsatları barındıran bir şehirdi.
             </div>
           </div>
-          <slider :swiper="swipedata" />
+          <slider :swiper="swipedata" space="300" />
         </div>
       </section>
 
@@ -109,6 +107,7 @@ definePageMeta({ layout: 'invert-nav-color' })
 import content from "../../assets/content.json"
 const swipedata = content.eskisehirSlide
 const lookcloser = content.lookcloser
+const img2 = ['step-1','step-2']
 
 </script>
 

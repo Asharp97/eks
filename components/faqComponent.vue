@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="faq-wrapper">
+    <div class="faq-wrapper mpi">
       <div class="faq" @click="accordionCheck(n)" v-for="(f, n) in faq">
         <div class="question">
           <div class="t2">
@@ -23,8 +23,10 @@
 <script setup>
 const prop = defineProps(['faq'])
 const openfaq = ref([true])
+const emit = defineEmits(['toggle'])
 
 const accordionCheck = (x) => {
+  emit('toggle')
   for (let i = 0; i < toRaw(prop).faq.length; i++) {
     if (x == i)
       openfaq.value[i] = !openfaq.value[i]

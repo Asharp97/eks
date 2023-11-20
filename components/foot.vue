@@ -5,8 +5,8 @@
     </section>
     <section>
       <div div class="footer-bg">
-        <footer class="container">
-          <div class="text">
+        <footer class="container mpi">
+          <div class="text mpb">
             <div class="logo">
               EKS<span>LAND</span>
             </div>

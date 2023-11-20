@@ -332,5 +332,39 @@
       "title": "iletişim Numarası",
       "adres": "0555 555 55 55"
     }
+  ],
+  "cards1": [
+    {
+      "icon": "typcn:location",
+      "title": "Konum",
+      "details": "Arsanın gelecekteki değer artışı potansiyelini de düşünün. Yakın gelecekte gelişmesi beklenen bölgelere yatırım yapmak daha karlı olabilir."
+    },
+    {
+      "icon": "iconamoon:flag-light",
+      "title": "Arazi ve Topografya",
+      "details": "Arsanın toprak yapısını ve zemin etüdünü inceletmek, inşaat maliyetlerini ve yapılacak projenin dayanıklılığını etkileyen faktörlerdir."
+    },
+    {
+      "icon": "file-icons:service-fabric",
+      "title": "Alt yapı ve Hizmetler",
+      "details": "Elektrik, su, kanalizasyon gibi altyapı hizmetlerinin arsa üzerinde bulunup bulunmadığını ve bu hizmetlerin maliyetini göz önünde bulundurmalısınız."
+    }
+  ],
+  "cards2": [
+    {
+      "icon": "fluent:road-cone-16-filled",
+      "title": "Erişim Yolları",
+      "details": "Erişim yolları, arsanıza ulaşmanın ne kadar kolay veya zor olduğunu belirler. İyi bir erişim yolu, arsanıza ulaşımı daha rahat ve hızlı hale getirirken, kötü bir erişim yolu arazinizi değersizleştirebilir."
+    },
+    {
+      "icon": "ph:tag-fill",
+      "title": "Fiyat Değerlendirmesi",
+      "details": "Arsanın gelecekteki değer artışı potansiyelini de düşünün. Yakın gelecekte gelişmesi beklenen bölgelere yatırım yapmak daha karlı olabilir."
+    },
+    {
+      "icon": "icon-park-outline:target-one",
+      "title": "Piyasa Değeri",
+      "details": "Arsanın piyasa değerini belirlemek için bölgeyi araştırmalı ve benzer arsa satışlarına bakmalısınız."
+    }
   ]
 }

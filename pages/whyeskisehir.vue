@@ -178,12 +178,14 @@
         </div>
         <div class="white-bg container">
           <div class="content">
-            <faqComponent :faq="faq" class="Faqcontainer" />
+            <div class="faqwrapper">
+              <faqComponent :faq="faq" class="Faqcontainer" @toggle="toggle" />
+            </div>
             <div class="listed-images">
-              <span>
+              <span id="scroll1" class="scrolled">
                 <nuxt-img class="img" v-for="n in 7" :src='`listed-imgs/${n}.jfif`' />
               </span>
-              <span>
+              <span id="scroll2">
                 <nuxt-img class="img" v-for="n in 7" :src='`listed-imgs/${n}.jfif`' />
               </span>
             </div>
@@ -200,6 +202,21 @@ import content from "../assets/content.json"
 const layout = content.minerals
 const trans = content.transport
 const faq = content.honorableMentions
+
+let switcher = false
+
+const toggle = () => {
+  const scroll1 = document.getElementById('scroll1')
+  const scroll2 = document.getElementById('scroll2')
+  switcher = !switcher
+  if (switcher) {
+    scroll1.classList.remove('scrolled')
+    scroll2.classList.add('scrolled')
+  } else {
+    scroll1.classList.add('scrolled')
+    scroll2.classList.remove('scrolled')
+  }
+}
 
 </script>
 

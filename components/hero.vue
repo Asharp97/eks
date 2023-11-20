@@ -1,13 +1,13 @@
 <template>
   <div class="hero">
-    <nuxt-img class="landing-image" :src="`${img}.png`" />
-    <div class="landing-page container">
-      <div class="landing-text ">
+    <nuxt-img class="landing-image " :src="`${img}.png`" />
+    <div class="landing-page mpi container">
+      <div class="landing-text">
         <div class="display">
           {{ text }}
         </div>
       </div>
-      <div class="form-bg">
+      <div class="form-bg ">
         <div class="form-inner">
           <div class="text">
             <h3>Hemen Bize Ulaşın</h3>

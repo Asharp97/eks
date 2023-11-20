@@ -6,7 +6,7 @@
     </section>
 
     <section class="container">
-      <div class="feature-cards">
+      <div class="feature-cards mpi">
         <div class="card" v-for="item in feature">
           <div class="title">
             <div class="t1">{{ item.title }}</div>
@@ -19,7 +19,7 @@
 
     <section>
       <div class="popular-ads container">
-        <div class="top">
+        <div class="top mpi">
           <div class="header">
             <h1>Popüler İlanlar</h1>
             <div class="sub-title">
@@ -28,7 +28,7 @@
             </div>
           </div>
         </div>
-        <swiper :slidesPerView="3" :loop="true" :spaceBetween="44" :navigation="true" :modules="moduleLand"
+        <swiper :freeMode="true" :slidesPerView="auto" :spaceBetween="44" :navigation="true" :modules="moduleLand"
           :scrollbar="{ hide: true }" class="swiper">
           <swiper-slide v-for="n in 8">
             <div class="land">
@@ -59,7 +59,7 @@
     </section>
 
     <section>
-      <div class="invest-bg white-bg">
+      <div class="invest-bg mpi white-bg">
         <div class="invest container">
           <h1>Yatırımınıza değer katmak için yanınızdayız!</h1>
           <hr class="separator">
@@ -76,22 +76,28 @@
     </section>
 
     <section>
-      <div class="why-Eskisehir">
+      <div class="why-Eskisehir big-container">
         <div class="text">
           <div class="display"> Neden </div>
           <h4> Eskişehir </h4>
           <div class="display"> Tercih Edilmeli? </div>
         </div>
-        <div class="p1">Şehrin stratejik konumu, ulaşım altyapısı ve hızla gelişen ekonomisi, arazi değerlerini artırma
-          potansiyeli sunar. Eskişehir, eğitim kurumları, kültürel etkinlikler ve sağlık hizmetleri gibi yaşam kalitesini
+        <div class="p1">
+          Şehrin stratejik konumu, ulaşım altyapısı ve hızla gelişen ekonomisi, arazi değerlerini artırma
+          potansiyeli sunar.
+        </div>
+        <div class="p1">
+          Eskişehir, eğitim kurumları, kültürel etkinlikler ve sağlık hizmetleri gibi yaşam kalitesini
           yükselten faktörlere sahiptir. Bu nedenle Eskişehir'deki araziler, uzun vadeli yatırımlar için çekici bir fırsat
-          olarak kabul edilir.</div>
+          olarak kabul edilir.
+        </div>
         <nuxt-img class="why-image" src="whyeskisehir.png" />
         <btn text="Neden Eskişehir" destination="whyeskisehir" />
       </div>
     </section>
 
-    <section class="container">
+    <section class="ask container">
+      <h1 class="mpb">Sık sorulan sorular</h1>
       <FaqComponent :faq="faq" class="FaqComponent" />
     </section>
 
@@ -100,11 +106,11 @@
 
 <script setup>
 import { Swiper, SwiperSlide } from 'swiper/vue';
-import { Scrollbar, Navigation } from 'swiper/modules';
+import { Scrollbar, Navigation, FreeMode } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/scrollbar';
 import 'swiper/css/navigation';
-const moduleLand = [Scrollbar, Navigation]
+const moduleLand = [Scrollbar, Navigation, FreeMode]
 
 import content from "../assets/content.json"
 const feature = content.features

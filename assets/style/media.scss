@@ -1,0 +1,215 @@
+@import "./variables";
+@media screen and (max-width: 1110px) {
+  .logo {
+    font-size: 21.8px;
+  }
+  .navbar {
+    .header {
+      justify-content: center !important;
+      height: 63px !important;
+      .hamburger {
+        display: block !important;
+        font-size: 30px;
+        margin-right: auto;
+        position: absolute;
+        left: 10px;
+      }
+    }
+  }
+  .mobile-hide {
+    display: none !important;
+  }
+  .mobile-show {
+    display: flex;
+  }
+  .listings {
+    padding-inline: 11px;
+    .top {
+      .land-count {
+        font-size: 13px;
+      }
+      .p2 {
+        font-size: 10px;
+      }
+    }
+    .filter-listing-row {
+      gap: 20px;
+      .filter {
+        .filter-inner {
+          .t2 {
+            font-size: 14px;
+          }
+          button {
+            font-size: 12px;
+          }
+          input {
+            height: 36px;
+            text-align: end;
+            padding-inline: 12px;
+          }
+        }
+      }
+      .listing {
+        .lands {
+          .land {
+            height: 66px !important;
+            .img-wrapper {
+              .land-img {
+                width: 91px !important;
+              }
+            }
+            .text {
+              font-size: 8px !important;
+              .p2 {
+                font-size: 8px;
+              }
+              .title {
+                margin-inline: 9px !important;
+              }
+              .details {
+                .param {
+                  width: 47px !important;
+                }
+              }
+            }
+            .buttons {
+              font-size: 10px;
+              margin: 0 10px !important;
+              button {
+                padding: 5px 0 !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .listing-details {
+    .details {
+      .imgDiv,
+      .textDiv {
+        width: 100%;
+      }
+    }
+  }
+  .features {
+    .swiper-button-next{
+      display: none;
+    }
+    .frame {
+      width: 36px !important;
+      height: 36px !important;
+      .icon {
+        font-size: 29px !important;
+        padding: 6px !important;
+      }
+
+    }
+  }
+  .display {
+    font-size: 30px !important;
+  }
+  .padded-form {
+    width: 100% !important;
+  }
+  h1 {
+    font-size: 25px;
+  }
+  .p1 {
+    font-size: 10px;
+  }
+
+  .mpi {
+    padding-inline: 33px;
+  }
+  .mpb {
+    padding-bottom: 16px;
+  }
+  .container {
+    overflow-x: hidden;
+  }
+
+  .home {
+    section {
+      .feature-cards {
+        gap: 20px;
+        .card {
+          width: 100% !important;
+        }
+      }
+      .popular-ads {
+        .top {
+          .header {
+            h1 {
+              margin-bottom: 21px;
+            }
+            .sub-title {
+              font-size: 10px;
+              margin-bottom: 21px;
+            }
+          }
+        }
+      }
+      .tapu-steps {
+        .steps-img-container {
+          border-radius: 0 !important;
+          padding-block: 12px;
+        }
+        .steps {
+          .step {
+            width: 100%;
+          }
+        }
+      }
+      .invest-bg {
+        text-align: center;
+      }
+    }
+  }
+
+  .landing-image {
+    height: 150vh !important;
+    margin-top: -300px !important;
+  }
+  .landing-page {
+    gap: 80px;
+    justify-content: center !important;
+    .landing-text {
+      margin-top: 175px !important;
+      text-align: center;
+    }
+    .form-bg {
+      button {
+        padding-inline: 0;
+      }
+    }
+  }
+
+  .faq-wrapper {
+    .faq {
+      .t2,
+      .p2 {
+        font-size: 10px;
+      }
+      .question {
+        .t2 {
+          span {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+
+  .footer-bg {
+    footer {
+      .text {
+        width: 100% !important;
+      }
+      .links {
+        width: 100% !important;
+      }
+    }
+  }
+}

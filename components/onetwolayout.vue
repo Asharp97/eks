@@ -5,7 +5,7 @@
     <div class="display">
       {{ titlesub }}
     </div>
-    <nuxt-img :src="img1 + `.png`" class="imgH" />
+    <nuxt-img :src="`${img1}.png`" class="imgH" />
     <div class="imgs">
       <nuxt-img v-for='img in img2' :src="img + `.png`" class="imgV" />
     </div>

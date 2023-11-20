@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="contact-us-form">
-      <div class="half swiper-quote">
+    <div class="contact-us-form big-container">
+      <div class="half swiper-quote mobile-hide ">
         <nuxt-img class="backgroundImg" src="fillform.png" />
         <swiper :navigation="true" :modules="modules" class="swiper" :loop="true" :space-between="70">
           <swiper-slide>
