@@ -357,6 +357,9 @@
       }
     }
   }
+  .swiper-button-prev {
+    display: none;
+  }
 }
 
 .onetwolayout {
@@ -750,7 +753,7 @@
 
     .imgDiv {
       width: 62.3%;
-      min-width: 550px;
+      max-width: 550px;
       .img {
         border-radius: 20px;
         margin-top: 54px;
@@ -792,7 +795,6 @@
         }
       }
     }
-    
   }
   .price {
     text-align: center;
@@ -805,6 +807,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    gap: 15px;
     .p1 {
       width: 436px;
     }
@@ -1648,6 +1651,7 @@
   .footer {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
   }
 }
 

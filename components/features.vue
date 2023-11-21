@@ -9,11 +9,11 @@
 
       <div class="vertical-separator"></div>
 
-      <swiper :slidesPerView="9" :modules="modules" :navigation="true" :loop="true" class="swiper single-nav"
+      <swiper :slidesPerView="9" :modules="modules" :navigation="true" :loop="true" class="swiper single-nav mobile-hide"
         @slideNextTransitionStart="nextEnd">
 
-        <swiper-slide v-for="(slider, n) in sliders" class="slide"
-          :class="{ 'active-slide': n == i, 'swiper-slide-active': n == i - 3 }" @click="update(n)">
+        <swiper-slide v-for="(slider, n) in sliders" class="slide "
+          :class="{ 'active-slide': n == i, 'swiper-slide-active': n == i }">
           <div class="frame">
             <div class="background">
               <Icon :name="slider.icon" class="icon" />
@@ -26,7 +26,7 @@
           </div>
         </swiper-slide>
 
-        <swiper-slide v-for="(slider, n) in sliders" class="slide" :class="{ 'active-slide': n == i }" @click="update(n)">
+        <swiper-slide v-for="(slider, n) in sliders" class="slide" :class="{ 'active-slide': n == i }">
           <div class="frame">
             <div class="background">
               <Icon :name="slider.icon" class="icon" />
@@ -40,8 +40,31 @@
         </swiper-slide>
 
       </swiper>
-      <div class="pagination">
-        <div class="dots" v-for="(pag, n) in 9" :class="{ 'active-pagination': n == activePag }" @click="update(n)">
+      <div class="mobile-show">
+        <swiper :slidesPerView="5" :modules="modules" :navigation="true" :loop="true" class="swiper single-nav "
+          @slideNextTransitionStart="nextEnd">
+
+          <swiper-slide v-for="(slider, n) in sliders" class="slide " :class="{ 'active-slide': n == im }">
+            <div class="frame">
+              <div class="background">
+                <Icon :name="slider.icon" class="icon" />
+              </div>
+            </div>
+            <div class="feature-details">
+              <div class="t2"> {{ slider.param }} </div>
+              <hr>
+              <h4> {{ slider.number }} </h4>
+            </div>
+          </swiper-slide>
+        </swiper>
+      </div>
+
+      <div class="pagination mobile-hide">
+        <div class="dots" v-for="(pag, n) in 9" :class="{ 'active-pagination': n == activePag }">
+        </div>
+      </div>
+      <div class="pagination mobile-show">
+        <div class="dots" v-for="(pag, n) in 9" :class="{ 'active-pagination': n == activePag }">
         </div>
       </div>
 
@@ -60,6 +83,7 @@ import { Navigation } from 'swiper/modules';
 const modules = [Navigation]
 
 let i = ref(4)
+let im = ref(2)
 let activePag = ref(4)
 
 const nextEnd = () => {
@@ -69,7 +93,6 @@ const nextEnd = () => {
   else {
     i.value = 0
   }
-
   if (activePag.value < 8)
     activePag.value += 1
   else
@@ -78,9 +101,13 @@ const nextEnd = () => {
 const update = (n) => {
   i.value = n
   activePag.value = n
-
-  console.log('i= ' + i.value)
-  console.log('activePag= ' + activePag.value)
+  let slides = document.getElementsByClassName('slide')
+  for (var j = 0; j < slides.length; j++) {
+    slides[j].classList.remove('swiper-slide-active')
+  }
+  slides[n].classList.add('swiper-slide-active')
+  // console.log('i= ' + i.value)
+  // console.log('activePag= ' + activePag.value)
 }
 
 

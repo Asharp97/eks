@@ -4,10 +4,10 @@
     <div class="steps-img-container mpi white-bg">
       <h1>3 Adımda EKSLAND ile Tapu Sahibi Olun</h1>
       <div class="images ">
-        <nuxt-img v-for="step in steps" :src="step.img + `.png`" class="img" />
+        <nuxt-img v-for="(step, n) in steps" :src="step.img + `.png`" class="img" :class="{ 'mobile-hide': n == 2 }" />
       </div>
     </div>
-    <div class="steps mpi">
+    <div class="steps ">
       <div class="step" v-for="step in steps">
         <div class="t1 mpb">{{ step.title }}</div>
         <div class="t2" v-for="p in step.ps"> {{ p }}</div>

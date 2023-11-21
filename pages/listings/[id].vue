@@ -1,9 +1,9 @@
 <template>
   <div>
-    <div class="listing-details gap">
+    <div class="listing-details gap ">
       <section>
         <div class="white-bg">
-          <div class="container">
+          <div class="container mpi">
             <div class="details">
               <div class="imgDiv">
                 <h2>EKSLAND güvencesiyle yatırım fırsatı</h2>
@@ -35,8 +35,9 @@
         </div>
       </section>
 
-      <section class="container">
-        <onetwolayout :text="lookcloser[0].text" :title="lookcloser[0].title" :titlesub="lookcloser[0].subtitle" :img1="'own1'" :img2="img2"/>
+      <section class="container mpi">
+        <onetwolayout :text="lookcloser[0].text" :title="lookcloser[0].title" :titlesub="lookcloser[0].subtitle"
+          :img1="'own1'" :img2="img2" />
       </section>
 
       <section class="white-bg">
@@ -66,9 +67,7 @@
             </div>
             <div class="p1">
               <b> Eskişehir</b>, tarihi zenginliği, kültürel mirası ve modern yaşam tarzının mükemmel bir birleşimini
-              sunan
-              gelecek
-              için <b> yatırım</b> fırsatları barındıran bir şehirdi.
+              sunan gelecek için <b> yatırım</b> fırsatları barındıran bir şehirdi.
             </div>
           </div>
           <slider :swiper="swipedata" space="300" />
@@ -107,7 +106,7 @@ definePageMeta({ layout: 'invert-nav-color' })
 import content from "../../assets/content.json"
 const swipedata = content.eskisehirSlide
 const lookcloser = content.lookcloser
-const img2 = ['step-1','step-2']
+const img2 = ['step-1', 'step-2']
 
 </script>
 
