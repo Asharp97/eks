@@ -28,7 +28,7 @@
             </div>
           </div>
         </div>
-        <swiper :freeMode="true" :slidesPerView="auto" :spaceBetween="44" :navigation="true" :modules="moduleLand"
+        <swiper :freeMode="true" :spaceBetween="44" :navigation="true" :modules="moduleLand"
           :scrollbar="{ hide: true }" class="swiper">
           <swiper-slide v-for="n in 8">
             <div class="land">

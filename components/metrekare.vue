@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="graph1 container">
+    <div class="graph1 container mpi">
 
       <div class="logo">
         EKS <span>LAND</span>

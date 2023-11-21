@@ -13,7 +13,7 @@
           <div class="display">3 adımda yatırımınızı <br> kolayca <br> gerçekleştirebilirsiniz.</div>
         </div>
       </section>
-      <section class="firststep container">
+      <section class="firststep container mpi">
         <div class="display">
           Bizimle iletişim <br> Kurun
         </div>
@@ -57,7 +57,7 @@
 
       </section>
 
-      <section class="thirdstep big-container">
+      <section class="thirdstep mpi big-container">
         <div class="sector">
           <nuxt-img class="img" src="own1.png" />
           <div class="p1">Satış işleminizi randevu tarihinde gerçekleştirip tapunuzu sizlere teslim edeceğiz. Artık arsa
@@ -66,7 +66,7 @@
         </div>
         <div class="sector2">
           <nuxt-img class="img" src="own2.png" />
-          <nuxt-img class="img" src="own3.png" />
+          <nuxt-img class="img mobile-hide" src="own3.png" />
         </div>
         <div class="sector3">
           <div class="three">

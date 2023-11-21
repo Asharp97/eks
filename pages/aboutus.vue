@@ -5,7 +5,7 @@
     </section>
     <section id="bizKimiz" class="bizkimiz">
       <div class="white-bg">
-        <div class="container">
+        <div class="container mpi">
 
           <div class="p1">
             Hakkımızda merak ettikleriniz.
@@ -13,11 +13,11 @@
           <div class="display "> Biz kimiz </div>
         </div>
       </div>
-      <div class="content container">
+      <div class="content container mpi">
         <div class="p1">Projelerimiz, portföyümüz, tecrübelerimiz...
           Tüm hizmetleri ile EKSLAND yatırımlarınıza öncü olmak için burada!</div>
         <div class="cols">
-          <div class="column">
+          <div class="column mpb">
             <nuxt-img class="img" src="nazim.png" />
             <div class="names">
               Nazım Ekşioğlu
@@ -28,7 +28,7 @@
               ullamcorper et sit
             </div>
           </div>
-          <div class="column">
+          <div class="column mpb">
 
             <nuxt-img class="img" src="nazim.png" />
             <div class="names">
@@ -48,14 +48,14 @@
     <h4> Hizmetlerimiz</h4>
 
     <section class="we-are-here">
-      <div class="content white-bg container">
+      <div class="content white-bg container ">
         <div class="icons">
           <Icon name="subway:world-1" class="world icon" />
           <Icon name="la:hands-helping" class="help icon" />
           <Icon name="gis:poi-map" class="map icon" />
         </div>
         <div class="title">
-          Yatırımınıza değer <br>
+          Yatırımınıza değer <br />
           katmak için<br>
           buradayız.
         </div>
@@ -63,7 +63,8 @@
         <div class="text">
           <div class="p1 half">Arazi yatırımı, her zaman güvenilir bir yatırım fırsatı olarak öne çıkmıştır. Şirketimiz,
             yıllardır bu alanda edinilen deneyim ve uzmanlık ile yatırımcıların arazi yatırımlarını daha da değerli hale
-            getirme konusunda kendini kanıtlamıştır. Biz, yatırımlarınızı büyütmek ve güvence altına almak için buradayız.
+            getirme konusunda kendini kanıtlamıştır. Biz, yatırımlarınızı büyütmek ve güvence altına almak için
+            buradayız.
           </div>
           <div class="half">
             <div class="p1">EKSLAND güvencesiyle</div> <br>
@@ -82,7 +83,7 @@
       </div>
     </section>
 
-    <section class="services container">
+    <section class="services container mpi">
       <h4> Hizmetlerimiz</h4>
       <nuxt-img src="tower.png" class="img" />
       <div class="cols">
@@ -112,7 +113,7 @@
       <btn text="Aktif projeler" class="btn" />
     </section>
 
-    <section class="office container">
+    <section class="office container mpi">
       <div class="display">
         Sizleri Fikirtepe’deki <br> Satış Ofisimize
         <br>

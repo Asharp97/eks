@@ -42,7 +42,7 @@
       </swiper>
       <div class="mobile-show">
         <swiper :slidesPerView="5" :modules="modules" :navigation="true" :loop="true" class="swiper single-nav "
-          @slideNextTransitionStart="nextEnd">
+          @slideNextTransitionStart="nextMob">
 
           <swiper-slide v-for="(slider, n) in sliders" class="slide " :class="{ 'active-slide': n == im }">
             <div class="frame">
@@ -98,17 +98,21 @@ const nextEnd = () => {
   else
     activePag.value = 0
 }
-const update = (n) => {
-  i.value = n
-  activePag.value = n
-  let slides = document.getElementsByClassName('slide')
-  for (var j = 0; j < slides.length; j++) {
-    slides[j].classList.remove('swiper-slide-active')
+
+const nextMob = () => {
+  if (im.value < 8) {
+    im.value += 1
   }
-  slides[n].classList.add('swiper-slide-active')
-  // console.log('i= ' + i.value)
-  // console.log('activePag= ' + activePag.value)
+  else {
+    im.value = 0
+  }
+  console.log(im.value)
+  if (activePag.value < 8)
+    activePag.value += 1
+  else
+    activePag.value = 0
 }
+
 
 
 </script>

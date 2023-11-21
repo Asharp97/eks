@@ -17,7 +17,9 @@
             <input type="text" placeholder="Adınız, Soyadınız" v-model="name" name="name">
             <input type="text" placeholder="E-mail Adresiniz" v-model="email" name="email">
             <input type="number" placeholder="Telefon numaranız" v-model="telephone" name="telephone">
-            <input type="text" placeholder="Hangi ülkede yaşıyorsunuz?" v-model="country" name="country">
+            <!-- <input type="text" placeholder="Hangi ülkede yaşıyorsunuz?" v-model="country" name="country"> -->
+            <q-select borderless v-model="country" :options="countries" label="Hangi ülkede yaşıyorsunuz?"
+              class="input" />
           </form>
           <btn2 @click="submit()" :full="true" text="Benimle İletişime Geç" />
         </div>
@@ -58,6 +60,8 @@ const submit = async () => {
     loading.value = false
   }
 }
+
+const countries = [1, 2, 3, 4, 5, 6]
 </script>
 
 <style lang="scss" scoped></style>

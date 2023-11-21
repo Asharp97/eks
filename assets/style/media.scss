@@ -1,4 +1,10 @@
 @import "./variables";
+@media screen and (max-width: 445px) {
+  .pagination {
+    width: 100%;
+    padding: 18px 7px;
+  }
+}
 @media screen and (max-width: 600px) {
   .slider {
     .slide {
@@ -11,6 +17,9 @@
 }
 @media screen and (max-width: 1110px) {
   //reusables
+  .gap {
+    gap: 90px;
+  }
   .logo {
     font-size: 21.8px;
   }
@@ -36,11 +45,9 @@
 
   .features {
     .swiper {
-      height: 246px;
+      height: 280px;
     }
-    .pagination {
-      width: 100%;
-    }
+
     .t2 {
       font-size: 15px;
     }
@@ -53,7 +60,8 @@
     }
 
     .swiper-button-next {
-      display: none;
+      top: 260px;
+      // right: calc(50% - 12px);
     }
     .frame {
       width: 36px !important;
@@ -180,20 +188,25 @@
       }
     }
   }
-  .landing-image {
-    height: 150vh !important;
-    margin-top: -300px !important;
-  }
-  .landing-page {
-    gap: 80px;
-    justify-content: center !important;
-    .landing-text {
-      margin-top: 175px !important;
-      text-align: center;
+  .hero {
+    .landing-image {
+      height: 150vh !important;
+      margin-top: -300px !important;
     }
-    .form-bg {
-      button {
-        padding-inline: 0;
+    .landing-page {
+      gap: 80px;
+      justify-content: center !important;
+      .landing-text {
+        margin-top: 175px !important;
+        text-align: center;
+      }
+      .form-bg {
+        backdrop-filter: none;
+
+        background-color: #42424280;
+        button {
+          padding-inline: 0;
+        }
       }
     }
   }
@@ -203,6 +216,110 @@
       .imgDiv,
       .textDiv {
         width: 100%;
+      }
+    }
+  }
+  .invest {
+    .titles {
+      .p1,
+      h4 {
+        margin-bottom: 70px;
+      }
+    }
+    .number {
+      font-size: 7rem;
+    }
+    .firststep {
+      .number {
+        top: -25px;
+      }
+      .zoom {
+        gap: 60px;
+        .p1 {
+          width: 100%;
+        }
+        .btns {
+          width: 100%;
+          flex-direction: row;
+          button {
+            font-size: 12px;
+            padding: 11px 15px;
+          }
+        }
+      }
+    }
+    .secondstep {
+      .number {
+        font-size: 20rem;
+        top: 0px;
+      }
+    }
+    .thirdstep {
+      gap: 10px;
+      .sector {
+        // max-width: 111px;
+        .p1 {
+          margin-block: 12px;
+          // width: 230%;
+        }
+      }
+      .sector2 {
+        height: fit-content;
+        width: 65%;
+      }
+      .sector3 {
+        height: fit-content;
+        .three {
+          font-size: 12rem;
+        }
+      }
+    }
+    .decks {
+      width: 80%;
+      .deck {
+        margin-block: 20px;
+        width: 100%;
+        .subtitle {
+          margin-top: 20px;
+        }
+        .cards {
+          .card {
+          }
+        }
+      }
+    }
+  }
+  .about {
+    .bizkimiz {
+      .p1 {
+        margin-bottom: 0px;
+      }
+      .content {
+        .cols {
+          .column {
+            width: 100%;
+          }
+        }
+      }
+    }
+    .we-are-here {
+      .content {
+        padding: 33px;
+        .title {
+          font-size: 25px;
+          width: 100%;
+        }
+        .text {
+          .half {
+            width: 100%;
+            text-align: center;
+            .p1 {
+              margin-top: 176px;
+              color: #424242;
+              font-size: 15px;
+            }
+          }
+        }
       }
     }
   }
@@ -218,6 +335,20 @@
           span {
             font-size: 15px;
           }
+        }
+      }
+    }
+  }
+
+  .faq {
+    .up {
+      right: 10px;
+    }
+    .titles {
+      .nav {
+        gap: 10px;
+        a {
+          padding: 15px 7px;
         }
       }
     }
@@ -251,9 +382,13 @@
       }
     }
   }
+  .footer-fillform {
+    margin-top: 90px;
+  }
   .graph1 {
     .footer {
       justify-content: center;
+      gap: 40px;
     }
   }
   .padded-form {
