@@ -10,7 +10,6 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@ant-design-vue/nuxt": "^1.1.2",
     "@nuxt/devtools": "latest",
     "@nuxtjs/supabase": "^1.1.2",
     "nuxt": "^3.7.3",

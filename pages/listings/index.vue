@@ -132,7 +132,7 @@ const price = ref({ min: 0, max: 100 })
 const km = ref({ min: 0, max: 100 })
 let city = ref(new Array(8).fill(false))
 
-const showFilter = ref(false)
+const showFilter = ref(true)
 
 definePageMeta({
   layout: 'invert-nav-color'

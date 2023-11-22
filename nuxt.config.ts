@@ -1,11 +1,9 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: [
     "nuxt-icon",
     "@nuxt/image",
     "@nuxtjs/supabase",
-    "@ant-design-vue/nuxt",
     "nuxt-quasar-ui",
     "@vueuse/nuxt",
   ],

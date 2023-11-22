@@ -41,15 +41,19 @@
       outline: inherit;
     }
 
+    .input {
+      height: 58px;
+    }
+
     textarea,
     input,
-    .input {
+    .input,
+    select {
       border: none;
       border-radius: 7px;
       padding-left: 24px;
       box-sizing: border-box;
       background-color: white;
-      height: 49px;
       border: 1px solid rgba(98, 98, 98, 0.21);
 
       &::placeholder,
@@ -58,12 +62,16 @@
         font-size: 1em;
       }
       .q-field__label {
-        
       }
 
       &:focus {
         outline: none;
       }
+    }
+    textarea,
+    input,
+    select {
+      height: 49px;
     }
     input::-webkit-outer-spin-button,
     input::-webkit-inner-spin-button {
@@ -791,10 +799,14 @@
     }
   }
 }
+.q-card {
+  background: #1d1d1d;
+  color: white;
+}
 
 .listing-details {
   .details {
-    padding-top: 63px;
+    padding-block: 63px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -843,18 +855,12 @@
       }
     }
   }
-  .price {
-    text-align: center;
-    padding-block: 68px;
-    span {
-      font-size: 18px;
-    }
-  }
+
   .title {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     gap: 15px;
+    padding: 10px;
     .p1 {
       width: 436px;
     }
@@ -1019,9 +1025,6 @@
       .column {
         width: 45%;
       }
-    }
-    .btn {
-      margin-inline: auto;
     }
   }
   h4 {

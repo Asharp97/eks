@@ -110,7 +110,6 @@
 
         </div>
       </div>
-      <btn text="Aktif projeler" class="btn" />
     </section>
 
     <section class="office container mpi">

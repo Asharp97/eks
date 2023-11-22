@@ -11,26 +11,23 @@
 
               </div>
               <div class="textDiv">
-                <h4>Arazi Detayları</h4>
-                <p>Eskişehir’de bulunan fırsat araziler için bizlerle hemen iletişim kurun.</p>
+                <h4>Arazi fiyatı: 15.000 €</h4>
+                <p>Satın almak için hemen iletişime geçin.</p>
+                
                 <hr>
                 <div class="params">
                   <div class="title" v-for="n in 7"> Metrekare: <div class="param"> &nbsp;512m2 </div>
                   </div>
                 </div>
-                <btn2 text="İletişime Geç" />
+                <btn2 text="Hemen Satın Al" />
               </div>
-            </div>
-            <div class="price">
-              <h4>Arazi fiyatı: 15.000 €</h4>
-              <span>Satın almak için hemen iletişime geçin.</span>
             </div>
           </div>
         </div>
       </section>
 
       <section>
-        <div class="container">
+        <div>
           <features />
         </div>
       </section>
@@ -53,7 +50,7 @@
               <nuxt-img class="img" src="closer-look.png" />
             </swiper-slide>
           </swiper>
-          
+
           <div class="pagination">
             <div class="dots" v-for="(pag, n) in  4" :class="{ 'active-pagination': n == activePag }"></div>
           </div>
@@ -62,7 +59,7 @@
 
       <section>
         <div class="container">
-          <div class="title">
+          <div class="title ">
             <div class="display">
               Eskişehir
             </div>

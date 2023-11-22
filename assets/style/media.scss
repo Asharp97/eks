@@ -63,14 +63,14 @@
       top: 260px;
       right: 10px;
     }
-    .frame {
-      width: 40px !important;
-      height: 36px !important;
-      .icon {
-        font-size: 29px !important;
-        padding: 6px !important;
-      }
-    }
+    // .frame {
+    //   width: 40px !important;
+    //   height: 36px !important;
+    //   .icon {
+    //     font-size: 29px !important;
+    //     padding: 6px !important;
+    //   }
+    // }
   }
   .display {
     font-size: 30px !important;
@@ -356,6 +356,7 @@
 
   .footer-bg {
     footer {
+      gap: 20px;
       .text {
         width: 100% !important;
       }
