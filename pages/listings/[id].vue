@@ -53,6 +53,7 @@
               <nuxt-img class="img" src="closer-look.png" />
             </swiper-slide>
           </swiper>
+          
           <div class="pagination">
             <div class="dots" v-for="(pag, n) in  4" :class="{ 'active-pagination': n == activePag }"></div>
           </div>

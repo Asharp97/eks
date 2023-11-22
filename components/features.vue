@@ -63,11 +63,6 @@
         <div class="dots" v-for="(pag, n) in 9" :class="{ 'active-pagination': n == activePag }">
         </div>
       </div>
-      <div class="pagination mobile-show">
-        <div class="dots" v-for="(pag, n) in 9" :class="{ 'active-pagination': n == activePag }">
-        </div>
-      </div>
-
     </div>
   </div>
 </template>
@@ -83,7 +78,6 @@ import { Navigation } from 'swiper/modules';
 const modules = [Navigation]
 
 let i = ref(4)
-let im = ref(2)
 let activePag = ref(4)
 
 const nextEnd = () => {

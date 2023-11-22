@@ -18,7 +18,7 @@
     </section>
 
     <section>
-      <div class="popular-ads container">
+      <div class="popular-ads container" id="container">
         <div class="top mpi">
           <div class="header">
             <h1>Popüler İlanlar</h1>
@@ -28,7 +28,7 @@
             </div>
           </div>
         </div>
-        <swiper :freeMode="true" :spaceBetween="44" :navigation="true" :modules="moduleLand"
+        <swiper :freeMode="true" :slidesPerView="count" :spaceBetween="44" :navigation="true" :modules="moduleLand"
           :scrollbar="{ hide: true }" class="swiper">
           <swiper-slide v-for="n in 8">
             <div class="land">
@@ -117,6 +117,27 @@ const feature = content.features
 const invests = content.invests
 const faq = content.faq
 
+let count = ref(3)
+let containerWidth = ref(null)
+onMounted(() => {
+  let containerWidth = document.getElementById('container').offsetWidth
+  getCount(containerWidth)
+})
+
+
+watch(
+  () => containerWidth,
+  () => {
+    getCount(containerWidth)
+    console.log(containerWidth)
+  }
+)
+
+const getCount = (x) => {
+  count.value = Math.floor(x / 330)
+}
 </script>
+
+
 
 <style lang="scss" scoped></style> 
