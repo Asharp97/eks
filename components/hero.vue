@@ -24,7 +24,7 @@
           {{ text }}
         </div>
       </div>
-      <div class="form-bg ">
+      <div class="form-bg" @click="getCountries()">
         <div class="form-inner">
           <div class="text">
             <h3>Hemen Bize Ulaşın</h3>
@@ -32,18 +32,20 @@
           </div>
           <form>
             <input type="text" placeholder="Adınız, Soyadınız" v-model="name" name="name">
-            <input type="text" placeholder="E-mail Adresiniz" v-model="email" name="email">
+            <div class="error" v-if="error && !name"> İsim gerekli </div>
+            <input type="email" placeholder="E-mail Adresiniz" v-model="email" name="email">
+            <div class="error" v-if="error && !email">e-posta eksik veya yanlış</div>
             <input type="number" placeholder="Telefon numaranız" v-model="telephone" name="telephone">
-            <!-- <input type="text" placeholder="Hangi ülkede yaşıyorsunuz?" v-model="country" name="country"> -->
-            <!-- <q-select borderless v-model="country" :options="countries" label="Hangi ülkede yaşıyorsunuz?" class="input"
-              " /> -->
-            <select name="" id="" @click="getCountries()">
-
-              <option value="" selected>Hangi ülkede yaşıyorsunuz?</option>
-              <option value="" v-for="(country, n) in countries ">{{ countries[n] }}</option>
+            <div class="error" v-if="error && !email">telefon numaran eksik</div>
+            <select name="" v-model="country" id="" :class="{ 'blacktext': country }">
+              <option :value="null" disabled selected>Hangi ülkede yaşıyorsunuz?</option>
+              <option v-for=" country in countries ">{{ country }}</option>
             </select>
-          </form> 
-          <btn2 @click="submit()" :full="true" text="Bizimle iletişime geçin" />
+            <div class="error" v-if="error && !country">lütfen ikamet ettiğiniz ülkeyi seçin</div>
+
+
+          </form>
+          <btn2 @click=" submit()" :full="true" text="Bizimle iletişime geçin" />
         </div>
       </div>
     </div>
@@ -51,14 +53,14 @@
 </template>
 
 <script setup>
-
-
 defineProps(['text', 'img']);
+
+let error = ref(false)
 
 const name = ref()
 const email = ref()
 const telephone = ref()
-const country = ref()
+const country = ref(null)
 
 const dialog = ref(false)
 
@@ -76,14 +78,17 @@ const submit = async () => {
       })
       .select()
     if (data) {
-      // console.log('succesfull: ' + JSON.stringify(data))
       dialog.value = true
-      // name.value = ''
-      // email.value = ''
-      // telephone.value = ''
-      // country.value = ''
+      name.value = ''
+      email.value = ''
+      telephone.value = ''
+      country.value = null
+      error.value = false
     }
-    if (err) throw err
+    if (err) {
+      error.value = true
+      throw err
+    }
   }
   catch (error) { console.log(error) }
   finally {
@@ -91,20 +96,19 @@ const submit = async () => {
   }
 }
 
-
-
-
 const countries = ref(['turkey', "some other country"])
 const csckey = { headers: { 'X-CSCAPI-KEY': 'Zmt0UVBvWElEVnQzYUp4OXBjRk1HRkY0SFd5RTl2WFJWaGJkbElPeg==' } }
 const getCountries = async () => {
   const { data, pending, error } = await useFetch('https://api.countrystatecity.in/v1/countries', csckey)
-  countries.value = JSON.stringify(data.value)
-  console.log(countries.value)
+  countries.value = data.value
 }
 
-onMounted(() => {
-  getCountries();
-})
+// import countryList from "../countries.json"
+
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.blacktext {
+  color: black;
+}
+</style>
