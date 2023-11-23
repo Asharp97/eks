@@ -8,7 +8,7 @@
     </NuxtLink>
     <div class="gap">
       <section class="titles">
-        <div class="p1">Sık sorulan sorular.</div>
+        <div class="p1">Sıkça sorulan sorular.</div>
 
         <div class="title" id="nav">
           <div class="logo"> EKS <span>LAND</span> </div>

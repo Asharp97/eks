@@ -179,6 +179,9 @@
             .buttons {
               font-size: 10px;
               margin: 0 10px !important;
+              min-width: 81px;
+              max-width: 121px;
+
               button {
                 padding: 5px 0 !important;
               }
@@ -323,6 +326,16 @@
       }
     }
   }
+  .form-inner {
+    .form {
+      .inputWrapper {
+        position: unset;
+      }
+      .error {
+        display: none;
+      }
+    }
+  }
 
   .faq-wrapper {
     .faq {
@@ -401,6 +414,15 @@
     }
     .swiper-wrapper {
       padding-bottom: 0;
+    }
+    .slide {
+      .p1 {
+        width: 300px;
+      }
+      .img {
+        width: 300px;
+        height: 165px;
+      }
     }
   }
 }

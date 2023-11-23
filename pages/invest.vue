@@ -28,9 +28,9 @@
             planlayıp sizleri daha yakından tanıma fırsatı bulmuş olacağız.
           </div>
           <div class="btns">
-            <a href="mailto:destek@eksland.com.tr">
-              <btn2 text="destek@eksland.com.tr" />
-            </a>
+            <!-- <a href="mailto:destek@eksland.com.tr"> -->
+            <btn2 text="destek@eksland.com.tr" />
+            <!-- </a> -->
             <btn2 :inv="true" text="Form Doldur" destination="invest#form" />
           </div>
         </div>

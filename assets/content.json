@@ -26,25 +26,25 @@
       "img": "step-1",
       "title": "Bizimle İletişime Geçin",
       "ps": [
-        "Sitemizde iletişim bölümünde bulunan formu doldurmanız sizinle iletişim kurmamız için yeterli olacaktır ",
-        "Ardından zoom toplantısı planlayıp sizleri",
-        "daha yakından tanıma fırsatı bulmuş olacağız."
+        "İletişim formumuzu doldurmanız ",
+        "zoom toplantısı planlayıp sizleri",
+        "daha yakından tanımamız için yeterli olacaktır."
       ]
     },
     {
       "img": "step-2",
       "title": "Evrakları hazırlayın",
       "ps": [
-        "Beğendiğiniz arsa için depozito göndermeniz ve bulunduğunuz ülkenin ",
-        "büyük elçiliğinden satış için vekaletname vermeniz işlemleri başlatmanız ve satış için gerekli olan evrakları hazırlamanız ",
-        "adına yeterli olacaktır."
+        "Yatırım yapmak istediğiniz arsa için depozito göndermeniz ve yaşadığınız ülkenin ",
+        "büyük elçiliğinden satış için gerekli evrakları ",
+        "hazırlamanız gerekmektedir."
       ]
     },
     {
       "img": "step-3",
       "title": "Tapu sahibi olun",
       "ps": [
-        "Evrak işlemleri ardından sizin için tapu dairesinde randevu oluşturacağız. Satış işleminizi randevu tarihinde gerçekleştirip tapunuzu sizlere teslim edeceğiz. Artık arsa sahibi oldunuz! İstediğiniz gibi değerlendirmeye hazırsınız.",
+        "Tapu dairesinde işlemler sonrası tapunuzu sizlere teslim edeceğiz.  Arazi yatırımı yapmak işte bu kadar kolay!",
         "Şimdi form doldurun!"
       ]
     }
@@ -79,7 +79,7 @@
           "url": "aboutus#bizKimiz"
         },
         {
-          "name": "Sık Sorulan Sorular",
+          "name": "Sıkça Sorulan Sorular",
           "url": "faq"
         },
         {
@@ -110,26 +110,26 @@
       "p": "50 yılı aşkın tecrübelerimiz, onlarca projelerimiz ile sizlere fırsatlar oluşturuyoruz."
     },
     {
-      "title": "Portföyümüzdeki çeşitlilik",
+      "title": "Portföyümüzü inceleyin",
       "icon": "ic:sharp-window",
       "p": "Türkiye’de sizlere sunduğumuz yüzlerce yatırım fırsatı ile seçenekleri çeşitlendiriyoruz."
     },
     {
-      "title": "Tecrübemizden İlham alın",
+      "title": "Yatırımlarınızı çeşitlendirin",
       "icon": "typcn:plus",
-      "p": "lorem ipsu"
+      "p": "Geleceğinizi güvence altına almak ve kazançlarınızı çeşitlendirmek için şimdi bizimle yatırım yapın."
     },
     {
-      "title": "Portföyümüzdeki çeşitlilik",
+      "title": "Hizmetlerimizden faydalanın",
       "icon": "typcn:plus",
-      "p": "lorem ipsu"
+      "p": "Hizmetlerimizle yatırımınızı yönlendirin ve hedeflerinize daha hızlı ulaşın; başarıya giden yolda size rehberlik ediyoruz."
     }
   ],
   "faq": [
     {
-      "label": "Arazi alımı için gerekli belgeler nelerdir?",
+      "label": "Hizmetlerimizden faydalanın",
       "defaultOpen": true,
-      "content": "Arazi alımı için gerekli olan belgeler arazi tapusu, kimlik belgesi, ikametgah belgesi, vergi numarası ve gerekirse vekâletname gibi belgeleri içerebilir. Tam bir liste ve gerekli adımlar hakkında bilgi almak için bizimle iletişime geçebilirsiniz."
+      "content": "Hizmetlerimizle yatırımınızı yönlendirin ve hedeflerinize daha hızlı ulaşın; başarıya giden yolda size rehberlik ediyoruz."
     },
     {
       "label": "Installation",

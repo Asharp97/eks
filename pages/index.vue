@@ -21,7 +21,15 @@
       <div class="popular-ads container" id="container">
         <div class="top mpi">
           <div class="header">
-            <h1>Popüler İlanlar</h1>
+            <div class="title">
+              <h1>Popüler İlanlar</h1>
+              <NuxtLink to="listings">
+                <div class="p1">
+                  İlanlara git
+                  <Icon name="material-symbols:play-circle" />
+                </div>
+              </NuxtLink>
+            </div>
             <div class="sub-title">
               <div class="p1">En çok ilgi gören ilanları öğrenin. <br /> </div>
               <div class="p1">Popüler arazilere göz atın.</div>
@@ -32,7 +40,7 @@
           :scrollbar="{ hide: true }" class="swiper">
           <swiper-slide v-for="n in 8">
             <div class="land">
-              <nuxt-img class="land-img" src="land-1.png" />
+              <nuxt-img  class="land-img" src="land-1.png" />
               <div class="text">
                 <div class="t2"> EKS Land ile Eskişehir’den Yatırımlık Arsa </div>
                 <div class="measurement">
@@ -79,25 +87,15 @@
       <div class="why-Eskisehir big-container">
         <div class="text">
           <div class="display"> Neden </div>
-          <h4> Eskişehir </h4>
-          <div class="display"> Tercih Edilmeli? </div>
-        </div>
-        <div class="p1">
-          Şehrin stratejik konumu, ulaşım altyapısı ve hızla gelişen ekonomisi, arazi değerlerini artırma
-          potansiyeli sunar.
-        </div>
-        <div class="p1">
-          Eskişehir, eğitim kurumları, kültürel etkinlikler ve sağlık hizmetleri gibi yaşam kalitesini
-          yükselten faktörlere sahiptir. Bu nedenle Eskişehir'deki araziler, uzun vadeli yatırımlar için çekici bir fırsat
-          olarak kabul edilir.
+          <h4> Arazi </h4>
+          <div class="display"> Yatırımı Yapılmalı? </div>
         </div>
         <nuxt-img class="why-image" src="whyeskisehir.png" />
-        <btn text="Neden Eskişehir" destination="whyeskisehir" />
       </div>
     </section>
 
     <section class="ask container">
-      <h1 class="mpb">Sık sorulan sorular</h1>
+      <h1 class="mpb">Sıkça sorulan sorular</h1>
       <FaqComponent :faq="faq" class="FaqComponent" />
     </section>
 
