@@ -52,6 +52,7 @@
   "footer": [
     {
       "title": "Sayfalar",
+      "url": "",
       "links": [
         {
           "name": "Anasayfa",
@@ -62,7 +63,7 @@
           "url": "listings"
         },
         {
-          "name": "Nasıl Arsa Alırım",
+          "name": "Nasıl yatırım yapabilirim",
           "url": "invest"
         },
         {
@@ -73,6 +74,7 @@
     },
     {
       "title": "Hakkımızda",
+      "url": "aboutus",
       "links": [
         {
           "name": "Biz kimiz?",

@@ -838,9 +838,11 @@
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    gap: 30px;
 
     .imgDiv {
-      width: 62.3%;
+      // width: 62.3%;
+      flex: 2 0 550px;
       .img {
         border-radius: 20px;
         margin-top: 54px;
@@ -848,7 +850,8 @@
       }
     }
     .textDiv {
-      width: 33.2%;
+      flex: 1 0 200px;
+      // width: 33.2%;
       display: flex;
       flex-direction: column;
       align-items: stretch;

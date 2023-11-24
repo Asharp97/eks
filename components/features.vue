@@ -6,7 +6,7 @@
         <div class="p1">Yatırımınız ile ilgili başlıklar. <br>
           Arazinizin önemli konumlara mesafesini öğrenin.</div>
 
-        <nuxt-img class="features-img" src="features.png" />
+        <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="features-img" src="features.png" />
 
         <div class="vertical-separator"></div>
 

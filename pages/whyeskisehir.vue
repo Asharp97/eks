@@ -24,7 +24,7 @@
 
 
           </div>
-          <nuxt-img class="img" src="graph2.png" />
+          <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px"	 class="img" src="graph2.png" />
           <div class="text">
             <div class="p1">
               Hem eğitim hem de sanayi alanındaki büyüme, şehre olan göçü artırmış ve nüfusu hızla yükseltmiştir. <span>
@@ -122,7 +122,7 @@
           <div class="p1">Ayrıca, Eskişehir'deki organize sanayi bölgeleri ve endüstriyel alanlar, yatırımcılar için uygun
             altyapı ve destek sunmaktadır.</div>
         </div>
-        <nuxt-img class="img" src="nuclear.png" />
+        <nuxt-img sizes="xs:320px sm:384px md:512px lg:635.5px" class="img" src="nuclear.png" />
 
 
       </section>
@@ -131,7 +131,7 @@
         <div class="p2">Türkiye'de Arsa Yatırımı: </div>
         <div class="display">Arsa değerlerinde
           %1071 artış</div>
-        <nuxt-img class="img" src="graph3.png" />
+        <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px"	 class="img" src="graph3.png" />
 
         <div class="columns">
           <div class="column text">
@@ -183,10 +183,10 @@
             </div>
             <div class="listed-images">
               <span id="scroll1" class="scrolled">
-                <nuxt-img class="img" v-for="n in 7" :src='`listed-imgs/${n}.jfif`' />
+                <nuxt-img sizes="200px" class="img" v-for="n in 7" :src='`listed-imgs/${n}.jfif`' />
               </span>
               <span id="scroll2">
-                <nuxt-img class="img" v-for="n in 7" :src='`listed-imgs/${n}.jfif`' />
+                <nuxt-img sizes="200px" class="img" v-for="n in 7" :src='`listed-imgs/${n}.jfif`' />
               </span>
             </div>
           </div>

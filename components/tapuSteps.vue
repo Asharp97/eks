@@ -5,7 +5,7 @@
       <h1>3 Adımda EKSLAND ile Tapu Sahibi Olun</h1>
       <div class="images ">
         <div v-for="(step, n) in steps">
-          <nuxt-img :src="step.img + `.png`" class="img" />
+          <nuxt-img sizes="xs:192px sm:230.4px md:307.2px lg:381.3px" :src="step.img + `.png`" class="img" />
           <div class="t1 mpb">{{ step.title }}</div>
         </div>
       </div>

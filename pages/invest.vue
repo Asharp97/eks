@@ -18,7 +18,7 @@
           Bizimle iletişim <br> Kurun
         </div>
         <div class="number">1</div>
-        <nuxt-img class="img" src="arrow.png" />
+        <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px"	 class="img" src="arrow.png" />
         <div class="zoom">
           <div class="p1">
             Sitemizde iletişim bölümünde bulunan formu doldurmanız sizinle iletişim kurmamız için yeterli olacaktır.
@@ -59,14 +59,14 @@
 
       <section class="thirdstep mpi big-container">
         <div class="sector">
-          <nuxt-img class="img" src="own1.png" />
+          <nuxt-img sizes="588px" class="img" src="own1.png" />
           <div class="p1">Satış işleminizi randevu tarihinde gerçekleştirip tapunuzu sizlere teslim edeceğiz. Artık arsa
             sahibi oldunuz! İstediğiniz gibi değerlendirmeye hazırsınız. Şimdi form doldurun!</div>
           <btn2 :inv="true" text="form doldur" />
         </div>
         <div class="sector2">
-          <nuxt-img class="img" src="own2.png" />
-          <nuxt-img class="img mobile-hide" src="own3.png" />
+          <nuxt-img sizes="433px" class="img" src="own2.png" />
+          <nuxt-img sizes="433px" class="img mobile-hide" src="own3.png" />
         </div>
         <div class="sector3">
           <div class="three">

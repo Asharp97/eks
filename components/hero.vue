@@ -1,6 +1,7 @@
 <template>
   <div class="hero">
-    <nuxt-img   class="landing-image " :src="`${img}.png`" />
+    <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1280px xl:1536px xxl:1536px 2xl:2560px" class="landing-image "
+      :src="`${img}.png`" />
     <div class="landing-page mpi container">
       <div class="landing-text">
         <div class="display">

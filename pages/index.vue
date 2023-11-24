@@ -40,7 +40,7 @@
           :scrollbar="{ hide: true }" class="swiper">
           <swiper-slide v-for="n in 8">
             <div class="land">
-              <nuxt-img  class="land-img" src="land-1.png" />
+              <nuxt-img sizes="375px" class="land-img" src="land-1.png" />
               <div class="text">
                 <div class="t2"> EKS Land ile Eskişehir’den Yatırımlık Arsa </div>
                 <div class="measurement">
@@ -132,7 +132,7 @@ watch(
 )
 
 const getCount = (x) => {
-  count.value = Math.floor(x / 330)
+  count.value = Math.floor(x / 340)
 }
 </script>
 

@@ -7,13 +7,12 @@
             <div class="details">
               <div class="imgDiv">
                 <h2>EKSLAND güvencesiyle yatırım fırsatı</h2>
-                <nuxt-img class="img" src="listing-img.png" />
-
+                <nuxt-img sizes="xs:640px sm:768px md:784px lg:877px" class="img" src="listing-img.png" />
               </div>
               <div class="textDiv">
                 <h4>Arazi fiyatı: 15.000 €</h4>
                 <p>Satın almak için hemen iletişime geçin.</p>
-                
+
                 <hr>
                 <div class="params">
                   <div class="title" v-for="n in 7"> Metrekare: <div class="param"> &nbsp;512m2 </div>
@@ -47,7 +46,7 @@
           <swiper :navigation="true" :loop="true" :modules="modules" class="swiper single-nav"
             @slideNextTransitionStart="nextEnd">
             <swiper-slide v-for="n in 4" class="slide">
-              <nuxt-img class="img" src="closer-look.png" />
+              <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="img" src="closer-look.png" />
             </swiper-slide>
           </swiper>
 

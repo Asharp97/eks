@@ -103,9 +103,6 @@
     section {
       .feature-cards {
         gap: 20px;
-        .card {
-          width: 100% !important;
-        }
       }
       .popular-ads {
         .top {
@@ -120,7 +117,6 @@
           }
         }
       }
-
       .invest-bg {
         text-align: center;
       }
@@ -213,15 +209,7 @@
       }
     }
   }
-  .listing-details {
-    .details {
-      justify-content: center;
-      .imgDiv,
-      .textDiv {
-        width: 100%;
-      }
-    }
-  }
+
   .invest {
     .titles {
       .p1,

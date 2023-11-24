@@ -5,9 +5,9 @@
     <div class="display">
       {{ titlesub }}
     </div>
-    <nuxt-img :src="`${img1}.png`" class="imgH" />
+    <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px"	 :src="`${img1}.png`" class="imgH" />
     <div class="imgs">
-      <nuxt-img v-for='img in img2' :src="img + `.png`" class="imgV" />
+      <nuxt-img sizes="xs:320px sm:384px md:512px lg:635.5px" v-for='img in img2' :src="img + `.png`" class="imgV" />
     </div>
     <div class="text">
       <div class="p1" v-for="t in text">{{ t }}</div>
