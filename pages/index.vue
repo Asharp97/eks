@@ -90,7 +90,7 @@
           <h4> Arazi </h4>
           <div class="display"> Yatırımı Yapılmalı? </div>
         </div>
-        <nuxt-img class="why-image" src="whyeskisehir.png" />
+        <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="why-image" src="whyeskisehir.png" />
       </div>
     </section>
 

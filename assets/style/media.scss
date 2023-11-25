@@ -247,8 +247,10 @@
     }
     .thirdstep {
       gap: 10px;
+      justify-content: space-evenly;
       .sector {
         // max-width: 111px;
+        margin-inline: auto;
         .p1 {
           margin-block: 12px;
           // width: 230%;

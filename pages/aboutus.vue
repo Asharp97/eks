@@ -30,7 +30,7 @@
         <div class="content container mpi">
           <div class="p1">Projelerimiz, portföyümüz, tecrübelerimiz...
             Tüm hizmetleri ile EKSLAND yatırımlarınıza öncü olmak için burada!</div>
-          <div class="cols">
+          <div class="cols mpi">
             <div class="column mpb">
               <nuxt-img sizes="xs:224px sm:268.8px md:358.4px lg:444.85px" class="img" src="nazim.png" />
               <div class="names">

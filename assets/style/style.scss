@@ -44,9 +44,9 @@
     select {
       color: #949494;
       font-size: 1em;
-      &:focus {
-        color: black;
-      }
+      // &:focus {
+      //   color: black;
+      // }
     }
     .phoneNumber {
       select {
@@ -123,7 +123,7 @@
       }
       .mobile-menu {
         height: 100dvh;
-        position: absolute;
+        position: fixed;
         display: flex;
         flex-direction: column;
         gap: 8px;

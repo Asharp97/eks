@@ -1,7 +1,7 @@
 <template>
   <div>
     <NuxtLink :to="`${destination ? '/' + destination : ''}`">
-      <button :class="{ 'inv': inv }">
+      <button type="submit" :class="{ 'inv': inv }">
         {{ text }}
       </button>
     </NuxtLink>

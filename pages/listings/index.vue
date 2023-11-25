@@ -86,7 +86,7 @@
           <div class="white-bg" v-for="n in 14">
             <NuxtLink :to="`listings/${n}`" class="land">
               <div class="img-wrapper">
-                <nuxt-img sizes="375px" class="land-img" src="fillform.png" />
+                <nuxt-img sizes="375px" class="land-img" src="land-1.png" />
               </div>
 
 

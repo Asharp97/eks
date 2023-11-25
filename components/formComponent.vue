@@ -64,10 +64,10 @@
         </select>
       </div>
 
+      <btn2 @click=" submit()" :full="true" text="Bizimle iletişime geçin" />
 
     </form>
 
-    <btn2 @click=" submit()" :full="true" text="Bizimle iletişime geçin" />
   </div>
 </template>
 
@@ -89,6 +89,12 @@ const dialog = ref(false)
 
 const api = useSupabaseClient()
 const submit = async () => {
+  // postInfo()
+  sendEmail()
+
+}
+
+const postInfo = async () => {
   try {
     if (name && email && telephone && country)
       loading.value = true
@@ -122,6 +128,9 @@ const submit = async () => {
   }
 }
 
+const sendEmail = () => {
+  console.log('email')
+}
 
 import countryList from "../assets/countries.json"
 const countries = countryList

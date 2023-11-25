@@ -9,13 +9,14 @@
         </div>
       </div>
       <div class="form-bg">
-        <Form title="Hemen Bize Ulaşın" subtitle="Ücretsiz bilgi edinin." />
+        <formComponent title="Hemen Bize Ulaşın" subtitle="Ücretsiz bilgi edinin." />
       </div>
     </div>
   </div>
 </template>
 
 <script setup>
+
 defineProps(['text', 'img']);
 
 </script>

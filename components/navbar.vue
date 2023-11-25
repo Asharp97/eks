@@ -43,7 +43,7 @@
         </nav>
         <div class="mobile-show">
           <nav class="mobile-menu" :class="{ 'hide-menu': !showMenu }">
-            <button @click="showMenu = !showMenu " class="close">
+            <button @click="showMenu = !showMenu" class="close">
               <Icon name="material-symbols:close-small-outline" />
             </button>
             <div class="contact">
@@ -108,6 +108,14 @@
 <script setup>
 const showMenu = ref(false)
 
+const route = useRoute()
+
+watch(
+  () => route.params,
+  () => {
+    showMenu.value = false
+  }
+)
 </script>
 
 <style lang="scss" scoped></style>
