@@ -65,22 +65,7 @@
     <section class="container">
       <TapuSteps />
     </section>
-    <!-- <section>
-      <div class="invest-bg mpi white-bg">
-        <div class="invest container">
-          <h1>Yatırımınıza değer katmak için yanınızdayız!</h1>
-          <hr class="separator">
-          <div class="boxes">
-            <div class="box" v-for="item in invests">
-              <Icon :name="item.icon" class="icons" />
-              <div class="t1"> {{ item.title }} </div>
-              <div class="t2"> {{ item.p }} </div>
-            </div>
 
-          </div>
-        </div>
-      </div>
-    </section> -->
     <section class="white-bg ">
       <div class="table container mpi">
         <h1>Son <span>5</span> Senede</h1>
