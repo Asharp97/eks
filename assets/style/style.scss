@@ -14,7 +14,6 @@
   box-sizing: border-box;
   scroll-behavior: smooth;
   body {
-    // overflow: hidden;
     background-color: $offwhite;
     color: black;
 
@@ -44,9 +43,9 @@
     select {
       color: #949494;
       font-size: 1em;
-      // &:focus {
-      //   color: black;
-      // }
+      &:focus {
+        color: black;
+      }
     }
     .phoneNumber {
       select {
@@ -58,10 +57,16 @@
       }
     }
 
+    .select {
+      height: 59px !important;
+      background-color: white;
+    }
+
     textarea,
     input,
     .input,
-    select {
+    select,
+    .select {
       border: none;
       border-radius: 7px;
       padding-left: 24px;
@@ -108,7 +113,6 @@
       .desktop-menu {
         width: 66%;
         display: flex;
-
         ul {
           display: flex;
           justify-content: space-between;
@@ -118,6 +122,11 @@
             font-size: 20px;
             font-weight: 400;
             line-height: 48px;
+            cursor: pointer;
+            .icon {
+              margin-bottom: 3px;
+              margin-left: 10px;
+            }
           }
         }
       }
@@ -243,6 +252,11 @@
     }
   }
 }
+.success-icon {
+  color: #11ae0e;
+  font-size: 68px;
+  margin-inline: auto;
+}
 
 .form-inner {
   width: 80%;
@@ -252,6 +266,7 @@
   justify-content: space-between;
   gap: 22px;
   // z-index: -10;
+
   .form {
     display: flex;
     flex-direction: column;
@@ -378,7 +393,6 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      cursor: pointer;
       .frame {
         border-radius: 50%;
         border: 2px solid black;
@@ -608,32 +622,32 @@
       }
     }
 
-    .invest-bg {
-      padding-block: 120px;
-      .invest {
-        .boxes {
-          display: flex;
-          justify-content: space-evenly;
-          flex-wrap: wrap;
-          text-align: center;
-          gap: 136px;
-          .box {
-            flex: 1 0 343px;
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-            align-items: center;
-            .icons {
-              color: $orange;
-              font-size: 40px;
-            }
-          }
-        }
-        .separator {
-          margin-block: 53px;
-        }
-      }
-    }
+    // .invest-bg {
+    //   padding-block: 120px;
+    //   .invest {
+    //     .boxes {
+    //       display: flex;
+    //       justify-content: space-evenly;
+    //       flex-wrap: wrap;
+    //       text-align: center;
+    //       gap: 136px;
+    //       .box {
+    //         flex: 1 0 343px;
+    //         display: flex;
+    //         flex-direction: column;
+    //         gap: 8px;
+    //         align-items: center;
+    //         .icons {
+    //           color: $orange;
+    //           font-size: 40px;
+    //         }
+    //       }
+    //     }
+    //     .separator {
+    //       margin-block: 53px;
+    //     }
+    //   }
+    // }
     .why-Eskisehir {
       display: flex;
       flex-direction: column;
@@ -654,6 +668,46 @@
       }
       .why-image {
         width: 100%;
+      }
+    }
+    .table {
+      text-align: center;
+      padding-block: 75px;
+      h1 {
+        span {
+          color: $orange;
+        }
+      }
+      h4 {
+        color: $gray;
+        margin-block: 46px;
+      }
+      table {
+        width: 100%;
+        margin-top: 176px;
+        border-collapse: collapse;
+        td,
+        th {
+          &:first-child {
+            text-align: start;
+          }
+        }
+        td {
+          padding-block: 12px;
+          color: #424242;
+          font-size: 20px;
+          font-weight: 500;
+          border-top: 1px solid $gray;
+          .icon {
+            font-style: 43px;
+            margin-right: 20px;
+          }
+        }
+        th {
+          font-size: 22px;
+          font-weight: 600;
+          padding-block: 20px;
+        }
       }
     }
   }
@@ -695,7 +749,7 @@
           width: 97px;
           text-align: center;
           border-left: 1px solid #d5d5d5;
-          font-size: 12px;
+          font-size: 15px;
           font-weight: 500;
         }
       }
@@ -828,11 +882,17 @@
   }
 }
 .q-card {
-  background: #1d1d1d;
-  color: white;
+  // background: #1d1d1d;
+  // color: white;
+  text-align: center;
+  padding: 40px;
+  .logo {
+    font-size: 30px;
+  }
 }
 
 .listing-details {
+  overflow-x: hidden;
   .details {
     padding-block: 63px;
     display: flex;
@@ -1248,7 +1308,12 @@
 }
 
 .whyeskisehir {
+  overflow-x: hidden;
   .population {
+    padding-block: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     .title {
       display: flex;
       justify-content: space-between;
@@ -1277,6 +1342,9 @@
   .young {
     text-align: center;
     margin-block: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
     .columns {
       display: flex;
       justify-content: space-evenly;
@@ -1343,7 +1411,6 @@
       color: $gray;
     }
   }
-
   .manufacture {
     display: flex;
     align-items: center;
@@ -1365,7 +1432,7 @@
     text-align: center;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 100px;
     .img {
       width: 100%;
     }
@@ -1492,7 +1559,7 @@
   gap: $sectionGap;
 }
 .container {
-  width: 100%;
+  width: 99%;
   margin-inline: auto;
   max-width: 1271px;
 }
@@ -1564,7 +1631,7 @@
   }
   .swiper {
     overflow-x: visible;
-    padding-block: 150px;
+    padding-block: 90px;
     width: 100%;
   }
   .swiper-slide-active {

@@ -8,7 +8,6 @@
 
       <section class="white-bg">
         <div class="population container">
-
           <div class="p1">
             Eskişehir’de öne çıkan başlıklar
           </div>

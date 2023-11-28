@@ -14,31 +14,61 @@
 
         <nav class="mobile-hide desktop-menu">
           <ul>
-            <NuxtLink to="/">
-              <li>
+            <li>
+              <NuxtLink to="/">
                 Anasayfa
-              </li>
-            </NuxtLink>
-            <NuxtLink to="/listings">
-              <li>
+              </NuxtLink>
+            </li>
+            <li>
+              <NuxtLink to="/listings">
                 İlanlar
-              </li>
-            </NuxtLink>
-            <NuxtLink to="/invest">
-              <li>
-                Nasıl yatırım yapabilirim?
-              </li>
-            </NuxtLink>
-            <NuxtLink to="/aboutus">
-              <li>
-                Hakkımızda
-              </li>
-            </NuxtLink>
-            <NuxtLink to="/contact">
-              <li>
+              </NuxtLink>
+            </li>
+            <li>
+              Şehirler
+              <span>
+                <Icon name="ph:caret-down-light" class="icon" />
+              </span>
+              <q-menu fit transition-show="jump-down" transition-hide="jump-up">
+                <q-list>
+                  <q-item clickable v-close-popup>
+                    <NuxtLink to="/whyeskisehir" style="display: flex;align-items: center;">
+                      <q-item-section>Eskişehir</q-item-section>
+                    </NuxtLink>
+                  </q-item>
+                </q-list>
+              </q-menu>
+            </li>
+            <li>
+              Kurumsal
+              <span>
+                <Icon name="ph:caret-down-light" class="icon" />
+              </span>
+              <q-menu fit transition-show="jump-down" transition-hide="jump-up">
+                <q-list>
+                  <q-item clickable v-close-popup>
+                    <NuxtLink to="/invest" style="display: flex;align-items: center;">
+                      <q-item-section>Nasıl yatırım yapabilirim?</q-item-section>
+                    </NuxtLink>
+                  </q-item>
+                  <q-item clickable v-close-popup>
+                    <NuxtLink to="/faq" style="display: flex;align-items: center;">
+                      <q-item-section>Aklınızda soru kalmasın</q-item-section>
+                    </NuxtLink>
+                  </q-item>
+                  <q-item clickable v-close-popup>
+                    <NuxtLink to="/aboutus" style="display: flex;align-items: center;">
+                      <q-item-section>Hakkımızda</q-item-section>
+                    </NuxtLink>
+                  </q-item>
+                </q-list>
+              </q-menu>
+            </li>
+            <li>
+              <NuxtLink to="/contact">
                 Bize Ulaşın
-              </li>
-            </NuxtLink>
+              </NuxtLink>
+            </li>
           </ul>
         </nav>
         <div class="mobile-show">

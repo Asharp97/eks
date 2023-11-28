@@ -70,12 +70,11 @@
           <slider :swiper="swipedata" space="300" />
         </div>
       </section>
-
       <section class="container">
         <TapuSteps />
       </section>
     </div>
-  </div>
+  </div>  
 </template>
 
 <script setup>

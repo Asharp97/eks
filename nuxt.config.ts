@@ -6,7 +6,13 @@ export default defineNuxtConfig({
     "@nuxtjs/supabase",
     "nuxt-quasar-ui",
     "@vueuse/nuxt",
+    "@ant-design-vue/nuxt",
+    "@pinia/nuxt",
+    "@pinia-plugin-persistedstate/nuxt",
   ],
+  build: {
+    transpile: ["pinia-plugin-persistedstate"],
+  },
   image: {
     provider: "imagekit",
     imagekit: {

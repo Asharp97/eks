@@ -10,8 +10,10 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@ant-design-vue/nuxt": "^1.2.0",
     "@nuxt/devtools": "latest",
     "@nuxtjs/supabase": "^1.1.2",
+    "@pinia-plugin-persistedstate/nuxt": "^1.2.0",
     "nuxt": "^3.7.3",
     "nuxt-icon": "^0.5.0",
     "nuxt-quasar-ui": "^2.0.6",
@@ -19,6 +21,7 @@
   },
   "dependencies": {
     "@nuxt/image": "^1.0.0-rc.2",
+    "@pinia/nuxt": "^0.5.1",
     "@quasar/extras": "^1.16.7",
     "@supabase/supabase-js": "^2.38.0",
     "@vueuse/nuxt": "^10.6.1",

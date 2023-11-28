@@ -214,6 +214,51 @@
       "icon": "mdi:cloud-percent",
       "param": "istanbul",
       "number": "200KM"
+    },
+    {
+      "icon": "bxs:plane-land",
+      "param": "istanbul",
+      "number": "200KM"
+    },
+    {
+      "icon": "fa6-solid:map-location-dot",
+      "param": "istanbul",
+      "number": "200KM"
+    },
+    {
+      "icon": "wpf:statistics",
+      "param": "istanbul",
+      "number": "200KM"
+    },
+    {
+      "icon": "material-symbols:factory",
+      "param": "istanbul",
+      "number": "200KM"
+    },
+    {
+      "icon": "mdi:city",
+      "param": "istanbul",
+      "number": "200KM"
+    },
+    {
+      "icon": "vaadin:road",
+      "param": "istanbul",
+      "number": "200KM"
+    },
+    {
+      "icon": "mdi:city",
+      "param": "istanbul",
+      "number": "200KM"
+    },
+    {
+      "icon": "game-icons:village",
+      "param": "istanbul",
+      "number": "200KM"
+    },
+    {
+      "icon": "mdi:cloud-percent",
+      "param": "istanbul",
+      "number": "200KM"
     }
   ],
   "eskisehirSlide": [
@@ -368,5 +413,63 @@
       "title": "Piyasa Değeri",
       "details": "Arsanın piyasa değerini belirlemek için bölgeyi araştırmalı ve benzer arsa satışlarına bakmalısınız."
     }
-  ]
+  ],
+  "table": {
+    "header": [
+      "Yatırım Araçları",
+      "2019",
+      "2020",
+      "2021",
+      "2022",
+      "2023",
+      "Şu an"
+    ],
+    "body": [
+      [
+        { "icon": "logos:bitcoin", "name": "Kripto Para" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" }
+      ],
+      [
+        { "icon": "lucide:land-plot", "name": "Kripto Para" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" }
+      ],
+      [
+        { "icon": "mdi:gold", "name": "Kripto Para" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" }
+      ],
+      [
+        { "icon": "cryptocurrency-color:usd", "name": "Kripto Para" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" }
+      ],
+      [
+        { "icon": "solar:euro-bold", "name": "Kripto Para" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" },
+        { "name": "value" }
+      ]
+    ]
+  }
 }

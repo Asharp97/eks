@@ -1,7 +1,7 @@
 <template>
   <div>
     <NuxtLink :to="`${destination ? '/' + destination : ''}`">
-      <button type="submit" :class="{ 'inv': inv }">
+      <button type="button" :class="{ 'inv': inv }">
         {{ text }}
       </button>
     </NuxtLink>
@@ -26,6 +26,14 @@ button {
   font-weight: 500;
 }
 
+button {
+  &:active {
+    // background-color: $gray;
+    // border: 2px solid $gray;
+    
+  }
+
+}
 
 .inv {
   color: $orange ;

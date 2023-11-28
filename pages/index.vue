@@ -65,8 +65,7 @@
     <section class="container">
       <TapuSteps />
     </section>
-
-    <section>
+    <!-- <section>
       <div class="invest-bg mpi white-bg">
         <div class="invest container">
           <h1>Yatırımınıza değer katmak için yanınızdayız!</h1>
@@ -80,6 +79,28 @@
 
           </div>
         </div>
+      </div>
+    </section> -->
+    <section class="white-bg ">
+      <div class="table container mpi">
+        <h1>Son <span>5</span> Senede</h1>
+        <h4> Türkiye </h4>
+        <h1>Yatırım araçlarındaki değişiklikler</h1>
+        <table>
+          <thead>
+            <tr>
+              <th v-for="header in table.header">{{ header }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for=" row in table.body">
+              <td v-for="data in row">
+                <Icon :name="data.icon" class="icon" v-if="data.icon" />
+                {{ data.name }}
+              </td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </section>
 
@@ -114,12 +135,14 @@ import content from "../assets/content.json"
 const feature = content.features
 const invests = content.invests
 const faq = content.faq
+const table = content.table
 
 let count = ref(3)
 let containerWidth = ref(null)
 onMounted(() => {
   let containerWidth = document.getElementById('container').offsetWidth
   getCount(containerWidth)
+  
 })
 
 
@@ -134,6 +157,8 @@ watch(
 const getCount = (x) => {
   count.value = Math.floor(x / 340)
 }
+
+
 </script>
 
 
