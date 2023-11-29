@@ -36,24 +36,27 @@
         <table>
           <thead>
             <tr>
-              <th v-for="header in ilanHeader">{{ header }}</th>
+              <th v-for="header in ilanHeader">{{ header.label }}</th>
             </tr>
           </thead>
           <tbody>
             <tr v-for="row in ilanlar ">
-              <td v-for="(data, n) in row" :class="{ 'hide': n == 'created_at' }">
+
+              <td v-for="data in row">
                 {{ data }}
+              </td>
+              <td>
+                <Icon name="ic:baseline-delete" class="icon" />
               </td>
             </tr>
           </tbody>
         </table>
       </div>
       <div class="postAd" v-if="tabs[1]">
-        <div v-for="input in ilanHeader" class="input-wrapper">
-          <label for="">{{ input }}</label>
-          <input :placeholder="input">
+        <div v-for="(param, n) in ilanHeader" class="input-wrapper">
+          <input :type="param.type" v-model="newAd[n]" :placeholder="param.label">
         </div>
-        <btn2 text="ilan Ekle" @click="postAd" />
+        <btn2 text="Ilan Ekle" @click="postAd()"/>
       </div>
 
     </div>
@@ -61,6 +64,7 @@
 </template>
 
 <script setup>
+//User
 import { useStore } from '../stores/useUserStore.ts'
 const store = useStore()
 
@@ -92,6 +96,7 @@ const signup = async () => {
   })
 }
 
+//Tabs
 const tabs = ref([true, false, false])
 
 const toggleTabs = (x) => {
@@ -103,13 +108,14 @@ const toggleTabs = (x) => {
   }
 }
 
-const clients = ref('')
-const ilanlar = ref('')
-
+//JSON
 import content from '../assets/content.json'
 const clientHeader = content.clientHeader
 const ilanHeader = content.ilanHeader
+const ilanHeaderTwo = content.ilanHeaderTwo
 
+//Contacts
+const clients = ref('')
 const getClients = async () => {
   const { data, error } = await supabase
     .from('contact')
@@ -118,6 +124,8 @@ const getClients = async () => {
     clients.value = data
 }
 
+//Ads
+const ilanlar = ref('')
 const getIlanlar = async () => {
   const { data, error } = await supabase
     .from('ads')
@@ -126,19 +134,18 @@ const getIlanlar = async () => {
     ilanlar.value = data
 }
 
+//New Ad
+const newAd = reactive([])
 const postAd = async () => {
   const { error } = await supabase
     .from('ads')
-    .insert({
-      
-    })
+    .insert({newAd})
 }
 
 onMounted(() => {
   getClients()
   getIlanlar()
 })
-
 </script>
 
 
@@ -169,6 +176,7 @@ onMounted(() => {
   table {
     width: 100%;
     border-collapse: collapse;
+    overflow: scroll;
 
     td,
     th {
@@ -181,23 +189,22 @@ onMounted(() => {
   td {
     text-align: start;
     border: 1px solid lightgray;
+
   }
 
   .postAd {
     display: flex;
-    flex-direction: column;
     align-items: center;
+    flex-direction: column;
     gap: 20px;
-
     .input-wrapper {
       width: 500px;
     }
-
   }
 
+}
 
-  .hide {
-    display: none;
-  }
+.hide {
+  display: none;
 }
 </style>

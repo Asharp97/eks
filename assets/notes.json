@@ -11,8 +11,8 @@
 
 // camel case of alan1
 landPrice
-cityOfLocation
-districtOfLocation
+cityLocation
+districtLocation
 squareMeters
 pricePerSquareMeter
 islandNo
@@ -32,15 +32,15 @@ imgs
 - Distance of the land to the industrial zone
 
 // camel case of alan2
-distanceIstanbul
-distanceAnkara
-distanceCityCenter
-distanceSettlement
-distanceAirport
-Land sales rate of the region
-Region real estate value in the last 5 years
-Valuation rate of regional lands (Annual)
-Distance of the land to the industrial zone
+istanbulDistance
+ankaraDistance
+cityCenterDistance
+nearestSettlementDistance
+airportDistance
+landSalesRate
+realEstateValueLast5Years
+regionalLandsValuationRate
+landToIndustrialZoneDistancee
 
 Alan 1
 - Arazi Fiyatı
