@@ -87,8 +87,8 @@ const signout = async () => {
 }
 const signup = async () => {
   const { data, error } = await supabase.auth.signUp({
-    email: 'ali-his',
-    password: 'alialiali',
+    email: '',
+    password: '',
   })
 }
 

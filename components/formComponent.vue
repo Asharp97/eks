@@ -96,13 +96,13 @@ const emailCheck = () => {
     return false
 }
 
-const api = useSupabaseClient()
+const supabase = useSupabaseClient()
 const postInfo = async () => {
   try {
     if (name && email && telephone && country)
       loading.value = true
 
-    const { data, err } = await api
+    const { data, err } = await supabase
       .from('contact')
       .insert({
         name: name.value,

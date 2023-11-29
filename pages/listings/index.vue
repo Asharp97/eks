@@ -1,7 +1,5 @@
 <template>
   <div class="listings container">
-
-
     <div class="top">
       <div class="t2 land-count"> 115 Adet İlan Bulundu </div>
       <div class="headers mobile-hide white-bg">
@@ -47,7 +45,6 @@
     </div>
 
     <div class="filter-listing-row" :class="{ 'hide-filter': !showFilter }">
-
       <div class="filter">
         <div class="filter-inner white-bg">
           <div class="t2"> Fiyat </div>
@@ -56,9 +53,7 @@
             -
             <input type="number" v-model="price.max" min="1" max="100">
           </div>
-          <q-range v-model="price" :min="0" :max="100" @change="print(price)" color="black" thumb-color="black" label />
-
-
+          <q-range v-model="price" :min="0" :max="100" color="black" thumb-color="black" label />
           <div class="t2">
             Metrekare
           </div>
@@ -67,7 +62,7 @@
             -
             <input type="number" v-model="km.max" min="1" max="100">
           </div>
-          <q-range v-model="km" :min="0" :max="100" @change="print(km)" color="black" thumb-color="black" label />
+          <q-range v-model="km" :min="0" :max="100" color="black" thumb-color="black" label />
 
           <div class="t2">
             İlçeler
@@ -138,8 +133,27 @@ definePageMeta({
   layout: 'invert-nav-color'
 })
 
+const ilanlar = ref([])
+const getIlanlar = async () => {
+  const { data, error } = await supabase
+    .from('ads')
+    .select()
+  if (data)
+    ilanlar.value = data
+}
 
-const print = (x) => { console.log(x) }
+onMounted(() => {
+  getIlanlar()
+})
+
+watch(
+  () => [price.value, km.value, city.value],
+  () => {
+    // console.log('price: ' + price.value.min + '-' + price.value.max)
+    // console.log('km: ' + km.value.min + '-' + km.value.max)
+    console.log('city: ' + city.value)
+  }
+)
 </script>
 
 <style lang="scss" scoped>
