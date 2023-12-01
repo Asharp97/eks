@@ -68,8 +68,8 @@
             İlçeler
           </div>
           <div class="checklist">
-            <q-checkbox size="lg" dense v-model="city[n - 1]" :label="`city name ${n - 1}`" color="black" v-for="n in 8"
-              class="check" :class="{ 'active': city[n - 1] }" />
+            <q-checkbox size="lg" dense v-model="city[n]" :label="ilce" color="black"
+              v-for="(ilce, n) in ilceler" class="check" :class="{ 'active': city[n] }" />
           </div>
 
           <btn2 text="Sonuçları Listele" />
@@ -123,9 +123,12 @@
 </template>
 
 <script setup>
+import content from '../assets/content.json'
+const ilceler = content.eskisehirDistricts
+
 const price = ref({ min: 0, max: 100 })
 const km = ref({ min: 0, max: 100 })
-let city = ref(new Array(8).fill(false))
+let city = ref(new Array(14).fill(false))
 
 const showFilter = ref(true)
 
@@ -134,6 +137,7 @@ definePageMeta({
 })
 
 const ilanlar = ref([])
+const supabase = useSupabaseClient()
 const getIlanlar = async () => {
   const { data, error } = await supabase
     .from('ads')

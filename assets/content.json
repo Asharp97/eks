@@ -472,29 +472,33 @@
       ]
     ]
   },
-  "clientHeader": ["id", "name", "mail", "telephone", "country"],
+  "clientHeader": ["ID", "name", "mail", "telephone", "country"],
   "ilanHeader": [
-    { "label": "Arazi Fiyatı", "type": "number" },
-    { "label": "Bulunduğu Şehir", "type": "text" },
-    { "label": "Bulunduğu İlçe", "type": "text" },
-    { "label": "Metrekare", "type": "number" },
-    { "label": "Metrekare fiyatı", "type": "number" },
-    { "label": "Ada no", "type": "number" },
-    { "label": "Pafta no", "type": "number" },
-    { "label": "Parsel no", "type": "number" },
-    { "label": "img", "type": "file" },
-    { "label": "İstanbul'a olan uzaklık", "type": "number" },
-    { "label": "Ankaraya olan uzaklık", "type": "number" },
-    { "label": "Şehir Merkezine olan uzaklık", "type": "number" },
-    { "label": "En yakın yerleşim yerine olan uzaklık", "type": "number" },
-    { "label": "Havaalanına olan uzaklık", "type": "number" },
-    { "label": "Bölgenin arsa satış oranı", "type": "number" },
-    { "label": "Son 5 Yıldaki bölge emlak değeri", "type": "number" },
-    {
-      "label": "Bölge arazilerinin değerlenme oranı (Yıllık)",
-      "type": "number"
-    },
-    { "label": "Arsanın sanayı bölgesine uzaklığı", "type": "number" }
+    "ID",
+    "Arazi Fiyatı €",
+    "Bulunduğu Şehir",
+    "Bulunduğu İlçe",
+    "Metrekare",
+    "Metrekare fiyatı",
+    "Ada no",
+    "Pafta no",
+    "Parsel no",
+    "daha goster"
+  ],
+  "eskisehirDistricts": [
+    "Eskişehir Central",
+    "Beylikova",
+    "Çifteler",
+    "Günyüzü",
+    "Han",
+    "İnönü",
+    "Mahmudiye",
+    "Mihalgazi",
+    "Mihalıççık",
+    "Odunpazarı",
+    "Sarıcakaya",
+    "Seyitgazi",
+    "Sivrihisar",
+    "Tepebaşı"
   ]
-
 }

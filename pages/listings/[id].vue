@@ -102,6 +102,7 @@ definePageMeta({ layout: 'invert-nav-color' })
 import content from "../../assets/content.json"
 const swipedata = content.eskisehirSlide
 const lookcloser = content.lookcloser
+const ilce = content.eskisehirDistricts
 const img2 = ['step-1', 'step-2']
 
 </script>

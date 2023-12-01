@@ -18,7 +18,7 @@ pricePerSquareMeter
 islandNo
 sheetNo
 plotNumber
-imgs
+imgURL
 
 // name of alan2 in english
 - Distance to Istanbul
@@ -28,7 +28,7 @@ imgs
 - Distance to the airport
 - Land sales rate of the region
 - Region real estate value in the last 5 years
-- Valuation rate of regional lands (Annual)
+- Valuation rate of regional lands (Annual) 
 - Distance of the land to the industrial zone
 
 // camel case of alan2

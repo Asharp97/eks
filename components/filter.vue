@@ -26,8 +26,9 @@
           İlçeler
         </div>
         <div class="checklist">
-          <q-checkbox size="lg" dense v-model="city[n - 1]" label="city name" color="black" v-for="n in 8" class="check"
-            :class="{ 'active': city[n - 1] }" />
+          <q-checkbox size="lg" dense v-model="city[n - 1]" :label="ilce" color="black" 
+            class="check" :class="{ 'active': city[n - 1] }" />
+            {{ ilce }}
         </div>
 
         <btn2 text="Sonuçları Listele" />
@@ -43,6 +44,9 @@ const km = ref({ min: 0, max: 100 })
 let city = ref(new Array(8).fill(false))
 
 const print = (x) => { console.log(x) }
+
+import content from '../assets/content.json'
+const ilceler = content.eskisehirDistricts
 </script>
 
 <style lang="scss" scoped></style>
