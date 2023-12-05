@@ -481,5 +481,27 @@
     "Ada no",
     "Pafta no",
     "Parsel no"
+  ],
+  "fullParams": [
+    "id",
+    "created_at",
+    "Arazi Fiyatı",
+    "Bulunduğu Şehir",
+    "Bulunduğu İlçe",
+    "Metrekare",
+    "Metrekare fiyatı",
+    "Ada no",
+    "Pafta no",
+    "Parsel no",
+    "imgURL",
+    "İstanbul'a olan uzaklık",
+    "Ankaraya olan uzaklık",
+    "Şehir Merkezine olan uzaklık",
+    "En yakın yerleşim yerine olan uzaklık",
+    "Havaalanına olan uzaklık",
+    "Bölgenin arsa satış oranı",
+    "Son 5 Yıldaki bölge emlak değeri",
+    "Bölge arazilerinin değerlenme oranı (Yıllık)",
+    "Arsanın sanayı bölgesine uzaklığı"
   ]
 }

@@ -171,7 +171,18 @@
       <q-dialog v-model="overlay">
         <q-card>
           <q-card-section class="q-pt-none">
-            {{ ilan }}
+            <div v-for="(x, n, q) in ilan" :class="{ 'hide': q == 0 || q == 1 || n == 'imgURL' }">
+              <div class="edit">
+
+                <div class="p1 param">
+                  {{ fullParams[q] }}:
+                </div>
+                <div class="p2 data">
+                  <input :value="x">
+                  <!-- {{ x }} -->
+                </div>
+              </div>
+            </div>
           </q-card-section>
 
           <q-separator />
@@ -185,22 +196,49 @@
         </q-card>
       </q-dialog>
 
+
+      <q-dialog v-model="success">
+        <q-card>
+          <q-card-section class="q-pt-none">
+            <Icon name="clarity:success-standard-line" class="icon" />
+          </q-card-section>
+
+          <q-separator />
+
+          <q-card-actions align="right">
+            <h1>Yuklendi</h1>
+          </q-card-actions>
+        </q-card>
+      </q-dialog>
+
+      <q-inner-loading :showing="loading" />
+
     </div>
   </div>
 </template>
 
 <script setup>
+let loading = ref(false)
+
+//JSON
+import content from '../assets/content.json'
+const clientHeader = content.clientHeader
+const ilanHeader = content.ilanHeader
+const fullParams = content.fullParams
+
 // editAd
-let overlay = ref(true)
+let overlay = ref(false)
 let ilan = ref({})
 const getIlan = async (id) => {
   overlay.value = true
+  loading.value = true
   const { data, error } = await supabase
     .from('lands')
     .select()
     .eq('id', id)
   if (data)
     ilan.value = data[0]
+  loading.value = false
   console.log(ilan.value)
 }
 
@@ -251,10 +289,6 @@ const toggleTabs = (x) => {
     getIlanlar()
 }
 
-//JSON
-import content from '../assets/content.json'
-const clientHeader = content.clientHeader
-const ilanHeader = content.ilanHeader
 
 //Contacts
 const clients = ref({})
@@ -271,6 +305,7 @@ const deleteClients = async (id) => {
     .from('contact')
     .delete()
     .eq('id', id)
+  getClients()
   if (error)
     console.log(error)
 }
@@ -290,22 +325,25 @@ const deleteIlan = async (id) => {
     .from('lands')
     .delete()
     .eq('id', id)
+  getIlanlar()
   if (error)
     console.log(error)
 }
 const editIlan = async (id) => {
   const { error } = await supabase
     .from('lands')
-    .update({ landPrice: 5555 })
+    .update()
     .eq('id', id)
-  console.log(id)
+  getIlanlar()
   if (error)
     console.log(error)
 }
 
 //New Ad
 const newAd = { imgURL: [] }
+const success = ref(false)
 const postAd = () => {
+  loading.value = true
   if (imgFile)
     imgUpload()
   else
@@ -313,12 +351,17 @@ const postAd = () => {
 }
 
 const postAdData = async () => {
+  console.log('eh')
   const { data, error } = await supabase
     .from('lands')
     .insert(newAd)
     .select()
-  if (data)
-    console.log(data)
+  if (data) {
+    success.value = true
+    newAd = { imgURL: [] }
+  }
+  loading.value = false
+
 }
 
 // New Image Locally
@@ -368,3 +411,23 @@ const getImgURL = async (name, i) => {
   }
 }
 </script>
+
+<style>
+.hide {
+  display: none;
+}
+
+.edit {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .param {
+    text-align: start;
+  }
+
+  .input {
+    width: fit-content;
+  }
+}
+</style>

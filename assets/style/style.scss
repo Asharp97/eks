@@ -640,6 +640,7 @@
       text-align: center;
       display: flex;
       gap: 65px;
+     
       .text {
         display: flex;
         flex-direction: column;
@@ -1306,6 +1307,9 @@
 
 .whyeskisehir {
   overflow-x: hidden;
+  .display {
+    margin-bottom: 60px;
+  }
   .population {
     padding-block: 100px;
     display: flex;
@@ -1459,6 +1463,7 @@
       .content {
         display: flex;
         padding-inline: 100px;
+        gap: 40px;
         .faqwrapper {
           display: flex;
           align-items: center;
@@ -1558,6 +1563,8 @@
       }
     }
   }
+
+
 
   .icon {
     cursor: pointer;
@@ -1705,7 +1712,7 @@
   color: $orange;
 }
 
-.gapH{
+.gapH {
   display: flex;
   gap: 20px;
 }
