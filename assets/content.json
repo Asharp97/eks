@@ -172,93 +172,39 @@
   "sliders": [
     {
       "icon": "bxs:plane-land",
-      "param": "istanbul",
-      "number": "200KM"
+      "param": "Havaalanına Uzaklık"
     },
     {
       "icon": "fa6-solid:map-location-dot",
-      "param": "istanbul",
-      "number": "200KM"
+      "param": "Son 5 Yılda Emlak Değeri"
     },
     {
       "icon": "wpf:statistics",
-      "param": "istanbul",
-      "number": "200KM"
+      "param": "Bölge Arazilerinin Değerlenme Oranı"
     },
     {
       "icon": "material-symbols:factory",
-      "param": "istanbul",
-      "number": "200KM"
+      "param": "Sanayı Bülgesıne Mesafe"
     },
     {
       "icon": "mdi:city",
-      "param": "istanbul",
-      "number": "200KM"
+      "param": "İstanbul"
     },
     {
       "icon": "vaadin:road",
-      "param": "istanbul",
-      "number": "200KM"
+      "param": "Ankara"
     },
     {
       "icon": "mdi:city",
-      "param": "istanbul",
-      "number": "200KM"
+      "param": "Şehir Merkezi"
     },
     {
       "icon": "game-icons:village",
-      "param": "istanbul",
-      "number": "200KM"
+      "param": "En Yakin Yerleşim Yeri"
     },
     {
       "icon": "mdi:cloud-percent",
-      "param": "istanbul",
-      "number": "200KM"
-    },
-    {
-      "icon": "bxs:plane-land",
-      "param": "istanbul",
-      "number": "200KM"
-    },
-    {
-      "icon": "fa6-solid:map-location-dot",
-      "param": "istanbul",
-      "number": "200KM"
-    },
-    {
-      "icon": "wpf:statistics",
-      "param": "istanbul",
-      "number": "200KM"
-    },
-    {
-      "icon": "material-symbols:factory",
-      "param": "istanbul",
-      "number": "200KM"
-    },
-    {
-      "icon": "mdi:city",
-      "param": "istanbul",
-      "number": "200KM"
-    },
-    {
-      "icon": "vaadin:road",
-      "param": "istanbul",
-      "number": "200KM"
-    },
-    {
-      "icon": "mdi:city",
-      "param": "istanbul",
-      "number": "200KM"
-    },
-    {
-      "icon": "game-icons:village",
-      "param": "istanbul",
-      "number": "200KM"
-    },
-    {
-      "icon": "mdi:cloud-percent",
-      "param": "istanbul",
-      "number": "200KM"
+      "param": "Arsa Satış Oranı"
     }
   ],
   "eskisehirSlide": [
@@ -486,12 +432,8 @@
     "daha goster"
   ],
   "eskisehirDistricts": [
-    "Eskişehir Central",
-    "Beylikova",
-    "Çifteler",
     "Günyüzü",
     "Han",
-    "İnönü",
     "Mahmudiye",
     "Mihalgazi",
     "Mihalıççık",
@@ -500,5 +442,44 @@
     "Seyitgazi",
     "Sivrihisar",
     "Tepebaşı"
+  ],
+  "sort": [
+    {
+      "text": "Fiyat (önce en yüksek)",
+      "obj": {
+        "col": "landPrice",
+        "asc": false
+      }
+    },
+    {
+      "text": "Fiyat (önce en Düşük)",
+      "obj": {
+        "col": "landPrice",
+        "asc": true
+      }
+    },
+    {
+      "text": "Metrekare (önce en yüksek)",
+      "obj": {
+        "col": "squareMeters",
+        "asc": false
+      }
+    },
+    {
+      "text": "Metrekare (önce en Düşük)",
+      "obj": {
+        "col": "squareMeters",
+        "asc": true
+      }
+    }
+  ],
+  "params": [
+    "Bulunduğu Şehir",
+    "Bulunduğu İlçe",
+    "Metrekare",
+    "Metrekare fiyatı",
+    "Ada no",
+    "Pafta no",
+    "Parsel no"
   ]
 }

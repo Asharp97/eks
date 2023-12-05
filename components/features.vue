@@ -9,16 +9,28 @@
         <div class="vertical-separator"></div>
         <swiper :slidesPerView="count" :modules="modules" :navigation="true" :loop="true" class="swiper single-nav "
           @slideNextTransitionStart="nextEnd">
-          <swiper-slide v-for="(slider, n) in sliders" class="slide" :class="{ 'active-slide': n == i }">
+          <swiper-slide v-for="(x, n, q) in data" class="slide" :class="{ 'active-slide': q == i }">
             <div class="frame">
               <div class="background">
-                <Icon :name="slider.icon" class="icon" />
+                <Icon  :name="sliders[q].icon" class="icon" />
               </div>
             </div>
             <div class="feature-details">
-              <div class="t2"> {{ slider.param }} </div>
+              <div class="t2"> {{ sliders[q].param }} </div>
               <hr>
-              <h4> {{ slider.number }} </h4>
+              <h4> {{ x }}</h4>
+            </div>
+          </swiper-slide>
+          <swiper-slide v-for="(x, n, q) in data" class="slide" :class="{ 'active-slide': q == i }">
+            <div class="frame">
+              <div class="background">
+                <Icon :name="sliders[q].icon" class="icon" />
+              </div>
+            </div>
+            <div class="feature-details">
+              <div class="t2"> {{ sliders[q].param }} </div>
+              <hr>
+              <h4> {{ x }} KM</h4>
             </div>
           </swiper-slide>
         </swiper>
@@ -33,6 +45,7 @@
 </template>
 
 <script setup>
+defineProps(['data'])
 import content from "../assets/content.json"
 const sliders = content.sliders
 
@@ -47,7 +60,7 @@ let activePag = ref(4)
 let count = ref(4)
 
 const nextEnd = () => {
-  if (i.value < 17)
+  if (i.value < 8)
     i.value += 1
   else
     i.value = 0
@@ -58,33 +71,10 @@ const nextEnd = () => {
     activePag.value = 0
 }
 
-
 onMounted(() => {
   let containerWidth = document.getElementById('container').offsetWidth
   getCount(containerWidth)
 })
-
-
-// const clickHandle = (s) => {
-//   const swiper = document.querySelector('.swiper').swiper;
-
-
-//   if (swiper.activeIndex == 9 && s == 14) {
-//     swiper.slideNext()
-//   }
-
-//   if (s < 4) {
-//     i.value = s
-//     swiper.slideTo((s - 4) + 9)
-//   }
-//   else {
-//     i.value = s
-//     swiper.slideTo(s - 4)
-//   }
-
-// }
-
-
 
 const getCount = (width) => {
   let num = Math.floor(width / 141)
@@ -97,8 +87,6 @@ const getCount = (width) => {
     i.value = Math.floor(count.value / 2)
   }
 }
-
-
 </script>
 
 <style lang="scss" scoped></style>

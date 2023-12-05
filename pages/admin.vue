@@ -55,7 +55,7 @@
           <tbody>
             <tr v-for="row in ilanlar ">
               <td>
-                <Icon name="material-symbols:edit" class="icon" @click="editIlan(row.id)" />
+                <Icon name="material-symbols:edit" class="icon" @click="getIlan(row.id)" />
               </td>
               <td>
                 <Icon name="ic:baseline-delete" class="icon" @click="deleteIlan(row.id)" />
@@ -64,7 +64,7 @@
                 {{ data }}
               </td>
               <td style="text-align: center;">
-                <Icon class="icon" name="ic:outline-remove-red-eye" @click="showMore(row.id)" />
+                <Icon class="icon" name="ic:outline-remove-red-eye" @click="getIlan(row.id)" />
               </td>
             </tr>
           </tbody>
@@ -73,6 +73,7 @@
 
       <div class="postAd" v-if="tabs[1]">
         <div class="inputs">
+
           <ul>
             <div class="input-wrapper">
               <input type="number" v-model="newAd.landPrice" placeholder="Arazi Fiyatı">
@@ -161,16 +162,48 @@
                 placeholder="Arsanın sanayı bölgesine uzaklığı">
             </div>
           </ul>
+
         </div>
 
         <btn2 text="Ilan Ekle" @click="postAd()" />
       </div>
+
+      <q-dialog v-model="overlay">
+        <q-card>
+          <q-card-section class="q-pt-none">
+            {{ ilan }}
+          </q-card-section>
+
+          <q-separator />
+
+          <q-card-actions align="right">
+            <div class="gapH">
+              <btn2 text="Submit" @click="editIlan(ilan.id)" />
+              <btn2 :inv="true" text="Okay" @click="overlay = false" />
+            </div>
+          </q-card-actions>
+        </q-card>
+      </q-dialog>
 
     </div>
   </div>
 </template>
 
 <script setup>
+// editAd
+let overlay = ref(true)
+let ilan = ref({})
+const getIlan = async (id) => {
+  overlay.value = true
+  const { data, error } = await supabase
+    .from('lands')
+    .select()
+    .eq('id', id)
+  if (data)
+    ilan.value = data[0]
+  console.log(ilan.value)
+}
+
 //User
 import { useStore } from '../stores/useUserStore.ts'
 const store = useStore()
@@ -224,13 +257,14 @@ const clientHeader = content.clientHeader
 const ilanHeader = content.ilanHeader
 
 //Contacts
-const clients = ref('')
+const clients = ref({})
 const getClients = async () => {
   const { data, error } = await supabase
     .from('contact')
     .select()
   if (data)
     clients.value = data
+
 }
 const deleteClients = async (id) => {
   const { error } = await supabase
@@ -240,20 +274,12 @@ const deleteClients = async (id) => {
   if (error)
     console.log(error)
 }
-const editClients = async (id) => {
-  const { error } = await supabase
-    .from('contact')
-    .update({ name: 'Han', email: 'ali-wiungi@a7a.com', telephone: '012900090', country: 'afghan' })
-    .eq('id', id)
-  if (error)
-    console.log(error)
-}
 
 //Ads
 const ilanlar = ref('')
 const getIlanlar = async () => {
   const { data, error } = await supabase
-    .from('ads')
+    .from('lands')
     .select()
   if (data)
     ilanlar.value = data
@@ -261,7 +287,7 @@ const getIlanlar = async () => {
 }
 const deleteIlan = async (id) => {
   const { error } = await supabase
-    .from('ads')
+    .from('lands')
     .delete()
     .eq('id', id)
   if (error)
@@ -269,9 +295,10 @@ const deleteIlan = async (id) => {
 }
 const editIlan = async (id) => {
   const { error } = await supabase
-    .from('ads')
+    .from('lands')
     .update({ landPrice: 5555 })
     .eq('id', id)
+  console.log(id)
   if (error)
     console.log(error)
 }
@@ -287,7 +314,7 @@ const postAd = () => {
 
 const postAdData = async () => {
   const { data, error } = await supabase
-    .from('ads')
+    .from('lands')
     .insert(newAd)
     .select()
   if (data)
@@ -296,6 +323,7 @@ const postAdData = async () => {
 
 // New Image Locally
 const imgFile = []
+const imgExt = []
 const imgName = ref([])
 
 const imageSelected = (event) => {
@@ -314,9 +342,11 @@ const clearImages = () => {
 
 // New Image to Database
 const imgDBName = []
+const re = /(?:\.([^.]+))?$/
 const imgUpload = async () => {
   for (let i = 0; i < imgFile.length; i++) {
-    imgDBName[i] = `img_${Date.now()}_${i}.jpg`
+    imgExt[i] = re.exec(imgName[i])[1];
+    imgDBName[i] = `img_${Date.now()}_${i}.${imgExt[i]}`
     const { data, error } = await supabase
       .storage
       .from('images')

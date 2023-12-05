@@ -38,14 +38,17 @@
         </div>
         <swiper :freeMode="true" :slidesPerView="count" :spaceBetween="44" :navigation="true" :modules="moduleLand"
           :scrollbar="{ hide: true }" class="swiper">
-          <swiper-slide v-for="n in 8">
+          <swiper-slide v-for="(x, n) in ilanlar">
             <div class="land">
               <nuxt-img sizes="375px" class="land-img" src="land-1.png" />
               <div class="text">
                 <div class="t2"> EKS Land ile Eskişehir’den Yatırımlık Arsa </div>
                 <div class="measurement">
                   <Icon class="icon" name="arcticons:tapemeasure" />
-                  <div class="p2">345 m</div>
+                  <div class="p2">
+                    {{ x.squareMeters }}
+                    345 m
+                  </div>
                 </div>
                 <div class="buttons">
                   <button class="price">
@@ -109,6 +112,16 @@
 </template>
 
 <script setup>
+const supabase = useSupabaseClient()
+let ilanlar = ref()
+const getPopularIlan = async () => {
+  const { data, error } = await supabase
+    .from('lands')
+    .select()
+  if (data)
+    ilanlar.value = data
+}
+
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import { Scrollbar, Navigation, FreeMode } from 'swiper/modules';
 import 'swiper/css';
@@ -127,7 +140,7 @@ let containerWidth = ref(null)
 onMounted(() => {
   let containerWidth = document.getElementById('container').offsetWidth
   getCount(containerWidth)
-  
+  getPopularIlan()
 })
 
 

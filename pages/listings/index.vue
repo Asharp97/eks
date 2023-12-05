@@ -1,12 +1,12 @@
 <template>
   <div class="listings container">
+
     <div class="top">
-      <div class="t2 land-count"> 115 Adet İlan Bulundu </div>
+      <div class="t2 land-count"> {{ totalIlanlar }} Adet İlan Bulundu </div>
       <div class="headers mobile-hide white-bg">
         <div class="p2">
           Görsel, ilan başlığı & Şehir bilgisi
         </div>
-
         <span>
           <div class="header ">
             Metrekare
@@ -28,16 +28,15 @@
 
       <div class="sort white-bg">
         <button>
-          <div class="p2"> Liste Sıralama </div>
+          <div class="p2">
+            {{ sortBy() }}
+          </div>
           <Icon name="ep:arrow-down" class="icon" />
         </button>
         <q-menu fit transition-show="jump-down" transition-hide="jump-up">
           <q-list>
-            <q-item clickable v-close-popup>
-              <q-item-section>Fiyat</q-item-section>
-            </q-item>
-            <q-item clickable v-close-popup>
-              <q-item-section>Metre</q-item-section>
+            <q-item clickable v-close-popup v-for="x in sortName" @click="order = x">
+              <q-item-section> {{ x.text }} </q-item-section>
             </q-item>
           </q-list>
         </q-menu>
@@ -49,46 +48,58 @@
         <div class="filter-inner white-bg">
           <div class="t2"> Fiyat </div>
           <div class="inputs">
-            <input type="number" v-model="price.min" min="1" max="100">
+            <input type="number" @keyup.enter="getIlanlar" v-model="price.min" min="1" max="290000">
             -
-            <input type="number" v-model="price.max" min="1" max="100">
+            <input type="number" @keyup.enter="getIlanlar" v-model="price.max" min="1" max="300000">
           </div>
-          <q-range v-model="price" :min="0" :max="100" color="black" thumb-color="black" label />
+          <q-range v-model="price" :min="0" :max="300000" color="black" thumb-color="black" label />
           <div class="t2">
             Metrekare
           </div>
           <div class="inputs">
-            <input type="number" v-model="km.min" min="1" max="100">
+            <input type="number" @keyup.enter="getIlanlar" v-model="km.min" min="1" max="1300">
             -
-            <input type="number" v-model="km.max" min="1" max="100">
+            <input type="number" @keyup.enter="getIlanlar" v-model="km.max" min="1" max="1300">
           </div>
-          <q-range v-model="km" :min="0" :max="100" color="black" thumb-color="black" label />
+          <q-range v-model="km" :min="0" :max="1300" color="black" thumb-color="black" label />
 
           <div class="t2">
             İlçeler
           </div>
           <div class="checklist">
-            <q-checkbox size="lg" dense v-model="city[n]" :label="ilce" color="black"
-              v-for="(ilce, n) in ilceler" class="check" :class="{ 'active': city[n] }" />
+            <div class="input-wrapper" v-for="x in  cities">
+              <q-checkbox v-model="city" :val="x" color="black">
+                <div class="p2"> {{ x }}</div>
+              </q-checkbox>
+              <!-- <input type="checkbox" v-model="city" :value="x" class="black">
+              <label for="" :class="{ 'black': city.includes(x) }" class="gray">
+                <div class="p2"> {{ x }}</div>
+              </label> -->
+            </div>
           </div>
 
-          <btn2 text="Sonuçları Listele" />
+          <btn2 @click="clearFilter">
+            <div class="p2">
+              Aramayı Temizle
+            </div>
+            <Icon name="pajamas:clear" />
+          </btn2>
         </div>
       </div>
       <div class="listing">
-
+        <q-inner-loading :showing="loading" />
         <div class="lands">
-          <div class="white-bg" v-for="n in 14">
-            <NuxtLink :to="`listings/${n}`" class="land">
+          <div class="white-bg" v-for="ilan  in  ilanlar">
+            <NuxtLink :to="`listings/${ilan.id}`" class="land">
               <div class="img-wrapper">
                 <nuxt-img sizes="375px" class="land-img" src="land-1.png" />
+                <!-- <img :src="land.imgURL" alt=""> -->
               </div>
-
-
               <div class="text">
                 <div class="title">
                   <div class="p2 gray">
-                    #Eskisehir
+                    <!-- #Eskisehir -->
+                    {{ ilan.cityLocation }}
                   </div>
                   <div class="p2">
                     Eksland güvencesiyle satılık arsa
@@ -97,13 +108,16 @@
                 <div class="details">
 
                   <div class="param p2">
-                    500m2
+                    {{ ilan.squareMeters }}m2
+                    <!-- 500m2 -->
                   </div>
                   <div class="param p2">
-                    11.000 €
+                    <!-- 11.000 € -->
+                    {{ ilan.landPrice }}€
                   </div>
                   <div class="param p2 last">
-                    Alpu
+                    <!-- Alpu -->
+                    {{ ilan.districtLocation }}
                   </div>
                 </div>
               </div>
@@ -115,53 +129,152 @@
 
             </NuxtLink>
           </div>
+          <div class="white-bg pagination" v-show="totalIlanlar > adPerPage">
+            <div v-for=" n in totalPages">
+              <div class="p1" @click="page = n" :class="{ 'active': n == page }">
+                {{ n }}
+              </div>
+            </div>
+          </div>
         </div>
+        <h1 v-if="totalIlanlar == 0">
+          We're sorry we couldn't find any lands that fit your search,
+          <Icon name="material-symbols:heart-broken-rounded" class="orange" />
+          Consider widening your search parameters
+        </h1>
       </div>
     </div>
-
   </div>
 </template>
 
 <script setup>
-import content from '../assets/content.json'
-const ilceler = content.eskisehirDistricts
-
-const price = ref({ min: 0, max: 100 })
-const km = ref({ min: 0, max: 100 })
-let city = ref(new Array(14).fill(false))
-
-const showFilter = ref(true)
-
 definePageMeta({
   layout: 'invert-nav-color'
 })
 
-const ilanlar = ref([])
+import content from '../assets/content.json'
+const cities = content.eskisehirDistricts
+const sortName = content.sort
+
+let loading = ref(false)
+
+let price = ref({ min: 0, max: 300000 })
+let km = ref({ min: 0, max: 1300 })
+let city = ref([])
+
+let showFilter = ref(true)
+
+let ilanlar = ref([])
+
+let totalIlanlar = ref(null)
+let page = ref(1)
+const adPerPage = 10
+let totalPages = ref()
+
+let order = ref(null)
+
 const supabase = useSupabaseClient()
-const getIlanlar = async () => {
-  const { data, error } = await supabase
-    .from('ads')
+
+const sortBy = () => {
+  if (order.value)
+    return order.value.text
+  else
+    return 'Sort By'
+}
+
+let getCount = async () => {
+  let query = supabase
+    .from('lands')
+    .select('*', { count: 'exact', head: true })
+    .gte('landPrice', price.value.min)
+    .gte('squareMeters', km.value.min)
+    .lte('landPrice', price.value.max)
+    .lte('squareMeters', km.value.max)
+
+  if (city.value.length > 0)
+    query = query.in('districtLocation', city.value)
+
+  let { count, error } = await query
+  totalIlanlar.value = count
+  totalPages = Math.ceil(totalIlanlar.value / adPerPage)
+}
+
+let clearFilter = () => {
+  price.value = { min: 0, max: 300000 }
+  km.value = { min: 0, max: 1300 }
+  city.value = []
+}
+
+let getIlanlar = async () => {
+  let query = supabase
+    .from('lands')
     .select()
+    .gte('landPrice', price.value.min)
+    .gte('squareMeters', km.value.min)
+    .lte('landPrice', price.value.max)
+    .lte('squareMeters', km.value.max)
+    .range(adPerPage * (page.value - 1), page.value * adPerPage)
+
+  if (city.value.length > 0)
+    query = query.in('districtLocation', city.value)
+
+  if (order.value)
+    query = query.order(order.value.obj.col, { ascending: order.value.obj.asc })
+
+
+  loading.value = true
+  let { data, error } = await query
   if (data)
     ilanlar.value = data
+  loading.value = false
 }
 
 onMounted(() => {
+  getCount()
   getIlanlar()
 })
 
 watch(
-  () => [price.value, km.value, city.value],
+  () => [price.value, km.value, city.value, order.value],
   () => {
-    // console.log('price: ' + price.value.min + '-' + price.value.max)
-    // console.log('km: ' + km.value.min + '-' + km.value.max)
-    console.log('city: ' + city.value)
+    // console.log(order)
+    page.value = 1
+    getIlanlar()
+    getCount()
   }
+)
+watch(
+  () => page.value,
+  () => { getIlanlar() }
 )
 </script>
 
 <style lang="scss" scoped>
 @import "../../assets/style/variables.scss";
+
+.pagination {
+  .p1 {
+    cursor: pointer;
+  }
+
+  .active {
+    color: $orange;
+  }
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.black {
+  color: black !important;
+}
+
+.gray {
+  color: $gray;
+}
 
 .hide-filter {
   gap: 0;
