@@ -1,6 +1,5 @@
 <template>
   <div class="tapu-steps">
-    <div class="p1 mpi">3 aşamada yatırımınızı gerçekleştirin.</div>
     <div class="steps-img-container mpi white-bg">
       <h1>3 Adımda EKSLAND ile Tapu Sahibi Olun</h1>
       <div class="images ">

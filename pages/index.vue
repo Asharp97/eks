@@ -5,7 +5,7 @@
       <hero class="hero" text="EKSLAND ile toprakta büyüyen yatırımlar" img="hero-home" />
     </section>
 
-    <section class="container">
+    <section class="container" style="margin-top: -100px;">
       <div class="feature-cards mpi">
         <div class="card" v-for="item in feature">
           <div class="title">
@@ -40,7 +40,8 @@
           :scrollbar="{ hide: true }" class="swiper">
           <swiper-slide v-for="(x, n) in ilanlar">
             <div class="land">
-              <nuxt-img sizes="375px" class="land-img" src="land-1.png" />
+              <!-- <nuxt-img sizes="375px" class="land-img" src="land-1.png" /> -->
+              <img :src="x.imgURL[0]" class="land-img" alt="">
               <div class="text">
                 <div class="t2"> EKS Land ile Eskişehir’den Yatırımlık Arsa </div>
                 <div class="measurement">
@@ -77,14 +78,17 @@
         <table>
           <thead>
             <tr>
-              <th v-for="header in table.header">{{ header }}</th>
+              <th v-for="(header, n) in table.header" :class="{ 'orange': n == 6 }">{{ header }}</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for=" row in table.body">
-              <td v-for="data in row">
+            <tr v-for="row in table.body">
+              <td v-for="(data, n) in row" :class="{ 'orange': n == 6 }">
                 <Icon :name="data.icon" class="icon" v-if="data.icon" />
                 {{ data.name }}
+                <span class="currency" :class="{ 'hide': n == 0 }">
+                  ₺
+                </span>
               </td>
             </tr>
           </tbody>

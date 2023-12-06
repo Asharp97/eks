@@ -92,8 +92,8 @@
           <div class="white-bg" v-for="ilan  in  ilanlar">
             <NuxtLink :to="`listings/${ilan.id}`" class="land">
               <div class="img-wrapper">
-                <nuxt-img sizes="375px" class="land-img" src="land-1.png" />
-                <!-- <img :src="land.imgURL" alt=""> -->
+                <!-- <nuxt-img sizes="375px" class="land-img" src="land-1.png" /> -->
+                <img :src="ilan.imgURL[0]" alt="" class="land-img">
               </div>
               <div class="text">
                 <div class="title">
@@ -137,11 +137,11 @@
             </div>
           </div>
         </div>
-        <h1 v-if="totalIlanlar == 0">
+        <h2 v-if="totalIlanlar == 0">
           We're sorry we couldn't find any lands that fit your search,
           <Icon name="material-symbols:heart-broken-rounded" class="orange" />
           Consider widening your search parameters
-        </h1>
+        </h2>
       </div>
     </div>
   </div>

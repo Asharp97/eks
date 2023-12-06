@@ -158,7 +158,7 @@
             </div>
 
             <div class="input-wrapper">
-              <input type="number" v-model="newAd.landToIndustrialZoneDistancee"
+              <input type="number" v-model="newAd.landToIndustrialZoneDistance"
                 placeholder="Arsanın sanayı bölgesine uzaklığı">
             </div>
           </ul>
@@ -344,21 +344,20 @@ const newAd = { imgURL: [] }
 const success = ref(false)
 const postAd = () => {
   loading.value = true
-  if (imgFile)
+  if (imgFile[0])
     imgUpload()
-  else
+  else {
     postAdData()
+  }
 }
 
 const postAdData = async () => {
-  console.log('eh')
   const { data, error } = await supabase
     .from('lands')
     .insert(newAd)
     .select()
   if (data) {
     success.value = true
-    newAd = { imgURL: [] }
   }
   loading.value = false
 
@@ -388,8 +387,8 @@ const imgDBName = []
 const re = /(?:\.([^.]+))?$/
 const imgUpload = async () => {
   for (let i = 0; i < imgFile.length; i++) {
-    imgExt[i] = re.exec(imgName[i])[1];
-    imgDBName[i] = `img_${Date.now()}_${i}.${imgExt[i]}`
+    // imgExt[i] = re.exec(imgName[i])[1];
+    imgDBName[i] = `img_${Date.now()}_${i}.jpg`
     const { data, error } = await supabase
       .storage
       .from('images')

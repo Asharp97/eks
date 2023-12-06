@@ -120,6 +120,7 @@
       }
       .desktop-menu {
         width: 66%;
+        max-width: 662px;
         display: flex;
         ul {
           display: flex;
@@ -232,7 +233,7 @@
   .landing-image {
     width: 100%;
     height: 116vh;
-    margin-top: -140px;
+    margin-top: -130px;
     position: absolute;
     z-index: -10;
     object-fit: cover;
@@ -241,12 +242,13 @@
     color: white;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     height: 100vh;
-    margin-top: -140px;
+    margin-top: -100px;
     .landing-text {
       max-width: 635px;
+      line-height: 1.1;
     }
     .form-bg {
       border-radius: 14px;
@@ -587,6 +589,8 @@
 
         .land-img {
           height: 245px;
+          object-fit: cover;
+          width: 100%;
           border-radius: 7px 7px 0px 0px;
         }
 
@@ -640,7 +644,7 @@
       text-align: center;
       display: flex;
       gap: 65px;
-     
+
       .text {
         display: flex;
         flex-direction: column;
@@ -905,6 +909,8 @@
         border-radius: 20px;
         margin-top: 54px;
         width: 100%;
+        height: 600px;
+        object-fit: cover;
       }
     }
     .textDiv {
@@ -917,6 +923,7 @@
       h4 {
         margin-bottom: 20px;
         width: max-content;
+        margin-inline: auto;
       }
       p {
         font-size: 18px;
@@ -959,6 +966,8 @@
       .slide {
         .img {
           width: 100%;
+          height: 700px;
+          object-fit: cover;
         }
       }
     }
@@ -1564,16 +1573,12 @@
     }
   }
 
-
-
   .icon {
     cursor: pointer;
     font-size: 30px;
   }
 
-  .hide {
-    display: none;
-  }
+
 }
 
 // reusables
@@ -1690,7 +1695,6 @@
 .mobile-show {
   display: none;
 }
-
 .hidden {
   visibility: hidden;
 }
@@ -1709,12 +1713,16 @@
 }
 
 .orange {
-  color: $orange;
+  color: $orange !important;
 }
 
 .gapH {
   display: flex;
   gap: 20px;
+}
+
+.hide {
+  display: none;
 }
 
 // reusable compnents
@@ -1801,6 +1809,7 @@
 
     h1 {
       max-width: 777px;
+      margin-bottom: 61px;
     }
     .images {
       display: flex;
@@ -1814,6 +1823,7 @@
         .t1 {
           margin-inline: auto;
           width: 100%;
+          margin-top: 42px;
         }
         .img {
           width: 100%;
@@ -1827,16 +1837,15 @@
 
   .steps {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
     text-align: center;
-    gap: 30px;
 
     .step {
       display: flex;
       flex-direction: column;
-      max-width: 381px;
-      width: 30%;
+      max-width: 370px;
+      width: 100%;
 
       .t2 {
         text-wrap: balance;
@@ -1856,7 +1865,7 @@
   .how-to-buy-button {
     color: $darkGray;
     margin-inline: auto;
-    margin-block: 100px;
+    margin-top: 60px;
   }
 }
 

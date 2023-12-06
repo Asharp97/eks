@@ -5,8 +5,6 @@
     </section>
     <div class="gap">
       <section class="titles white-bg">
-        <div class="p1 mpi">3 aşamada yatırımınızı gerçekleştirin.</div>
-
         <div class="title" id="nav">
           <div class="logo"> EKS <span>LAND</span> </div>
           <h4>Eskişehir</h4>

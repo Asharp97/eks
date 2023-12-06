@@ -7,7 +7,8 @@
             <div class="details">
               <div class="imgDiv">
                 <h2>EKSLAND güvencesiyle yatırım fırsatı</h2>
-                <nuxt-img sizes="xs:640px sm:768px md:784px lg:877px" class="img" src="listing-img.png" />
+                <!-- <nuxt-img sizes="xs:640px sm:768px md:784px lg:877px" class="img" src="listing-img.png" /> -->
+                <img :src="land.imgURL[0]" alt="" class="img">
               </div>
               <div class="textDiv">
                 <h4>Arazi fiyatı: {{ land.landPrice }}.00 €</h4>
@@ -37,8 +38,10 @@
           <h1>Araziye yakından bakın</h1>
           <swiper :navigation="true" :loop="true" :modules="modules" class="swiper single-nav"
             @slideNextTransitionStart="nextEnd">
-            <swiper-slide v-for="n in 4" class="slide">
-              <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="img" src="closer-look.png" />
+            <swiper-slide v-for="n in land.imgURL" class="slide">
+              <!-- <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="img" src="closer-look.png" /> -->
+              <img :src="n" class="img" alt="">
+
             </swiper-slide>
           </swiper>
 
@@ -82,7 +85,7 @@
 
 const id = useRoute().params.id
 const supabase = useSupabaseClient()
-const land = ref({ landPrice: '' })
+const land = ref({ landPrice: '', imgURL: [] })
 const section1 = ref()
 const section2 = ref()
 let details = async () => {
