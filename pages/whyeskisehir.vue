@@ -1,11 +1,10 @@
 <template>
-  <div class="whyeskisehir ">
+  <div class="whyeskisehir">
 
     <section>
       <hero img="hero-whyeskisehir" text="Neden Eskişehir’i Tercih Etmeliyim?" />
     </section>
     <div class="gap">
-
       <section class="white-bg">
         <div class="population container">
           <div class="p1">
@@ -23,7 +22,7 @@
 
 
           </div>
-          <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px"	 class="img" src="graph2.png" />
+          <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="img" src="graph2.png" />
           <div class="text">
             <div class="p1">
               Hem eğitim hem de sanayi alanındaki büyüme, şehre olan göçü artırmış ve nüfusu hızla yükseltmiştir. <span>
@@ -45,9 +44,11 @@
       </section>
 
 
-      <section class="container">
-        <onetwolayout :img1="layout[0].img1" :img2="layout[0].img2" :text="layout[0].text" :title="layout[0].title"
-          :titlesub="layout[0].subtitle" />
+      <section class="gray-bg">
+        <div class="container minerals">
+          <onetwolayout :img1="layout[0].img1" :img2="layout[0].img2" :text="layout[0].text" :title="layout[0].title"
+            :titlesub="layout[0].subtitle" :static="true" />
+        </div>
         <!-- {{ layout[0][0].title }} -->
       </section>
 
@@ -102,35 +103,24 @@
         </div>
       </section>
 
-      <section class=" transport container">
-        <h1>
-          02.Eskişehir
-        </h1>
-        <div class="display">Her yerden
-          kolayca ulaşın</div>
-        <slider :swiper="trans" space="100" />
-      </section>
+      <div class="border"></div>
 
-      <section class="manufacture container">
-        <div class="text">
-          <h1>03. Eskişehir</h1>
-          <div class="display">Sanayi</div>
-          <div class="p1">Eskişehir, son yıllarda hızla gelişen bir sanayi merkezi haline gelmiştir. Şehir, otomotiv,
-            savunma sanayii, makine üretimi, gıda işleme, tekstil ve havacılık gibi birçok sektörde önemli sanayi
-            tesislerine ev sahipliği yapmaktadır. </div>
-          <div class="p1">Ayrıca, Eskişehir'deki organize sanayi bölgeleri ve endüstriyel alanlar, yatırımcılar için uygun
-            altyapı ve destek sunmaktadır.</div>
+      <section>
+        <div class="transport container">
+          <h1>
+            02.Eskişehir
+          </h1>
+          <div class="display">Her yerden
+            kolayca ulaşın</div>
+          <slider :swiper="trans" space="100" />
         </div>
-        <nuxt-img sizes="xs:320px sm:384px md:512px lg:635.5px" class="img" src="nuclear.png" />
-
-
       </section>
 
       <section class="increase container">
         <div class="p2">Türkiye'de Arsa Yatırımı: </div>
         <div class="display">Arsa değerlerinde
           %1071 artış</div>
-        <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px"	 class="img" src="graph3.png" />
+        <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="img" src="graph3.png" />
 
         <div class="columns">
           <div class="column text">
@@ -166,32 +156,62 @@
         </div>
       </section>
 
+      <section class="gray-bg">
+        <div class="manufacture container ">
+          <div class="text">
+            <h1>03. Eskişehir</h1>
+            <div class="display">Sanayi</div>
+            <div class="p1">Eskişehir, son yıllarda hızla gelişen bir sanayi merkezi haline gelmiştir. Ülkemizin tek Uçak
+              Motor Fabrikası <strong> (TUSAŞ)</strong> ile Dizel Lokomotif motoru üreten <strong> tek</strong> fabrikası
+              <strong> (TÜLOMSAŞ)</strong>
+              Eskişehir’de
+              bulunmaktadır. Ayrıca şehrin ekonomisinin <strong> %39’ </strong>unu şehrin sanayisi sağlamaktadır.
+            </div>
+
+            <div class="p1">
+              Ayrıca, Eskişehir'deki organize sanayi bölgeleri ve
+              <strong>
+                endüstriyel alanlar,
+                yatırımcılar için uygun altyapı
+              </strong>
+              ve destek sunmaktadır.
+            </div>
+          </div>
+          <nuxt-img sizes="xs:320px sm:384px md:512px lg:635.5px" class="img" src="nuclear.png" />
+        </div>
+
+
+      </section>
+
       <section>
         <metrekare />
       </section>
 
-      <section class="honorable-mentions container">
-        <h1>04. Eskişehir</h1>
-        <div class="display">
-          Şehrin öne çıkanları
-        </div>
-        <div class="white-bg container">
-          <div class="content">
-            <div class="faqwrapper">
-              <faqComponent :faq="faq" class="Faqcontainer" @toggle="toggle" />
-            </div>
-            <div class="listed-images">
-              <span id="scroll1" class="scrolled">
-                <nuxt-img sizes="200px" class="img" v-for="n in 7" :src='`listed-imgs/${n}.jfif`' />
-              </span>
-              <span id="scroll2">
-                <nuxt-img sizes="200px" class="img" v-for="n in 7" :src='`listed-imgs/${n}.jfif`' />
-              </span>
+      <section class="gray-bg">
+        <div class="honorable-mentions container">
+          <h1>04. Eskişehir</h1>
+          <div class="display">
+            Şehrin öne çıkanları
+          </div>
+          <div class="white-bg container">
+            <div class="content">
+              <div class="faqwrapper">
+                <faqComponent :faq="faq" class="Faqcontainer" @toggle="toggle" />
+              </div>
+              <div class="listed-images">
+                <span id="scroll1" class="scrolled">
+                  <nuxt-img sizes="200px" class="img" v-for="n in 7" :src='`listed-imgs/${n}.jfif`' />
+                </span>
+                <span id="scroll2">
+                  <nuxt-img sizes="200px" class="img" v-for="n in 7" :src='`listed-imgs/${n}.jfif`' />
+                </span>
+              </div>
             </div>
           </div>
         </div>
       </section>
 
+      
     </div>
   </div>
 </template>

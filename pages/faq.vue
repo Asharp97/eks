@@ -11,7 +11,7 @@
         <div class="p1">Sıkça sorulan sorular.</div>
 
         <div class="title" id="nav">
-          <div class="logo"> EKS <span>LAND</span> </div>
+          <div class="logo"> EKS<span>LAND</span> </div>
           <h4>Fikirtepe</h4>
           <div class="display">Aklınıza <br> gelebilecek tüm <br> sorular.</div>
         </div>

@@ -1,10 +1,7 @@
 <template>
   <div class="container" id="container">
     <div class="mpi">
-      <h1>Öne çıkan başlıklar</h1>
       <div class="features white-bg">
-        <div class="p1">Yatırımınız ile ilgili başlıklar. <br>
-          Arazinizin önemli konumlara mesafesini öğrenin.</div>
         <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="features-img" src="features.png" />
         <div class="vertical-separator"></div>
         <swiper :slidesPerView="count" :modules="modules" :navigation="true" :loop="true" class="swiper single-nav "

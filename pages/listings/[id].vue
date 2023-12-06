@@ -16,8 +16,11 @@
 
                 <hr>
                 <div class="params">
-                  <div class="title" v-for="(x, n, q) in section1">{{ params[q] }} <div class="param">
-                      &nbsp;{{ x }} </div>
+                  <div class="title" v-for="(x, n, q) in section1">
+                    {{ params[q] }}:
+                    <div class="param">
+                      &nbsp;{{ x }}
+                    </div>
                   </div>
                 </div>
                 <btn2 text="Hemen Satın Al" />
@@ -36,8 +39,8 @@
       <section>
         <div class="closer-look container">
           <h1>Araziye yakından bakın</h1>
-          <swiper :navigation="true" :loop="true" :modules="modules" class="swiper single-nav"
-            @slideNextTransitionStart="nextEnd">
+          <swiper :navigation="true" :loop="true" class="swiper noNav" @slideNextTransitionStart="nextEnd"
+            @slidePrevTransitionStart="prevEnd">
             <swiper-slide v-for="n in land.imgURL" class="slide">
               <!-- <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="img" src="closer-look.png" /> -->
               <img :src="n" class="img" alt="">
@@ -46,14 +49,16 @@
           </swiper>
 
           <div class="pagination">
-            <div class="dots" v-for="(pag, n) in  4" :class="{ 'active-pagination': n == activePag }"></div>
+            <div class="dots" v-for="(pag, n) in  land.imgURL.length" :class="{ 'active-pagination': n == activePag }">
+            </div>
           </div>
+
         </div>
       </section>
 
       <section class="container mpi">
         <onetwolayout :text="lookcloser[0].text" :title="lookcloser[0].title" :titlesub="lookcloser[0].subtitle"
-          :img1="'own1'" :img2="img2" />
+          :img1="land.imgURL[land.imgURL.length - 1]" :img2="img2" />
       </section>
 
       <section class="white-bg">
@@ -88,41 +93,43 @@ const supabase = useSupabaseClient()
 const land = ref({ landPrice: '', imgURL: [] })
 const section1 = ref()
 const section2 = ref()
+let img2;
 let details = async () => {
   const { data, error } = await supabase
     .from('lands')
     .select()
     .eq('id', id)
-  // if (data)
-  land.value = data[0]
-  section1.value = Object.fromEntries(Object.entries(land.value).slice(3, 10))
-  section2.value = Object.fromEntries(Object.entries(land.value).slice(11))
-
+  if (data) {
+    land.value = data[0]
+    section1.value = Object.fromEntries(Object.entries(land.value).slice(3, 10))
+    section2.value = Object.fromEntries(Object.entries(land.value).slice(11))
+    img2 = [land.value.imgURL[land.value.imgURL.length - 3], land.value.imgURL[land.value.imgURL.length - 2]]
+  }
 }
 
 import content from "../../assets/content.json"
 const params = content.params
 
-onMounted(() => {
-  details()
+onMounted(() => {  details()
 })
 
 
 //swiper
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
-import 'swiper/css/navigation';
-import { Navigation } from 'swiper/modules';
-const modules = [Navigation]
 
 //patination
 const activePag = ref(0)
 
 const nextEnd = () => {
   activePag.value += 1
-  if (activePag.value == 4)
+  if (activePag.value == land.value.imgURL.length)
     activePag.value = 0
-
+}
+const prevEnd = () => {
+  activePag.value -= 1
+  if (activePag.value == 0)
+    activePag.value = land.value.imgURL.length
 }
 
 definePageMeta({ layout: 'invert-nav-color' })
@@ -130,7 +137,7 @@ definePageMeta({ layout: 'invert-nav-color' })
 //content import
 const swipedata = content.eskisehirSlide
 const lookcloser = content.lookcloser
-const img2 = ['step-1', 'step-2']
+
 
 </script>
 

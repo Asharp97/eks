@@ -1,5 +1,8 @@
 <template>
-  <div>
+  <div class="big-container">
+    <div class="display">
+      Hemen İletişim
+    </div>
     <div class="contact-us-form big-container">
       <div class="half swiper-quote mobile-hide ">
         <nuxt-img sizes="xs:0px lg:635px" class="backgroundImg" src="fillform.png" />
@@ -13,11 +16,18 @@
                 değiştirdi.
                 Ayrıca yurdumdan bir toprağım oldu. Çok teşekkür ederim.</div>
               <div class="author">
-                Kemal Eren Yılmaz
+                <nuxt-img class="img" src="profile.png" />
+                <span>
+                  Kemal Eren Yılmaz
+                </span>
               </div>
             </div>
           </swiper-slide>
-          <swiper-slide>Slide 2</swiper-slide>
+          <swiper-slide>
+            <div class="text-bg">
+              Slide 2
+            </div>
+          </swiper-slide>
         </swiper>
 
       </div>

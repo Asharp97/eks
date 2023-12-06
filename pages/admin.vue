@@ -252,8 +252,8 @@ const pass = ref('')
 const supabase = useSupabaseClient()
 const signin = async () => {
   const { data, error } = await supabase.auth.signInWithPassword({
-    email: 'alyhayyan97@gmail.com',
-    password: 'Hayyan123456',
+    email: mail.value,
+    password: pass.value,
   })
   if (data) {
     store.token = data.session.access_token
@@ -389,8 +389,7 @@ const imgUpload = async () => {
   for (let i = 0; i < imgFile.length; i++) {
     // imgExt[i] = re.exec(imgName[i])[1];
     imgDBName[i] = `img_${Date.now()}_${i}.jpg`
-    const { data, error } = await supabase
-      .storage
+    const { data, error } = await supabase.storage
       .from('images')
       .upload(imgDBName[i], imgFile[i])
     if (data) {
@@ -399,8 +398,7 @@ const imgUpload = async () => {
   }
 }
 const getImgURL = async (name, i) => {
-  const { data } = supabase
-    .storage
+  const { data } = supabase.storage
     .from('images')
     .getPublicUrl(name)
   if (data) {

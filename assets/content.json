@@ -243,9 +243,9 @@
   "minerals": [
     {
       "title": "01. Eskişehir",
-      "subtitle": "Madenleri ile zengin Şehir",
+      "subtitle": "Madenleri ile zengin şehir",
       "text": [
-        "Eskişehir, maden potansiyeli açısından oldukça zengin bir bölge olarak bilinir. Özellikle linyit kömürü, bor, manyezit, talk, zeolit ve trona gibi çeşitli maden kaynaklarına sahip olan şehir, bu hammaddelerin çıkarılması ve işlenmesi konusunda önemli bir rol oynamaktadır. ",
+        "Eskişehir, maden potansiyeli açısından oldukça zengin bir bölge olarak bilinir. Özellikle linyit kömürü, bor, manyezit, talk, zeolit ve trona gibi çeşitli maden kaynaklarına sahiptir. Şehir bünyesinde 75 firma faaliyet göstermekte yaklaşık 3.800 çalışan bulunmaktadır.",
         "Türkiye’de rezerv açısından en çok bulunan bor cevherleri tinkal ve kolemanit’tir. Türkiye’de önemli tinkal yatakları Seyitgazi’ye bağlı Kırka’da bulunuyor."
       ],
       "img1": "mineral-1",
@@ -372,49 +372,49 @@
     ],
     "body": [
       [
-        { "icon": "logos:bitcoin", "name": "Kripto Para" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" }
+        { "icon": "logos:bitcoin", "name": "Bitcoin" },
+        { "name": 3.888 },
+        { "name": 10.204 },
+        { "name": 36.679 },
+        { "name": 20.555 },
+        { "name": 25.125 },
+        { "name": 41.986 }
       ],
       [
-        { "icon": "lucide:land-plot", "name": "Kripto Para" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" }
+        { "icon": "lucide:land-plot", "name": "Arazi/Arsa" },
+        { "name": 457 },
+        { "name": 482 },
+        { "name": 693 },
+        { "name": 1.086 },
+        { "name": 2.209 },
+        { "name": 3.636 }
       ],
       [
-        { "icon": "mdi:gold", "name": "Kripto Para" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" }
+        { "icon": "mdi:gold", "name": "Altın" },
+        { "name": 217 },
+        { "name": 290 },
+        { "name": 453 },
+        { "name": 761 },
+        { "name": 1.117 },
+        { "name": 1.889 }
       ],
       [
-        { "icon": "cryptocurrency-color:usd", "name": "Kripto Para" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" }
+        { "icon": "cryptocurrency-color:usd", "name": "Dolar Kuru" },
+        { "name": 5.67 },
+        { "name": 6.86 },
+        { "name": 8.65 },
+        { "name": 16.80 },
+        { "name": 25.93 },
+        { "name": 28.86 }
       ],
       [
-        { "icon": "solar:euro-bold", "name": "Kripto Para" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" },
-        { "name": "value" }
+        { "icon": "solar:euro-bold", "name": "Euro Kuru" },
+        { "name": 6.58 },
+        { "name": 7.70 },
+        { "name": 10.29 }, 
+        { "name": 17.46 },
+        { "name": 28.22 },
+        { "name": 31.49 }
       ]
     ]
   },

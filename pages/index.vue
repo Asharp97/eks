@@ -82,26 +82,35 @@
             </tr>
           </thead>
           <tbody>
-            <tr v-for="row in table.body">
-              <td v-for="(data, n) in row" :class="{ 'orange': n == 6 }">
+            <tr v-for="(row, r) in  table.body ">
+              <td v-for="(data, n) in  row " :class="{ 'orange': n == 6 }">
                 <Icon :name="data.icon" class="icon" v-if="data.icon" />
                 {{ data.name }}
                 <span class="currency" :class="{ 'hide': n == 0 }">
                   ₺
                 </span>
+                <div v-if="n == 6 && r == 1" class="green">(%695.62 ARTIŞ)</div>
               </td>
             </tr>
           </tbody>
         </table>
+        <div class="p2">Arazi verileri
+          <span>
+            Endeksa’dan
+          </span>
+          alınmıştır.
+        </div>
       </div>
     </section>
 
     <section>
       <div class="why-Eskisehir big-container">
         <div class="text">
-          <div class="display"> Neden </div>
-          <h4> Arazi </h4>
-          <div class="display"> Yatırımı Yapılmalı? </div>
+          <div class="display orange">
+            Dolar Euro Altın Borsa
+          </div>
+          <h4> EKSLAND ile </h4>
+          <div class="display"> Geleceğin Yatırımı Arsa </div>
         </div>
         <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="why-image" src="whyeskisehir.png" />
       </div>

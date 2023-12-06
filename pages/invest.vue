@@ -6,9 +6,8 @@
     <div class="gap">
       <section class="titles white-bg">
         <div class="title" id="nav">
-          <div class="logo"> EKS <span>LAND</span> </div>
-          <h4>Eskişehir</h4>
-          <div class="display">3 adımda yatırımınızı <br> kolayca <br> gerçekleştirebilirsiniz.</div>
+          <div class="p1">Arazi yatırımınız EKSLAND ayrıcalığı ile yapın.</div>
+          <h3>3 adımda yatırımınızı kolayca gerçekleştirebilirsiniz.</h3>
         </div>
       </section>
       <section class="firststep container mpi">
@@ -16,7 +15,7 @@
           Bizimle iletişim <br> Kurun
         </div>
         <div class="number">1</div>
-        <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px"	 class="img" src="arrow.png" />
+        <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="img" src="arrow.png" />
         <div class="zoom">
           <div class="p1">
             Sitemizde iletişim bölümünde bulunan formu doldurmanız sizinle iletişim kurmamız için yeterli olacaktır.
@@ -29,7 +28,15 @@
             <!-- <a href="mailto:destek@eksland.com.tr"> -->
             <btn2 text="destek@eksland.com.tr" />
             <!-- </a> -->
+            <button class="social zoomlink">
+              <Icon name="bx:bxl-zoom" />
+              zoom
+            </button>
             <btn2 :inv="true" text="Form Doldur" destination="invest#form" />
+            <button class="social whatsapp">
+              <Icon name="logos:whatsapp-icon" />
+              WhatsApp
+            </button>
           </div>
         </div>
       </section>
@@ -48,7 +55,7 @@
           <div class="part2">
 
             <div class="display">Arsa Sahibi Olun</div>
-            <div class="p1">Evrak işlemleri ardından sizin için tapu dairesinde randevu oluşturacağız. </div>
+            <div class="p2">Evrak işlemleri ardından sizin için tapu dairesinde randevu oluşturacağız. </div>
           </div>
           <div class="number">2</div>
         </div>

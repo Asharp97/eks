@@ -12,8 +12,8 @@
             <div class="p1 worries">
               Hakkımızda merak ettikleriniz.
             </div>
-            <div class="display">Hakkımızda </div>
-            <div class="text">
+            <div class="display mb">Hakkımızda </div>
+            <div class="text mb2">
 
               <div class="p1">
                 Lorem ipsum dolor sit amet consectetur. Dui morbi elit sed vel placerat. Mollis sapien vulputate at
@@ -21,15 +21,17 @@
                 etiam morbi ac nunc lorem. Mauris elementum varius proin erat neque nunc aliquam blandit. Magna a pharetra
                 nunc odiom.
               </div>
-              <div class="p1">Lorem ipsum dolor sit amet consectetur. Dui morbi elit sed vel placerat. Mollis sapien
+              <div class="p1 mb2">Lorem ipsum dolor sit amet consectetur. Dui morbi elit sed vel placerat. Mollis sapien
                 vulputate at suscipit eget lectus dictum senectus eu. Sit commodo facilisi consequat eget. </div>
             </div>
-            <div class="display "> Biz kimiz </div>
+            <div class="display mb"> Biz kimiz </div>
           </div>
         </div>
         <div class="content container mpi">
           <div class="p1">Projelerimiz, portföyümüz, tecrübelerimiz...
-            Tüm hizmetleri ile EKSLAND yatırımlarınıza öncü olmak için burada!</div>
+            <br>
+            Tüm hizmetleri ile EKSLAND yatırımlarınıza öncü olmak için burada!
+          </div>
           <div class="cols mpi">
             <div class="column mpb">
               <nuxt-img sizes="xs:224px sm:268.8px md:358.4px lg:444.85px" class="img" src="nazim.png" />
@@ -59,9 +61,9 @@
 
           </div>
         </div>
+        <h4 class="gray"> Hizmetlerimiz</h4>
       </section>
 
-      <h4> Hizmetlerimiz</h4>
 
       <section class="we-are-here">
         <div class="content white-bg container ">
@@ -85,7 +87,6 @@
             <div class="half">
               <div class="p1">EKSLAND güvencesiyle</div> <br>
               <h2>
-
                 50 senelik tecrübemiz ve bilgimiz ile yatırımınızı bizimle gerçekleştirin
               </h2>
             </div>
@@ -99,37 +100,40 @@
         </div>
       </section>
 
-      <section class="services container mpi">
-        <h4> Hizmetlerimiz</h4>
-        <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" src="tower.png" class="img" />
-        <div class="cols">
-          <div class="column">
-            <div class="p1">
-              <b> 14’ten fazla sözleşmeli fonlar. </b>
-              <br>
-              Her bir fonumuz, özenle seçilen ve yönetilen yatırım araçlarından oluşur ve uzman ekip tarafından dikkatle
-              izlenir. Siz de şirketimizle çalışarak bu geniş fon portföyünden faydalanabilir ve yatırımınızı daha da
-              güçlendirebilirsiniz. 14'ten fazla sözleşmeli fon seçeneğimiz ile yatırımlarınıza değer katmak için doğru
-              adımı atın."
-            </div>
-
-          </div>
-          <div class="column">
-            <div class="p1">
-              <b> 1300’den fazla aktif proje. </b>
-              <br>
-              Her bir fonumuz, özenle seçilen ve yönetilen yatırım araçlarından oluşur ve uzman ekip tarafından dikkatle
-              izlenir. Siz de şirketimizle çalışarak bu geniş fon portföyünden faydalanabilir ve yatırımınızı daha da
-              güçlendirebilirsiniz. 14'ten fazla sözleşmeli fon seçeneğimiz ile yatırımlarınıza değer katmak için doğru
+      <section class=" white-bg ">
+        <div class="services container mpi">
+          <h4> Hizmetlerimiz</h4>
+          <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" src="tower.png" class="img" />
+          <div class="cols">
+            <div class="column">
+              <div class="p1">
+                <div class="h"> 14’ten fazla sözleşmeli fonlar. </div>
+                <br>
+                Her bir fonumuz, özenle seçilen ve yönetilen yatırım araçlarından oluşur ve uzman ekip tarafından dikkatle
+                izlenir. Siz de şirketimizle çalışarak bu geniş fon portföyünden faydalanabilir ve yatırımınızı daha da
+                güçlendirebilirsiniz. 14'ten fazla sözleşmeli fon seçeneğimiz ile yatırımlarınıza değer katmak için doğru
+                adımı atın."
+              </div>
 
             </div>
+            <div class="column">
+              <div class="p1">
+                <div class="h"> 1300’den fazla aktif proje. </div>
+                <br>
+                Her bir fonumuz, özenle seçilen ve yönetilen yatırım araçlarından oluşur ve uzman ekip tarafından dikkatle
+                izlenir. Siz de şirketimizle çalışarak bu geniş fon portföyünden faydalanabilir ve yatırımınızı daha da
+                güçlendirebilirsiniz. 14'ten fazla sözleşmeli fon seçeneğimiz ile yatırımlarınıza değer katmak için doğru
+              </div>
 
+            </div>
           </div>
         </div>
+
       </section>
 
-      <section class="office container mpi">
-        <div class="display">
+      <section class="office  container mpi">
+
+        <div class="display" style="line-height: 97px;margin-bottom: 61px;">
           Sizleri Fikirtepe’deki <br> Satış Ofisimize
           <br>
           Bekliyoruz!
@@ -146,6 +150,7 @@
             duyarız!"
           </div>
         </div>
+
       </section>
     </div>
 

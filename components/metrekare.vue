@@ -3,13 +3,13 @@
     <div class="graph1 container mpi">
 
       <div class="logo">
-        EKS <span>LAND</span>
+        EKS<span>LAND</span>
       </div>
-      <h4>Eskişehir </h4>
+      <h4>Türkiye</h4>
       <div class="display">
         Metrekare başına arsa fiyat endeksi
       </div>
-      <div class="p1">
+      <div class="p1" style="max-width:1200px">
         Metrekare başına arsa fiyat endeksi, her sene artış gösteren bu özel araziyi yatırımcılar için vazgeçilmez
         kılıyor. Bu dinamik endeks, yatırımınızın gelecekteki getirisini garanti altına alıyor.
       </div>
