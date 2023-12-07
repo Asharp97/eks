@@ -340,7 +340,7 @@ const editIlan = async (id) => {
 }
 
 //New Ad
-const newAd = { imgURL: [] }
+const newAd = { imgURL: [], imgName: [] }
 const success = ref(false)
 const postAd = () => {
   loading.value = true
@@ -384,11 +384,11 @@ const clearImages = () => {
 
 // New Image to Database
 const imgDBName = []
-const re = /(?:\.([^.]+))?$/
 const imgUpload = async () => {
   for (let i = 0; i < imgFile.length; i++) {
-    // imgExt[i] = re.exec(imgName[i])[1];
-    imgDBName[i] = `img_${Date.now()}_${i}.jpg`
+    imgExt[i] = imgName.value[i].split(".").pop()
+    imgDBName[i] = `img_${Date.now()}_${i}.${imgExt[i]}`
+    newAd.imgName[i] = imgDBName[i]
     const { data, error } = await supabase.storage
       .from('images')
       .upload(imgDBName[i], imgFile[i])
