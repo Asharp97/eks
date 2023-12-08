@@ -73,31 +73,31 @@
     <section class="white-bg ">
       <div class="table container mpi">
         <h1>Son <span>5</span> Senede</h1>
-        <h4> Türkiye </h4>
+        <h4>Türkiye</h4>
         <h1>Yatırım araçlarındaki değişiklikler</h1>
         <table>
           <thead>
             <tr>
-              <th v-for="(header, n) in table.header" :class="{ 'orange': n == 6 }">{{ header }}</th>
+              <th v-for="(header, n) in table.header" :class="{ 'green': n == 6 }">{{ header }}</th>
             </tr>
           </thead>
           <tbody>
-            <tr v-for="(row, r) in  table.body ">
-              <td v-for="(data, n) in  row " :class="{ 'orange': n == 6 }">
-                <Icon :name="data.icon" class="icon" v-if="data.icon" />
+            <tr v-for="(row, r) in table.body">
+              <td v-for="(data, n) in row" :class="{ 'green': n == 6 }">
+                <Icon :name="data.icon" class="icon" v-if="data.icon" :class="data.color" />
                 {{ data.name }}
-                <span class="currency" :class="{ 'hide': n == 0 }">
-                  ₺
-                </span>
-                <div v-if="n == 6 && r == 1" class="green">(%695.62 ARTIŞ)</div>
+                <span class=" currency" :class="{ 'hide': n == 0 }"> ₺ </span>
+                <div v-if="n == 6 && r == 1" class="orange">(%695.62 ARTIŞ)</div>
               </td>
             </tr>
           </tbody>
         </table>
-        <div class="p2">Arazi verileri
-          <span>
-            Endeksa’dan
-          </span>
+        <div class="p2" style="text-align: start;">Arazi verileri
+          <NuxtLink to="https://www.endeksa.com/tr/analiz/turkiye/eskisehir/endeks/satilik/arazi">
+            <span>
+              Endeksa’dan
+            </span>
+          </NuxtLink>
           alınmıştır.
         </div>
       </div>
@@ -174,4 +174,20 @@ const getCount = (x) => {
 
 
 
-<style lang="scss" scoped></style> 
+<style lang="scss" scoped>
+.greenDark {
+  color: #3B510A;
+}
+
+.gold {
+  color: #F1CE18;
+}
+
+.dolar {
+  color: #599E2F;
+}
+
+.euro {
+  color: #0A2CE1;
+}
+</style> 

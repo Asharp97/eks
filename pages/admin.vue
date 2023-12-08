@@ -2,8 +2,8 @@
   <div class="admin container">
     <!-- <h1 @click="signup">sign ali up</h1> -->
     <form v-if="!store.user" action="" class="form ">
-      <input type="email" v-model="mail" placeholder="email" name="email" />
-      <input type="password" v-model="pass" placeholder="pass" name="password" />
+      <input type="email" v-model="mail" @keyup.enter="signin" placeholder="email" name="email" />
+      <input type="password" v-model="pass" @keyup.enter="signin" placeholder="pass" name="password" />
       <btn2 text="sign in" @click="signin" />
     </form>
 
@@ -55,7 +55,7 @@
           <tbody>
             <tr v-for="row in ilanlar ">
               <td>
-                <Icon name="material-symbols:edit" class="icon" @click="getIlan(row.id)" />
+                <Icon name="material-symbols:edit" class="icon" @click="showMore(row.id)" />
               </td>
               <td>
                 <Icon name="ic:baseline-delete" class="icon" @click="deleteIlan(row.id)" />
@@ -64,7 +64,7 @@
                 {{ data }}
               </td>
               <td style="text-align: center;">
-                <Icon class="icon" name="ic:outline-remove-red-eye" @click="getIlan(row.id)" />
+                <Icon class="icon" name="ic:outline-remove-red-eye" @click="showMore(row.id)" />
               </td>
             </tr>
           </tbody>
@@ -73,38 +73,37 @@
 
       <div class="postAd" v-if="tabs[1]">
         <div class="inputs">
-
           <ul>
             <div class="input-wrapper">
-              <input type="number" v-model="newAd.landPrice" placeholder="Arazi Fiyatı">
+              <input type="number" v-model="newIlan.landPrice" placeholder="Arazi Fiyatı">
             </div>
 
             <div class="input-wrapper">
-              <input type="text" v-model="newAd.cityLocation" placeholder="Bulunduğu Şehir">
+              <input type="text" v-model="newIlan.cityLocation" placeholder="Bulunduğu Şehir">
             </div>
 
             <div class="input-wrapper">
-              <input type="text" v-model="newAd.districtLocation" placeholder="Bulunduğu İlçe">
+              <input type="text" v-model="newIlan.districtLocation" placeholder="Bulunduğu İlçe">
             </div>
 
             <div class="input-wrapper">
-              <input type="number" v-model="newAd.squareMeters" placeholder="Metrekare">
+              <input type="number" v-model="newIlan.squareMeters" placeholder="Metrekare">
             </div>
 
             <div class="input-wrapper">
-              <input type="number" v-model="newAd.pricePerSquareMeter" placeholder="Metrekare fiyatı">
+              <input type="number" v-model="newIlan.pricePerSquareMeter" placeholder="Metrekare fiyatı">
             </div>
 
             <div class="input-wrapper">
-              <input type="number" v-model="newAd.islandNo" placeholder="Ada no">
+              <input type="number" v-model="newIlan.islandNo" placeholder="Ada no">
             </div>
 
             <div class="input-wrapper">
-              <input type="number" v-model="newAd.sheetNo" placeholder="Pafta no">
+              <input type="number" v-model="newIlan.sheetNo" placeholder="Pafta no">
             </div>
 
             <div class="input-wrapper">
-              <input type="number" v-model="newAd.plotNumber" placeholder="Parsel no">
+              <input type="number" v-model="newIlan.plotNumber" placeholder="Parsel no">
             </div>
 
 
@@ -123,42 +122,42 @@
 
           <ul>
             <div class="input-wrapper">
-              <input type="number" v-model="newAd.istanbulDistance" placeholder="İstanbul'a olan uzaklık">
+              <input type="number" v-model="newIlan.istanbulDistance" placeholder="İstanbul'a olan uzaklık">
             </div>
 
             <div class="input-wrapper">
-              <input type="number" v-model="newAd.ankaraDistance" placeholder="Ankaraya olan uzaklık">
+              <input type="number" v-model="newIlan.ankaraDistance" placeholder="Ankaraya olan uzaklık">
             </div>
 
             <div class="input-wrapper">
-              <input type="number" v-model="newAd.cityCenterDistance" placeholder="Şehir Merkezine olan uzaklık">
+              <input type="number" v-model="newIlan.cityCenterDistance" placeholder="Şehir Merkezine olan uzaklık">
             </div>
 
             <div class="input-wrapper">
-              <input type="number" v-model="newAd.nearestSettlementDistance"
+              <input type="number" v-model="newIlan.nearestSettlementDistance"
                 placeholder="En yakın yerleşim yerine olan uzaklık">
             </div>
 
             <div class="input-wrapper">
-              <input type="number" v-model="newAd.airportDistance" placeholder="Havaalanına olan uzaklık">
+              <input type="number" v-model="newIlan.airportDistance" placeholder="Havaalanına olan uzaklık">
             </div>
 
             <div class="input-wrapper">
-              <input type="number" v-model="newAd.landSalesRate" placeholder="Bölgenin arsa satış oranı">
+              <input type="number" v-model="newIlan.landSalesRate" placeholder="Bölgenin arsa satış oranı">
             </div>
 
             <div class="input-wrapper">
-              <input type="number" v-model="newAd.realEstateValueLast5Years"
+              <input type="number" v-model="newIlan.realEstateValueLast5Years"
                 placeholder="Son 5 Yıldaki bölge emlak değeri">
             </div>
 
             <div class="input-wrapper">
-              <input type="number" v-model="newAd.regionalLandsValuationRate"
+              <input type="number" v-model="newIlan.regionalLandsValuationRate"
                 placeholder="Bölge arazilerinin değerlenme oranı (Yıllık)">
             </div>
 
             <div class="input-wrapper">
-              <input type="number" v-model="newAd.landToIndustrialZoneDistance"
+              <input type="number" v-model="newIlan.landToIndustrialZoneDistance"
                 placeholder="Arsanın sanayı bölgesine uzaklığı">
             </div>
           </ul>
@@ -171,7 +170,7 @@
       <q-dialog v-model="overlay">
         <q-card>
           <q-card-section class="q-pt-none">
-            <div v-for="(x, n, q) in ilan" :class="{ 'hide': q == 0 || q == 1 || n == 'imgURL' }">
+            <div v-for="(x, n, q) in ilan" :class="{ 'hide': q == 0 || q == 1 || n == 'imgURL' || n == 'imgName' }">
               <div class="edit">
 
                 <div class="p1 param">
@@ -226,21 +225,7 @@ const clientHeader = content.clientHeader
 const ilanHeader = content.ilanHeader
 const fullParams = content.fullParams
 
-// editAd
-let overlay = ref(false)
-let ilan = ref({})
-const getIlan = async (id) => {
-  overlay.value = true
-  loading.value = true
-  const { data, error } = await supabase
-    .from('lands')
-    .select()
-    .eq('id', id)
-  if (data)
-    ilan.value = data[0]
-  loading.value = false
-  console.log(ilan.value)
-}
+
 
 //User
 import { useStore } from '../stores/useUserStore.ts'
@@ -320,15 +305,49 @@ const getIlanlar = async () => {
     ilanlar.value = data
 
 }
+
+let ilan = ref({})
+const getIlan = async (id) => {
+  const { data, error } = await supabase
+    .from('lands')
+    .select()
+    .eq('id', id)
+  if (data)
+    ilan.value = data[0]
+}
+
+let overlay = ref(false)
+const showMore = (id) => {
+  overlay.value = true
+  loading.value = true
+  getIlan(id)
+  loading.value = false
+}
 const deleteIlan = async (id) => {
   const { error } = await supabase
     .from('lands')
     .delete()
     .eq('id', id)
+  getIlan(id)
+  // if (ilan.value.imgName.length > 0)
+  //   deleteImage()
   getIlanlar()
   if (error)
     console.log(error)
 }
+
+const deleteImage = async () => {
+  for (let i = 0; i < ilan.value.imgName.length; i++) {
+    const { data, error } = await supabase
+      .storage
+      .from('images')
+      .remove(ilan.value.imgName[i])
+    if (data) {
+      console.log(ilan.value.imgName[i] + ' : Deleted')
+    }
+  }
+}
+
 const editIlan = async (id) => {
   const { error } = await supabase
     .from('lands')
@@ -340,7 +359,7 @@ const editIlan = async (id) => {
 }
 
 //New Ad
-const newAd = { imgURL: [] }
+const newIlan = { imgURL: [], imgName: [] }
 const success = ref(false)
 const postAd = () => {
   loading.value = true
@@ -349,12 +368,13 @@ const postAd = () => {
   else {
     postAdData()
   }
+  success.value = true
 }
 
 const postAdData = async () => {
   const { data, error } = await supabase
     .from('lands')
-    .insert(newAd)
+    .insert(newIlan)
     .select()
   if (data) {
     success.value = true
@@ -384,11 +404,11 @@ const clearImages = () => {
 
 // New Image to Database
 const imgDBName = []
-const re = /(?:\.([^.]+))?$/
 const imgUpload = async () => {
   for (let i = 0; i < imgFile.length; i++) {
-    // imgExt[i] = re.exec(imgName[i])[1];
-    imgDBName[i] = `img_${Date.now()}_${i}.jpg`
+    imgExt[i] = imgName.value[i].split('.').pop();
+    imgDBName[i] = `img_${Date.now()}_${i}.${imgExt[i]}`
+    newIlan.imgName[i] = imgDBName[i]
     const { data, error } = await supabase.storage
       .from('images')
       .upload(imgDBName[i], imgFile[i])
@@ -397,12 +417,13 @@ const imgUpload = async () => {
     }
   }
 }
+
 const getImgURL = async (name, i) => {
   const { data } = supabase.storage
     .from('images')
     .getPublicUrl(name)
   if (data) {
-    newAd.imgURL[i] = data.publicUrl
+    newIlan.imgURL[i] = data.publicUrl
     if (i == imgFile.length - 1)
       postAdData()
   }

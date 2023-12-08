@@ -1,8 +1,5 @@
 <template>
   <div class="big-container">
-    <div class="display">
-      Hemen İletişim
-    </div>
     <div class="contact-us-form big-container">
       <div class="half swiper-quote mobile-hide ">
         <nuxt-img sizes="xs:0px lg:635px" class="backgroundImg" src="fillform.png" />

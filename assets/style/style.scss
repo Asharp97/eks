@@ -112,7 +112,7 @@
     backdrop-filter: blur(2.5px);
     width: 100%;
     .header {
-      height: 140px;
+      height: $navHeight;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -234,18 +234,19 @@
 .hero {
   .landing-image {
     width: 100%;
-    height: 116vh;
-    margin-top: -130px;
+    height: 97vh;
+    margin-top: -$navHeight;
     position: absolute;
     object-fit: cover;
   }
   .landing-page {
     color: white;
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    height: 100vh;
+    height: 85vh;
     margin-top: -100px;
     z-index: 1;
     .landing-text {
@@ -272,7 +273,8 @@
 }
 
 .form-inner {
-  width: 80%;
+  // width: 99%;
+  max-width: 500px;
   display: flex;
   margin-block: 24px;
   flex-direction: column;
@@ -665,11 +667,6 @@
       text-align: center;
       display: flex;
       gap: 65px;
-      .orange {
-        text-decoration: line-through;
-        text-decoration-color: #000000;
-        text-decoration-thickness: 4px;
-      }
       .text {
         display: flex;
         flex-direction: column;
@@ -683,6 +680,8 @@
       }
       .why-image {
         width: 100%;
+        margin-inline: auto;
+        max-width: 1291px;
       }
     }
     .table {
@@ -698,7 +697,7 @@
       }
       h4 {
         color: $gray;
-        margin-block: 46px;
+        margin-block: 35px;
       }
       table {
         width: 100%;
@@ -725,6 +724,12 @@
           font-size: 22px;
           font-weight: 600;
           padding-block: 20px;
+        }
+      }
+      .p2 {
+        margin-top: 37px;
+        span {
+          font-weight: 600;
         }
       }
     }
@@ -1295,7 +1300,7 @@
       .display {
         margin-bottom: 60px;
       }
-      .p1{
+      .p1 {
         max-width: 1128px;
         margin-inline: auto;
       }
@@ -1846,7 +1851,7 @@
   color: $orange !important;
 }
 .green {
-  color: #40840b;
+  color: #40840b !important;
 }
 
 .gapH {
@@ -1932,7 +1937,7 @@
 
 .tapu-steps {
   display: flex;
-  gap: 47px;
+  gap: 40px;
   flex-direction: column;
 
   .p1 {
@@ -1941,7 +1946,7 @@
 
   .steps-img-container {
     border-radius: 40px 40px 0px 0px;
-    padding: 56px 40px;
+    padding: 20px 40px;
 
     h1 {
       max-width: 777px;
