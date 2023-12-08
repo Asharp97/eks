@@ -103,6 +103,7 @@
     section {
       .feature-cards {
         gap: 20px;
+        margin-top: 30px;
       }
       .popular-ads {
         .top {
@@ -186,10 +187,12 @@
   }
   .hero {
     .landing-image {
-      height: 150vh !important;
-      margin-top: -300px !important;
+      height: 100vh !important;
+      margin-top: 0;
+      filter: brightness(0.5);
     }
     .landing-page {
+      height: 100vh;
       gap: 80px;
       justify-content: center !important;
       .landing-text {
@@ -198,8 +201,7 @@
       }
       .form-bg {
         backdrop-filter: none;
-
-        background-color: #42424280;
+        background-color: #85858552;
         button {
           padding-inline: 0;
         }

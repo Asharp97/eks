@@ -185,8 +185,8 @@
   }
 }
 .form-bg {
-  max-width: 451px !important;
-  width: 100% !important;
+  max-width: 451px;
+  width: 100%;
 }
 .footer-fillform {
   margin-top: $sectionGap;
@@ -244,7 +244,7 @@
     color: #fff;
     display: flex;
     flex-wrap: wrap;
-    height: 81vh;
+    height: 88vh;
     justify-content: space-evenly;
     margin-top: -65px;
     position: relative;
@@ -258,11 +258,11 @@
       border-radius: 14px;
       background: rgba(255, 255, 255, 0.22);
       backdrop-filter: blur(55.5px);
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 451px;
     }
   }
 }
@@ -522,6 +522,7 @@
       display: flex;
       justify-content: space-between;
       gap: 17px;
+      
       flex-wrap: wrap;
       .card {
         flex: 1 0 290px;
@@ -785,9 +786,9 @@
     }
     .sort {
       display: flex;
-      button {
+      // button {
         // min-width: 176px;
-      }
+      // }
     }
   }
   .filter-listing-row {
@@ -832,6 +833,7 @@
         }
       }
     }
+
     .listing {
       display: flex;
       flex-direction: column;
@@ -914,6 +916,7 @@
         width: 100%;
       }
     }
+    
   }
 }
 .q-card {

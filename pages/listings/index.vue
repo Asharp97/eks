@@ -52,7 +52,7 @@
             -
             <input type="number" @keyup.enter="getIlanlar" v-model="price.max" min="1" max="300000">
           </div>
-          <q-range v-model="price" :min="0" :max="300000" color="black" thumb-color="black" label />
+          <q-range step='1000' v-model="price" :min="0" :max="300000" color="black" thumb-color="black" label />
           <div class="t2">
             Metrekare
           </div>
@@ -61,7 +61,7 @@
             -
             <input type="number" @keyup.enter="getIlanlar" v-model="km.max" min="1" max="1300">
           </div>
-          <q-range v-model="km" :min="0" :max="1300" color="black" thumb-color="black" label />
+          <q-range step='1000' v-model="km" :min="0" :max="1300" color="black" thumb-color="black" label />
 
           <div class="t2">
             İlçeler
@@ -71,10 +71,6 @@
               <q-checkbox v-model="city" :val="x" color="black">
                 <div class="p2"> {{ x }}</div>
               </q-checkbox>
-              <!-- <input type="checkbox" v-model="city" :value="x" class="black">
-              <label for="" :class="{ 'black': city.includes(x) }" class="gray">
-                <div class="p2"> {{ x }}</div>
-              </label> -->
             </div>
           </div>
 
@@ -281,7 +277,8 @@ watch(
 
   .filter {
     overflow: hidden;
-    width: 0;
+    width: 0px !important;
+    min-width: 0px !important;
   }
 
   .listing {
