@@ -240,14 +240,14 @@
     object-fit: cover;
   }
   .landing-page {
-    color: white;
-    position: relative;
-    display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    color: #fff;
+    display: flex;
     flex-wrap: wrap;
-    height: 85vh;
-    margin-top: -100px;
+    height: 81vh;
+    justify-content: space-evenly;
+    margin-top: -65px;
+    position: relative;
     z-index: 1;
     .landing-text {
       z-index: 1;
