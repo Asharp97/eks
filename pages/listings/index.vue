@@ -50,9 +50,9 @@
           <div class="inputs">
             <input type="number" @keyup.enter="getIlanlar" v-model="price.min" min="1" max="290000">
             -
-            <input type="number" @keyup.enter="getIlanlar" v-model="price.max" min="1" max="300000">
+            <input type="number" @keyup.enter="getIlanlar" v-model="price.max" min="1" max="30000">
           </div>
-          <q-range v-model="price" :min="0" :max="300000" color="black" thumb-color="black" label />
+          <q-range v-model="price" :min="0" :max="30000" color="black" thumb-color="black" label />
           <div class="t2">
             Metrekare
           </div>
@@ -158,7 +158,7 @@ const sortName = content.sort
 
 let loading = ref(false)
 
-let price = ref({ min: 0, max: 300000 })
+let price = ref({ min: 0, max: 30000 })
 let km = ref({ min: 0, max: 1300 })
 let city = ref([])
 
@@ -186,10 +186,10 @@ let getCount = async () => {
   let query = supabase
     .from('lands')
     .select('*', { count: 'exact', head: true })
-    .gte('landPrice', price.value.min)
-    .gte('squareMeters', km.value.min)
-    .lte('landPrice', price.value.max)
-    .lte('squareMeters', km.value.max)
+    // .gte('landPrice', price.value.min)
+    // .gte('squareMeters', km.value.min)
+    // .lte('landPrice', price.value.max)
+    // .lte('squareMeters', km.value.max)
 
   if (city.value.length > 0)
     query = query.in('districtLocation', city.value)
@@ -200,7 +200,7 @@ let getCount = async () => {
 }
 
 let clearFilter = () => {
-  price.value = { min: 0, max: 300000 }
+  price.value = { min: 0, max: 30000 }
   km.value = { min: 0, max: 1300 }
   city.value = []
 }
@@ -209,11 +209,11 @@ let getIlanlar = async () => {
   let query = supabase
     .from('lands')
     .select()
-    .gte('landPrice', price.value.min)
-    .gte('squareMeters', km.value.min)
-    .lte('landPrice', price.value.max)
-    .lte('squareMeters', km.value.max)
-    .range(adPerPage * (page.value - 1), page.value * adPerPage)
+    // .gte('landPrice', price.value.min)
+    // .gte('squareMeters', km.value.min)
+    // .lte('landPrice', price.value.max)
+    // .lte('squareMeters', km.value.max)
+    // .range(adPerPage * (page.value - 1), page.value * adPerPage)
 
   if (city.value.length > 0)
     query = query.in('districtLocation', city.value)
@@ -237,7 +237,6 @@ onMounted(() => {
 watch(
   () => [price.value, km.value, city.value, order.value],
   () => {
-    // console.log(order)
     page.value = 1
     getIlanlar()
     getCount()

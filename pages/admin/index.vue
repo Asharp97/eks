@@ -55,7 +55,9 @@
           <tbody>
             <tr v-for="row in ilanlar ">
               <td>
-                <Icon name="material-symbols:edit" class="icon" @click="getIlan(row.id)" />
+                <NuxtLink :to="`/admin/${row.id}`">
+                  <Icon name="material-symbols:edit" class="icon" />
+                </NuxtLink>
               </td>
               <td>
                 <Icon name="ic:baseline-delete" class="icon" @click="deleteIlan(row.id)" />
@@ -171,15 +173,13 @@
       <q-dialog v-model="overlay">
         <q-card>
           <q-card-section class="q-pt-none">
-            <div v-for="(x, n, q) in ilan" :class="{ 'hide': q == 0 || q == 1 || n == 'imgURL' }">
+            <div v-for="(x, n, q) in ilan" :class="{ 'hide': q < 2 || q > 19 || n == 'imgURL' }">
               <div class="edit">
-
                 <div class="p1 param">
                   {{ fullParams[q] }}:
                 </div>
                 <div class="p2 data">
-                  <input :value="x">
-                  <!-- {{ x }} -->
+                  {{ x }}
                 </div>
               </div>
             </div>
@@ -329,15 +329,7 @@ const deleteIlan = async (id) => {
   if (error)
     console.log(error)
 }
-const editIlan = async (id) => {
-  const { error } = await supabase
-    .from('lands')
-    .update()
-    .eq('id', id)
-  getIlanlar()
-  if (error)
-    console.log(error)
-}
+
 
 //New Ad
 const newAd = { imgURL: [], imgName: [] }
@@ -418,6 +410,8 @@ const getImgURL = async (name, i) => {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-bottom:1px solid rgba(0, 0, 0, 0.116) ;
+  padding-block: 10px;
 
   .param {
     text-align: start;

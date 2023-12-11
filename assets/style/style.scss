@@ -112,7 +112,7 @@
     backdrop-filter: blur(2.5px);
     width: 100%;
     .header {
-      height: 140px;
+      height: $navHeight;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -184,10 +184,7 @@
     }
   }
 }
-.form-bg {
-  max-width: 451px !important;
-  width: 100% !important;
-}
+
 .footer-fillform {
   margin-top: $sectionGap;
   .footer-bg {
@@ -234,10 +231,10 @@
 .hero {
   .landing-image {
     width: 100%;
-    height: 116vh;
-    margin-top: -130px;
+    margin-top: -200px;
     position: absolute;
     object-fit: cover;
+    height: 865px;
   }
   .landing-page {
     color: white;
@@ -245,8 +242,10 @@
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    height: 100vh;
-    margin-top: -100px;
+    margin-bottom: 50px;
+
+    padding-top: $navHeight;
+
     z-index: 1;
     .landing-text {
       z-index: 1;
@@ -261,7 +260,10 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      width: 451px;
+      max-width: 451px;
+      padding: 15px 25px;
+      width: 100%;
+      z-index: inherit;
     }
   }
 }
@@ -272,13 +274,12 @@
 }
 
 .form-inner {
-  width: 80%;
   display: flex;
   margin-block: 24px;
   flex-direction: column;
   justify-content: space-between;
   gap: 22px;
-  // z-index: -10;
+  z-index: 10;
   .text {
     .p2 {
       margin-block: 12px;
@@ -311,7 +312,8 @@
 .contact-us-form {
   background-color: white;
   display: flex;
-  height: 860px;
+  height: 85vh;
+
   .half {
     width: 50%;
     form {
@@ -521,6 +523,7 @@
       justify-content: space-between;
       gap: 17px;
       flex-wrap: wrap;
+      margin-top: 32px;
       .card {
         flex: 1 0 290px;
         border-radius: 7px;
@@ -555,6 +558,7 @@
             }
             .p1 {
               color: $orange;
+              margin-top: 30px;
             }
           }
           .sub-title {
@@ -665,11 +669,6 @@
       text-align: center;
       display: flex;
       gap: 65px;
-      .orange {
-        text-decoration: line-through;
-        text-decoration-color: #000000;
-        text-decoration-thickness: 4px;
-      }
       .text {
         display: flex;
         flex-direction: column;
@@ -683,6 +682,7 @@
       }
       .why-image {
         width: 100%;
+        max-width: 1010px;
       }
     }
     .table {
@@ -698,11 +698,11 @@
       }
       h4 {
         color: $gray;
-        margin-block: 46px;
+        margin-block: 20px;
       }
       table {
         width: 100%;
-        margin-top: 176px;
+        margin-top: 68px;
         border-collapse: collapse;
         td,
         th {
@@ -710,6 +710,7 @@
             text-align: start;
           }
         }
+
         td {
           padding-block: 12px;
           color: #424242;
@@ -725,6 +726,14 @@
           font-size: 22px;
           font-weight: 600;
           padding-block: 20px;
+        }
+      }
+      .p2 {
+        text-align: start;
+        margin-top: 20px;
+        span {
+          font-weight: 600;
+          text-decoration: underline;
         }
       }
     }
@@ -1295,7 +1304,7 @@
       .display {
         margin-bottom: 60px;
       }
-      .p1{
+      .p1 {
         max-width: 1128px;
         margin-inline: auto;
       }
@@ -1666,37 +1675,38 @@
     border: 1px solid lightgray;
   }
 
-  .postAd {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    .inputs {
-      display: flex;
-      justify-content: space-evenly;
-      width: 100%;
-      flex-wrap: wrap;
-      ul {
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-        max-width: 500px;
-        width: 100%;
-        flex: 1 0 330px;
-        .input-wrapper {
-          display: flex;
-          justify-content: space-evenly;
-          align-items: center;
-          text-overflow: ellipsis;
-          white-space: nowrap;
-          overflow: hidden;
-        }
-      }
-    }
-  }
-
   .icon {
     cursor: pointer;
     font-size: 30px;
+  }
+}
+//admin reusable
+.postAd {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 40px;
+  .inputs {
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    flex-wrap: wrap;
+    ul {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 500px;
+      width: 100%;
+      flex: 1 0 330px;
+      .input-wrapper {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
   }
 }
 
@@ -1846,7 +1856,7 @@
   color: $orange !important;
 }
 .green {
-  color: #40840b;
+  color: #40840b !important;
 }
 
 .gapH {
@@ -1946,6 +1956,7 @@
     h1 {
       max-width: 777px;
       margin-bottom: 61px;
+      line-height: 67px;
     }
     .images {
       display: flex;
@@ -1964,7 +1975,7 @@
         .img {
           width: 100%;
           max-width: 370px;
-          height: 356px;
+          height: 330px;
           object-fit: cover;
         }
       }
