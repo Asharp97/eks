@@ -1,6 +1,5 @@
 <template>
   <div class="home">
-
     <section>
       <hero class="hero" text="EKSLAND ile toprakta büyüyen yatırımlar" img="hero-home" />
     </section>
@@ -90,7 +89,9 @@
                   <span class="icon-wrapper" :class="[{ 'gold': r == 2 }, { 'blue': r == 4 }, { 'darkGreen': r == 3 }]">
                     <Icon :name="data.icon" class="icon" v-if="data.icon" :class="{ 'gold': n == 2 }" />
                   </span>
-                  {{ data.name }}
+                  <span :class="{ 'mobile-hide': n == 0 }">
+                    {{ data.name }}
+                  </span>
                   <span class="currency" :class="{ 'hide': n == 0 }">
                     ₺
                   </span>

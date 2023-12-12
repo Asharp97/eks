@@ -10,8 +10,11 @@
       </div>
     </div>
     <div class="steps ">
-      <div class="step" v-for="step in steps">
-        <div class="t2" v-for="p in step.ps"> {{ p }}</div>
+      <div class="step" v-for="(step, n) in steps">
+        <div>
+          <span class="hide mobile-show orange">{{ n+1 }}</span>
+          <span class="t2" v-for="p in step.ps"> {{ p }}</span>
+        </div>
       </div>
     </div>
 

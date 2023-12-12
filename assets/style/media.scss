@@ -16,6 +16,19 @@
       .feature-cards {
         // margin-top: 0 !important;
       }
+      .table {
+        table {
+          .icon {
+            font-size: 22px;
+          }
+          td {
+            font-size: 9px;
+          }
+          th {
+            font-size: 10px;
+          }
+        }
+      }
     }
   }
 }
@@ -392,9 +405,14 @@
       }
     }
     .steps {
-      justify-content: center;
       .step {
-        width: 100%;
+        padding-top:20px ;
+        // width: 100%;
+        text-align: left;
+        .orange{
+          display: block;
+          text-align: center;
+        }
       }
     }
   }

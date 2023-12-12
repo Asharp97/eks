@@ -71,7 +71,7 @@
             </li>
           </ul>
         </nav>
-        <div class="mobile-show">
+        <div class="mobile-show" ref="el">
           <nav class="mobile-menu" :class="{ 'hide-menu': !showMenu }">
             <button @click="showMenu = !showMenu" class="close">
               <Icon name="material-symbols:close-small-outline" />
@@ -146,6 +146,8 @@ watch(
     showMenu.value = false
   }
 )
+
 </script>
+
 
 <style lang="scss" scoped></style>
