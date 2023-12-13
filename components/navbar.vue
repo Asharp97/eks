@@ -76,29 +76,12 @@
             <button @click="showMenu = !showMenu" class="close">
               <Icon name="material-symbols:close-small-outline" />
             </button>
-            <div class="contact">
-              <div class="method">
-                <NuxtLink to="Tel:+90 555 055 55 01">
-                  <Icon name="material-symbols:call" />
-                  <span>
-                    +90 555 055 55 01
-                  </span>
-                </NuxtLink>
-              </div>
-              <div class="method">
-                <NuxtLink to="https://maps.app.goo.gl/7dU1hVySNx1nTdPJ6">
-                  <Icon name="material-symbols:location-on" />
-                  <span>
-                    İstanbul Türkiye
-                  </span>
-                </NuxtLink>
-              </div>
-            </div>
-            <NuxtLink to="/">
+
+            <!-- <NuxtLink to="/">
               <div class="logo">
                 EKS<span>LAND</span>
               </div>
-            </NuxtLink>
+            </NuxtLink> -->
             <ul>
               <NuxtLink to="/">
                 <li>
@@ -126,6 +109,24 @@
                 </li>
               </NuxtLink>
             </ul>
+            <div class="contact">
+              <div class="method">
+                <NuxtLink to="Tel:+90 555 055 55 01">
+                  <Icon name="material-symbols:call" />
+                  <span>
+                    +90 555 055 55 01
+                  </span>
+                </NuxtLink>
+              </div>
+              <div class="method">
+                <NuxtLink to="https://maps.app.goo.gl/7dU1hVySNx1nTdPJ6">
+                  <Icon name="material-symbols:location-on" />
+                  <span>
+                    İstanbul Türkiye
+                  </span>
+                </NuxtLink>
+              </div>
+            </div>
           </nav>
         </div>
 

@@ -95,7 +95,7 @@
                   <span class="currency" :class="{ 'hide': n == 0 }">
                     ₺
                   </span>
-                  <div v-if="n == 6 && r == 1" class="orange">(%695.62 ARTIŞ)</div>
+                  <div v-if="n == 6 && r == 1" class="orange t2">(%695.62 ARTIŞ)</div>
                 </td>
               </tr>
             </tbody>

@@ -9,8 +9,12 @@
   .hero {
     .landing-image {
       height: 1346px !important;
+      width: unset;
+      overflow: hidden;
     }
   }
+}
+@media screen and (max-width: 660px) {
   .home {
     section {
       .feature-cards {
@@ -214,14 +218,14 @@
   }
   .hero {
     .landing-image {
-      height: 172px;
+      height: 1100px;
       margin-top: -300px !important;
     }
     .landing-page {
       gap: 80px;
       justify-content: center !important;
       .landing-text {
-        margin-top: 175px !important;
+        // margin-top: 175px !important;
         text-align: center;
       }
       .form-bg {
@@ -406,10 +410,10 @@
     }
     .steps {
       .step {
-        padding-top:20px ;
+        padding-top: 20px;
         // width: 100%;
         text-align: left;
-        .orange{
+        .orange {
           display: block;
           text-align: center;
         }

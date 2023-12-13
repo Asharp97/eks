@@ -186,10 +186,10 @@ let getCount = async () => {
   let query = supabase
     .from('lands')
     .select('*', { count: 'exact', head: true })
-    // .gte('landPrice', price.value.min)
-    // .gte('squareMeters', km.value.min)
-    // .lte('landPrice', price.value.max)
-    // .lte('squareMeters', km.value.max)
+  // .gte('landPrice', price.value.min)
+  // .gte('squareMeters', km.value.min)
+  // .lte('landPrice', price.value.max)
+  // .lte('squareMeters', km.value.max)
 
   if (city.value.length > 0)
     query = query.in('districtLocation', city.value)
@@ -209,11 +209,11 @@ let getIlanlar = async () => {
   let query = supabase
     .from('lands')
     .select()
-    // .gte('landPrice', price.value.min)
-    // .gte('squareMeters', km.value.min)
-    // .lte('landPrice', price.value.max)
-    // .lte('squareMeters', km.value.max)
-    // .range(adPerPage * (page.value - 1), page.value * adPerPage)
+  // .gte('landPrice', price.value.min)
+  // .gte('squareMeters', km.value.min)
+  // .lte('landPrice', price.value.max)
+  // .lte('squareMeters', km.value.max)
+  // .range(adPerPage * (page.value - 1), page.value * adPerPage)
 
   if (city.value.length > 0)
     query = query.in('districtLocation', city.value)
@@ -281,6 +281,7 @@ watch(
   .filter {
     overflow: hidden;
     width: 0;
+    min-width: 0;
   }
 
   .listing {

@@ -103,14 +103,16 @@ let details = async () => {
     land.value = data[0]
     section1.value = Object.fromEntries(Object.entries(land.value).slice(3, 10))
     section2.value = Object.fromEntries(Object.entries(land.value).slice(11))
-    img2 = [land.value.imgURL[land.value.imgURL.length - 3], land.value.imgURL[land.value.imgURL.length - 2]]
+    if (land.value.imgURL.length > 4)
+      img2 = [land.value.imgURL[land.value.imgURL.length - 3], land.value.imgURL[land.value.imgURL.length - 2]]
   }
 }
 
 import content from "../../assets/content.json"
 const params = content.params
 
-onMounted(() => {  details()
+onMounted(() => {
+  details()
 })
 
 

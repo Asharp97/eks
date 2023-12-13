@@ -321,16 +321,37 @@ const getIlanlar = async () => {
 
 }
 const deleteIlan = async (id) => {
-  const { error } = await supabase
+
+  const { data, error } = await supabase
+    .from('lands')
+    .select()
+    .eq('id', id)
+  if (data) {
+    ilan.value = data
+    deleteImage(toRaw(ilan.value[0].imgName))
+    getImageNameForDelete(id)
+  }
+}
+
+const getImageNameForDelete = async (id) => {
+  const { status, error } = await supabase
     .from('lands')
     .delete()
     .eq('id', id)
   getIlanlar()
   if (error)
     console.log(error)
+
 }
 
-
+const deleteImage = async (x) => {
+  const { data, error } = await supabase
+    .storage
+    .from('images')
+    .remove(x)
+  // if (data)
+  //   console.log(data)
+}
 //New Ad
 const newAd = { imgURL: [], imgName: [] }
 const success = ref(false)
@@ -410,7 +431,7 @@ const getImgURL = async (name, i) => {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom:1px solid rgba(0, 0, 0, 0.116) ;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.116);
   padding-block: 10px;
 
   .param {
