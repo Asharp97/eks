@@ -119,7 +119,6 @@ const postInfo = async () => {
       telephone.value = ''
       country.value = null
       errorMsg.value = false
-      sendEmail()
     }
     if (err) throw err
   }
@@ -139,7 +138,7 @@ const sendEmail = () => {
 
 const submit = () => {
   postInfo()
-  sendEmail()
+  // sendEmail()
 }
 
 import countryList from "../assets/countries.json"

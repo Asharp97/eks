@@ -120,11 +120,10 @@
         </div>
       </section>
 
-      <section class="ask container">
-        <h1 class="mpb">Sıkça sorulan sorular</h1>
-        <FaqComponent :faq="faq" class="FaqComponent" />
-      </section>
-    </div>
+    <section class="ask container">
+      <h1 class="mpb">Sıkça sorulan sorular</h1>
+      <FaqComponent :faq="faq" class="FaqComponent" />
+    </section>
 
   </div>
 </template>

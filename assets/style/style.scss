@@ -114,6 +114,7 @@
     width: 100%;
     .header {
       height: $navHeight;
+      height: $navHeight;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -241,10 +242,9 @@
     height: 865px;
   }
   .landing-page {
-    color: white;
-    display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    color: #fff;
+    display: flex;
     flex-wrap: wrap;
     margin-bottom: 50px;
 
@@ -260,6 +260,7 @@
       border-radius: 14px;
       background: rgba(255, 255, 255, 0.22);
       backdrop-filter: blur(55.5px);
+      padding: 20px;
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -278,6 +279,8 @@
 }
 
 .form-inner {
+  // width: 99%;
+  max-width: 500px;
   display: flex;
   margin-block: 24px;
   flex-direction: column;
@@ -526,6 +529,7 @@
       display: flex;
       justify-content: space-between;
       gap: 17px;
+      
       flex-wrap: wrap;
       margin-top: 32px;
       .card {
@@ -794,9 +798,9 @@
     }
     .sort {
       display: flex;
-      button {
+      // button {
         // min-width: 176px;
-      }
+      // }
     }
   }
   .filter-listing-row {
@@ -841,6 +845,7 @@
         }
       }
     }
+
     .listing {
       display: flex;
       flex-direction: column;
@@ -923,6 +928,7 @@
         width: 100%;
       }
     }
+    
   }
 }
 .q-card {
@@ -1952,7 +1958,7 @@
 
 .tapu-steps {
   display: flex;
-  gap: 47px;
+  gap: 40px;
   flex-direction: column;
 
   .p1 {
@@ -1961,7 +1967,7 @@
 
   .steps-img-container {
     border-radius: 40px 40px 0px 0px;
-    padding: 56px 40px;
+    padding: 20px 40px;
 
     h1 {
       max-width: 777px;
