@@ -5,31 +5,14 @@
     padding: 18px 7px;
   }
 }
-@media screen and (max-width: 460px) {
-  .hero {
-    .landing-image {
-      height: 1346px !important;
-      width: unset;
-      overflow: hidden;
-    }
-  }
-}
-@media screen and (max-width: 660px) {
+
+@media screen and (max-width: 400px) {
   .home {
     section {
-      .feature-cards {
-        // margin-top: 0 !important;
-      }
       .table {
         table {
           .icon {
             font-size: 22px;
-          }
-          td {
-            font-size: 9px;
-          }
-          th {
-            font-size: 10px;
           }
         }
       }
@@ -57,7 +40,7 @@
   .navbar {
     .header {
       justify-content: center !important;
-      height: 63px !important;
+      height: $navHeightMob !important;
       .hamburger {
         display: block !important;
         font-size: 30px;
@@ -72,6 +55,21 @@
   }
   .mobile-show {
     display: flex !important;
+  }
+  .onetwolayout {
+    .imgH {
+      height: 264px;
+    }
+    .imgs {
+      .imgV {
+        height: 230px;
+      }
+    }
+    .text {
+      .p1 {
+        width: 100%;
+      }
+    }
   }
 
   .features {
@@ -103,22 +101,22 @@
     //   }
     // }
   }
-  .display {
-    font-size: 30px !important;
-  }
+  // .display {
+  //   font-size: 30px !important;
+  // }
 
-  h1 {
-    font-size: 25px;
-  }
-  .p1 {
-    font-size: 10px;
-  }
-  .t2 {
-    font-size: 10px;
-  }
-  .t1 {
-    font-size: 15px;
-  }
+  // h1 {
+  //   font-size: 25px;
+  // }
+  // .p1 {
+  //   font-size: 10px;
+  // }
+  // .t2 {
+  //   font-size: 10px;
+  // }
+  // .t1 {
+  //   font-size: 15px;
+  // }
   .mpi {
     padding-inline: 33px;
   }
@@ -129,18 +127,30 @@
     overflow: hidden;
   }
   //pages
+  .contact {
+    .contact-details {
+      .details {
+        gap: 20px;
+        div {
+          h3 {
+            margin-bottom: 5px;
+          }
+        }
+      }
+    }
+  }
 
   .home {
     section {
       .feature-cards {
         gap: 20px;
-        margin-top: 200px;
+        // margin-top: 50px;
       }
       .popular-ads {
         .top {
           .header {
             h1 {
-              margin-bottom: 21px;
+              margin-bottom: 0px;
             }
             .sub-title {
               font-size: 10px;
@@ -153,6 +163,7 @@
   }
   .listings {
     padding-inline: 11px;
+    margin-top: 24px;
     .top {
       .land-count {
         font-size: 13px;
@@ -217,14 +228,18 @@
     }
   }
   .hero {
+    overflow: hidden;
     .landing-image {
-      height: 1100px;
-      margin-top: -300px !important;
+      // height: 1300px;
+      // margin-top: -300px !important;
+      filter: brightness(0.7);
     }
     .landing-page {
-      height: 100vh;
+      // height: 100vh;
       gap: 80px;
       justify-content: center !important;
+      padding-top: calc($navHeight + 50px);
+      padding-bottom: 50px;
       .landing-text {
         // margin-top: 175px !important;
         text-align: center;
@@ -238,7 +253,6 @@
       }
     }
   }
-
   .invest {
     .titles {
       .p1,
@@ -260,7 +274,10 @@
         }
         .btns {
           width: 100%;
+          max-width: 300px;
           flex-direction: row;
+          margin-inline: auto;
+
           button {
             font-size: 12px;
             padding: 11px 15px;
@@ -279,6 +296,7 @@
       justify-content: space-evenly;
       .sector {
         // max-width: 111px;
+        padding: 0;
         margin-inline: auto;
         .p1 {
           margin-block: 12px;
@@ -312,12 +330,43 @@
     }
   }
   .about {
+    .office {
+      .img {
+        height: 177px;
+      }
+      .p1 {
+        padding-block: 27px;
+      }
+    }
+    .services {
+      .cols {
+        flex-wrap: wrap;
+        gap: 31px;
+        .column {
+          width: 100%;
+          // gap: ;
+          .p1 {
+            .h {
+              line-height: 3.8;
+            }
+          }
+        }
+      }
+      .img {
+        margin-bottom: 0;
+      }
+      h4 {
+        margin-block: 120px;
+      }
+    }
     .bizkimiz {
       .p1 {
-        margin-bottom: 0px;
+        margin-bottom: 57px;
       }
       .content {
+        padding: 10px 0;
         .cols {
+          gap: 59px;
           .column {
             width: 100%;
           }
@@ -332,15 +381,21 @@
           width: 100%;
         }
         .text {
+          .p1 {
+            text-align: start !important;
+          }
           .half {
             width: 100%;
             text-align: center;
             .p1 {
-              margin-top: 176px;
+              margin-top: 76px;
               color: #424242;
               font-size: 15px;
             }
           }
+        }
+        .exp {
+          margin-block: 50px;
         }
       }
     }
@@ -360,7 +415,7 @@
     .faq {
       .t2,
       .p2 {
-        font-size: 10px;
+        // font-size: 10px;
       }
       .question {
         .t2 {
@@ -373,14 +428,22 @@
   }
 
   .faq {
+    h1 {
+      width: max-content;
+      margin-bottom: 26px;
+    }
+    .white-bg {
+      background-color: transparent;
+      padding: 0;
+    }
     .up {
       right: 10px;
     }
     .titles {
       .nav {
-        gap: 10px;
+        gap: 14px;
         a {
-          padding: 15px 7px;
+          padding: 7px 15px;
         }
       }
     }
@@ -403,19 +466,20 @@
       border-radius: 0 !important;
       padding-block: 12px;
       .images {
+        flex-wrap: nowrap;
         .img {
-          width: 50%;
+          // width: 50%;
         }
       }
     }
     .steps {
       .step {
         padding-top: 20px;
-        // width: 100%;
-        text-align: left;
-        .orange {
-          display: block;
-          text-align: center;
+        max-width: 100%;
+        text-align: center;
+        h3 {
+          margin-bottom: 10px;
+          margin-top: 30px;
         }
       }
     }

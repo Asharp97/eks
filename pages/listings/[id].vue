@@ -1,5 +1,6 @@
 <template>
   <div>
+    <!-- {{ land.imgURL }} -->
     <div class="listing-details gap ">
       <section>
         <div class="white-bg">
@@ -20,6 +21,8 @@
                     {{ params[q] }}:
                     <div class="param">
                       &nbsp;{{ x }}
+                      <span class="measure" v-if="q == 2"> m&sup2; </span>
+                      <span class="measure" v-if="q == 3"> € </span>
                     </div>
                   </div>
                 </div>
@@ -40,11 +43,10 @@
         <div class="closer-look container">
           <h1>Araziye yakından bakın</h1>
           <swiper :navigation="true" :loop="true" class="swiper noNav" @slideNextTransitionStart="nextEnd"
-            @slidePrevTransitionStart="prevEnd">
+            :spaceBetween="30" @slidePrevTransitionStart="prevEnd">
             <swiper-slide v-for="n in land.imgURL" class="slide">
               <!-- <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="img" src="closer-look.png" /> -->
               <img :src="n" class="img" alt="">
-
             </swiper-slide>
           </swiper>
 
@@ -76,7 +78,7 @@
               sunan gelecek için <b> yatırım</b> fırsatları barındıran bir şehirdi.
             </div>
           </div>
-          <slider :swiper="swipedata" space="300" />
+          <slider :swiper="swipedata" space="32" />
         </div>
       </section>
       <section class="container">
@@ -102,9 +104,9 @@ let details = async () => {
   if (data) {
     land.value = data[0]
     section1.value = Object.fromEntries(Object.entries(land.value).slice(3, 10))
-    section2.value = Object.fromEntries(Object.entries(land.value).slice(11))
-    if (land.value.imgURL.length > 4)
-      img2 = [land.value.imgURL[land.value.imgURL.length - 3], land.value.imgURL[land.value.imgURL.length - 2]]
+    section2.value = Object.fromEntries(Object.entries(land.value).slice(11, 20))
+    // if (land.value.imgURL.length > 4)
+    img2 = [land.value.imgURL[land.value.imgURL.length - 3], land.value.imgURL[land.value.imgURL.length - 2]]
   }
 }
 

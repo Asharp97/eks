@@ -52,7 +52,7 @@
             -
             <input type="number" @keyup.enter="getIlanlar" v-model="price.max" min="1" max="30000">
           </div>
-          <q-range step='1000' v-model="price" :min="0" :max="30000" color="black" thumb-color="black" label />
+          <q-range :step='1000' v-model="price" :min="0" :max="30000" color="black" thumb-color="black" label />
           <div class="t2">
             Metrekare
           </div>
@@ -61,7 +61,7 @@
             -
             <input type="number" @keyup.enter="getIlanlar" v-model="km.max" min="1" max="1300">
           </div>
-          <q-range step='1000' v-model="km" :min="0" :max="1300" color="black" thumb-color="black" label />
+          <q-range :step='1000' v-model="km" :min="0" :max="1300" color="black" thumb-color="black" label />
 
           <div class="t2">
             İlçeler
@@ -147,7 +147,20 @@
 definePageMeta({
   layout: 'invert-nav-color'
 })
-
+//Filter Behaviour
+import { useWindowSize } from '@vueuse/core'
+const { width, height } = useWindowSize()
+const defaultFilterBehaviour = () => {
+  if (width.value < 1100)
+    showFilter.value = false
+  else
+    showFilter.value = true
+}
+watch(
+  () => width.value,
+  () => { defaultFilterBehaviour() }
+)
+//content import
 import content from '../assets/content.json'
 const cities = content.eskisehirDistricts
 const sortName = content.sort
@@ -228,7 +241,10 @@ let getIlanlar = async () => {
 onMounted(() => {
   getCount()
   getIlanlar()
+  defaultFilterBehaviour()
 })
+
+
 
 watch(
   () => [price.value, km.value, city.value, order.value],

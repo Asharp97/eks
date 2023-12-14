@@ -1,4 +1,4 @@
-<template>
+r<template>
   <div class="slider">
     <swiper :space-between="space ? space : -200" :scrollbar="{ hide: true }" :slidesPerView="2" :modules="modules"
       :navigation="true" :loop="true" class="swiper">

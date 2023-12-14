@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <section>
-      <hero img="hero-aboutus" text="Hakkımızda" />
+      <hero img="hero-aboutus" text="Hakkımızda." />
     </section>
     <div class="gap">
 
@@ -12,8 +12,8 @@
             <div class="p1 worries">
               Hakkımızda merak ettikleriniz.
             </div>
-            <div class="display mb">Hakkımızda </div>
-            <div class="text mb2">
+            <div class="display mb mobile-hide">Hakkımızda </div>
+            <div class="text mb2 mobile-hide">
 
               <div class="p1">
                 Lorem ipsum dolor sit amet consectetur. Dui morbi elit sed vel placerat. Mollis sapien vulputate at
@@ -24,7 +24,7 @@
               <div class="p1 mb2">Lorem ipsum dolor sit amet consectetur. Dui morbi elit sed vel placerat. Mollis sapien
                 vulputate at suscipit eget lectus dictum senectus eu. Sit commodo facilisi consequat eget. </div>
             </div>
-            <div class="display mb"> Biz kimiz </div>
+            <div class="display"> Biz kimiz </div>
           </div>
         </div>
         <div class="content container mpi">
@@ -133,7 +133,7 @@
 
       <section class="office  container mpi">
 
-        <div class="display" style="line-height: 97px;margin-bottom: 61px;">
+        <div class="display" style="margin-bottom: 61px;">
           Sizleri Fikirtepe’deki <br> Satış Ofisimize
           <br>
           Bekliyoruz!

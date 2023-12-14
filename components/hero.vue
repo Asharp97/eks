@@ -1,5 +1,5 @@
 <template>
-  <div class="hero">
+  <div class="hero" :class="{ 'marginbot': mb }">
     <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1280px xl:1536px xxl:1536px 2xl:2560px" class="landing-image "
       :src="`${img}.png`" />
     <div class="landing-page mpi container">
@@ -16,13 +16,13 @@
 </template>
 
 <script setup>
-
-defineProps(['text', 'img']);
-
+defineProps(['text', 'img', 'mb']);
 </script>
 
 <style lang="scss" scoped>
-
+.marginbot {
+  margin-bottom: 50px;
+}
 </style>
 
 

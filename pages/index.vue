@@ -1,7 +1,7 @@
 <template>
   <div class="home">
     <section>
-      <hero class="hero" text="EKSLAND ile toprakta büyüyen yatırımlar" img="hero-home" />
+      <hero class="hero" :mb="true" text="EKSLAND ile toprakta büyüyen yatırımlar" img="hero-home" />
     </section>
 
     <div class="gap">
@@ -38,8 +38,8 @@
           </div>
           <swiper :freeMode="true" :slidesPerView="count" :spaceBetween="44" :navigation="true" :modules="moduleLand"
             :scrollbar="{ hide: true }" class="swiper">
-            <swiper-slide v-for="(x, n) in ilanlar">
-              <NuxtLink :to="`listings/${x.id}`">
+            <swiper-slide v-for="(x, n) in ilanlar" class="landSlider">
+              <NuxtLink class="landWrapper" :to="`listings/${x.id}`">
                 <div class="land">
                   <!-- <nuxt-img sizes="375px" class="land-img" src="land-1.png" /> -->
                   <img :src="x.imgURL[0]" class="land-img" alt="">
@@ -48,8 +48,8 @@
                     <div class="measurement">
                       <Icon class="icon" name="arcticons:tapemeasure" />
                       <div class="p2">
-                        {{ x.squareMeters }}
-                        345 m
+                        {{ x.squareMeters }}m&sup2;
+                        <!-- 345 m -->
                       </div>
                     </div>
                     <div class="buttons">
@@ -80,12 +80,13 @@
           <table>
             <thead>
               <tr>
-                <th v-for="(header, n) in table.header" :class="{ 'green': n == 6 }">{{ header }}</th>
+                <th v-for="(header, n) in table.header" :class="[{ 'green': n == 6 }, { 'mobile-hide': n == 1 }]">{{
+                  header }}</th>
               </tr>
             </thead>
             <tbody>
               <tr v-for="(row, r) in  table.body ">
-                <td v-for="(data, n) in  row " :class="{ 'green': n == 6 }">
+                <td v-for="(data, n) in  row " :class="[{ 'green': n == 6 }, { 'mobile-hide': n == 1 }]">
                   <span class="icon-wrapper" :class="[{ 'gold': r == 2 }, { 'blue': r == 4 }, { 'darkGreen': r == 3 }]">
                     <Icon :name="data.icon" class="icon" v-if="data.icon" :class="{ 'gold': n == 2 }" />
                   </span>
@@ -120,11 +121,12 @@
         </div>
       </section>
 
-    <section class="ask container">
-      <h1 class="mpb">Sıkça sorulan sorular</h1>
-      <FaqComponent :faq="faq" class="FaqComponent" />
-    </section>
+      <section class="ask container">
+        <h1 class="mpb">Sıkça sorulan sorular</h1>
+        <FaqComponent :faq="faq" class="FaqComponent" />
+      </section>
 
+    </div>
   </div>
 </template>
 

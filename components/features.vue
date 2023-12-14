@@ -9,13 +9,13 @@
           <swiper-slide v-for="(x, n, q) in data" class="slide" :class="{ 'active-slide': q == i }">
             <div class="frame">
               <div class="background">
-                <Icon  :name="sliders[q].icon" class="icon" />
+                <Icon :name="sliders[q].icon" class="icon" />
               </div>
             </div>
             <div class="feature-details">
               <div class="t2"> {{ sliders[q].param }} </div>
               <hr>
-              <h4> {{ x }}</h4>
+              <h4> {{ x }} KM</h4>
             </div>
           </swiper-slide>
           <swiper-slide v-for="(x, n, q) in data" class="slide" :class="{ 'active-slide': q == i }">

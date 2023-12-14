@@ -5,15 +5,15 @@
       <div class="images ">
         <div v-for="(step, n) in steps">
           <nuxt-img sizes="xs:192px sm:230.4px md:307.2px lg:381.3px" :src="step.img + `.png`" class="img" />
-          <div class="t1 mpb">{{ step.title }}</div>
+          <div class="t1 mpb mobile-hide">{{ step.title }}</div>
         </div>
       </div>
     </div>
     <div class="steps ">
-      <div class="step" v-for="(step, n) in steps">
+      <div class="step mpi" v-for="(step, n) in steps">
         <div>
-          <span class="hide mobile-show orange">{{ n+1 }}</span>
-          <span class="t2" v-for="p in step.ps"> {{ p }}</span>
+          <h3 class="mobile-show">{{ step.title }}</h3>
+          <span class="t2 mixed-text" v-for="p in step.ps"> {{ p }}</span>
         </div>
       </div>
     </div>

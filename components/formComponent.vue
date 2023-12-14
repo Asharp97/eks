@@ -48,12 +48,15 @@
           <Icon name="material-symbols:exclamation-rounded" class="exclamation" />
         </div>
         <div class="phoneNumber">
-          <select name="countrycode" v-model="code" :class="[{ 'blacktext': code }, { 'err': errorMsg && !code }]">
-            <option :value="null" disabled selected>+</option>
-            <option :value="country.dial_code" v-for="country in countries">
-              {{ country.code }} {{ country.dial_code }}
-            </option>
-          </select>
+          <div class="caret-container">
+            <Icon name='material-symbols:arrow-drop-down' class='caret-select' />
+            <select name="countrycode" v-model="code" :class="[{ 'blacktext': code }, { 'err': errorMsg && !code }]">
+              <option :value="null" disabled selected>+</option>
+              <option :value="country.dial_code" v-for="country in countries">
+                {{ country.code }} {{ country.dial_code }}
+              </option>
+            </select>
+          </div>
           <input type="number" placeholder="Telefon numaranız" v-model="telephone" name="telephone"
             :class="{ 'err': errorMsg && !telephone }">
         </div>
@@ -63,11 +66,14 @@
         <div class="error" v-if="errorMsg && !country">
           <Icon name="material-symbols:exclamation-rounded" class="exclamation" />
         </div>
-        <select name="country" v-model="country" id=""
-          :class="[{ 'blacktext': country }, { 'err': errorMsg && !country }]">
-          <option :value="null" disabled selected>Hangi ülkede yaşıyorsunuz?</option>
-          <option v-for=" country in countries ">{{ country.name }}</option>
-        </select>
+        <div class="caret-container">
+          <Icon name='material-symbols:arrow-drop-down' class='caret-select' />
+          <select name="country" v-model="country" id=""
+            :class="[{ 'blacktext': country }, { 'err': errorMsg && !country }]">
+            <option :value="null" disabled selected>Hangi ülkede yaşıyorsunuz?</option>
+            <option v-for=" country in countries ">{{ country.name }}</option>
+          </select>
+        </div>
       </div>
       <btn2 @click="submit()" text="Bizimle iletişime geçin" />
     </form>
