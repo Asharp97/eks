@@ -171,6 +171,11 @@
       .p2 {
         font-size: 10px;
       }
+      .sort {
+        .p2 {
+          width: max-content;
+        }
+      }
     }
     .filter-listing-row {
       gap: 20px;
@@ -192,23 +197,27 @@
       .listing {
         .lands {
           .land {
-            height: 66px !important;
+            // height: 66px !important;
+            height: fit-content;
             .img-wrapper {
               .land-img {
                 width: 91px !important;
+                object-fit: cover;
               }
             }
             .text {
               font-size: 8px !important;
+              padding-block: 15px;
               .p2 {
-                font-size: 8px;
+                // font-size: 8px;
               }
               .title {
                 margin-inline: 9px !important;
               }
               .details {
                 .param {
-                  width: 47px !important;
+                  min-width: 47px !important;
+                  padding-inline: 4px;
                 }
               }
             }

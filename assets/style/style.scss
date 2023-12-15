@@ -844,7 +844,7 @@
     .sort {
       display: flex;
       .p2 {
-        width: max-content;
+        width: 110px;
       }
       // button {
       // min-width: 176px;
@@ -934,12 +934,12 @@
               display: flex;
               .param {
                 border-left: 1px solid #d5d5d5;
-                width: 97px;
+                min-width: 97px;
                 text-align: center;
               }
-              .last {
-                border-right: 1px solid #d5d5d5;
-              }
+              // .last {
+              //   // border-right: 1px solid #d5d5d5;
+              // }
             }
           }
 

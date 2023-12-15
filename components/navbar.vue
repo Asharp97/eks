@@ -103,6 +103,11 @@
                   Hakkımızda
                 </li>
               </NuxtLink>
+              <NuxtLink to="/faq">
+                <li>
+                  Sıkça Sorulan Sorular
+                </li>
+              </NuxtLink>
               <NuxtLink to="/contact">
                 <li>
                   Bize Ulaşın

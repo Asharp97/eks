@@ -104,7 +104,7 @@
                 <div class="details">
 
                   <div class="param p2">
-                    {{ ilan.squareMeters }}m2
+                    {{ ilan.squareMeters }}m&sup2; 
                     <!-- 500m2 -->
                   </div>
                   <div class="param p2">
