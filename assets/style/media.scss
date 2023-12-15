@@ -6,6 +6,29 @@
   }
 }
 
+@media screen and (max-width: 450px) {
+  .listings {
+    .filter-listing-row {
+      .listing {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        padding-right: 10px;
+        .lands {
+          .land {
+            .text {
+              gap: 10px;
+              max-width: 100%;
+            }
+            .buttons {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 @media screen and (max-width: 400px) {
   .home {
     section {
@@ -211,7 +234,8 @@
               .p2 {
                 // font-size: 8px;
               }
-              .title {
+              .title,
+              .details {
                 margin-inline: 9px !important;
               }
               .details {
@@ -231,6 +255,17 @@
                 padding: 5px 0 !important;
               }
             }
+          }
+        }
+      }
+    }
+  }
+  .listing-details {
+    .closer-look {
+      .swiper {
+        .slide {
+          .img {
+            height: 260px;
           }
         }
       }
@@ -263,6 +298,7 @@
     }
   }
   .invest {
+    overflow: hidden;
     .titles {
       .p1,
       h4 {
@@ -302,25 +338,43 @@
     }
     .thirdstep {
       gap: 10px;
-      justify-content: space-evenly;
+      justify-content: space-between;
+      height: fit-content;
+
+      .sector,
+      .sector2 {
+        display: flex;
+        justify-content: flex-start;
+        width: 29.6%;
+        .img {
+          height: 80px;
+        }
+      }
       .sector {
-        // max-width: 111px;
         padding: 0;
-        margin-inline: auto;
         .p1 {
           margin-block: 12px;
-          // width: 230%;
         }
       }
       .sector2 {
-        height: fit-content;
-        width: 65%;
+        // height: fit-content;
       }
       .sector3 {
         height: fit-content;
+        width: 22.4%;
         .three {
           font-size: 12rem;
+          margin-top: -70px;
+          margin-bottom: -110px;
         }
+      }
+    }
+    .text-btn {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-end;
+      .p1 {
+        width: 64%;
       }
     }
     .decks {
@@ -363,6 +417,7 @@
       }
       .img {
         margin-bottom: 0;
+        height: 236px;
       }
       h4 {
         margin-block: 120px;
@@ -400,6 +455,7 @@
               margin-top: 76px;
               color: #424242;
               font-size: 15px;
+              text-align: center !important;
             }
           }
         }
@@ -506,6 +562,9 @@
     width: 100% !important;
   }
   .slider {
+    .swiper {
+      padding-block: 55px;
+    }
     .swiper-slide {
       // width: 90% !important;
     }

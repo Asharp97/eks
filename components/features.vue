@@ -4,8 +4,8 @@
       <div class="features white-bg">
         <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="features-img" src="features.png" />
         <div class="vertical-separator"></div>
-        <swiper :slidesPerView="count" :modules="modules" :navigation="true" :loop="true" class="swiper single-nav "
-          @slideNextTransitionStart="nextEnd">
+        <swiper :allowTouchMove="false" :slidesPerView="count" :modules="modules" :navigation="true" :loop="true"
+          class="swiper single-nav" @slideNextTransitionStart="nextEnd()">
           <swiper-slide v-for="(x, n, q) in data" class="slide" :class="{ 'active-slide': q == i }">
             <div class="frame">
               <div class="background">

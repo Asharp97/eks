@@ -27,8 +27,8 @@
             <div class="display"> Biz kimiz </div>
           </div>
         </div>
-        <div class="content container mpi">
-          <div class="p1">Projelerimiz, portföyümüz, tecrübelerimiz...
+        <div class="content container">
+          <div class="p1 mpi">Projelerimiz, portföyümüz, tecrübelerimiz...
             <br>
             Tüm hizmetleri ile EKSLAND yatırımlarınıza öncü olmak için burada!
           </div>
@@ -96,7 +96,7 @@
               50 Yıllık Deneyim
             </div>
           </div>
-          <slider :swiper="swiperdata" space="400" />
+          <slider :swiper="swiperdata" space="40" />
         </div>
       </section>
 

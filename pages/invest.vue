@@ -62,24 +62,36 @@
 
       </section>
 
-      <section class="thirdstep mpi big-container">
-        <div class="sector">
-          <nuxt-img sizes="588px" class="img" src="own1.png" />
-          <div class="p1">Satış işleminizi randevu tarihinde gerçekleştirip tapunuzu sizlere teslim edeceğiz. Artık arsa
-            sahibi oldunuz! İstediğiniz gibi değerlendirmeye hazırsınız. Şimdi form doldurun!</div>
-          <btn2 :inv="true" text="form doldur" />
-        </div>
-        <div class="sector2">
-          <nuxt-img sizes="433px" class="img" src="own2.png" />
-          <nuxt-img sizes="433px" class="img mobile-hide" src="own3.png" />
-        </div>
-        <div class="sector3">
-          <div class="three">
 
-            3
+      <section class=" big-container">
+        <div class="thirdstep mpi">
+
+          <div class="sector">
+            <nuxt-img sizes="588px" class="img" src="own1.png" />
+            <div class="p1 mobile-hide">Satış işleminizi randevu tarihinde gerçekleştirip tapunuzu sizlere teslim edeceğiz.
+              Artık arsa
+              sahibi oldunuz! İstediğiniz gibi değerlendirmeye hazırsınız. Şimdi form doldurun!</div>
+            <btn2 :inv="true" text="form doldur" destination="invest#form" class="mobile-hide" />
+          </div>
+          <div class="sector2">
+            <nuxt-img sizes="433px" class="img" src="own2.png" />
+            <nuxt-img sizes="433px" class="img mobile-hide" src="own3.png" />
+          </div>
+          <div class="sector3">
+            <div class="three">
+              3
+            </div>
           </div>
         </div>
-
+        <div class="text-btn mpi mobile-show">
+          <div class="p1">
+            <b> Satış işleminizi randevu tarihinde gerçekleştirip tapunuzu sizlere teslim edeceğiz.</b>
+            Artık arsa
+            sahibi oldunuz! İstediğiniz gibi değerlendirmeye hazırsınız.
+            <b> Şimdi form doldurun!</b>
+          </div>
+          <btn2 :inv="true" text="form doldur" destination="invest#form" />
+        </div>
       </section>
 
 

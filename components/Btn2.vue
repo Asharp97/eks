@@ -27,8 +27,9 @@ button {
   width: 100%;
   padding: 10px 20px;
   border-radius: 7px;
-  font-size: 20px;
+  font-size: clamp(0.9375rem, 0.841rem + 0.5149vw, 1.25rem);
   font-weight: 500;
+  white-space: nowrap;
 }
 
 button {

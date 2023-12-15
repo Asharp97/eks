@@ -15,7 +15,10 @@
       <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="img" src="graph-1.png" />
       <div class="footer">
         <div class="p1">
-          <b> Endeksa’dan </b><br> alınmış veriler.
+          <NuxtLink to="https://www.endeksa.com/tr/analiz/turkiye/eskisehir/endeks/satilik/arsa" class="link">
+            <b> Endeksa’dan </b>
+          </NuxtLink>
+          <br> alınmış veriler.
         </div>
         <div class="roi">
           <div class="text">

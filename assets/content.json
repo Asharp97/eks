@@ -373,12 +373,12 @@
     "body": [
       [
         { "icon": "logos:bitcoin", "name": "Bitcoin", "color": "inherit" },
-        { "name": 3.888 },
-        { "name": 10.204 },
-        { "name": 36.679 },
-        { "name": 20.555 },
-        { "name": 25.125 },
-        { "name": 41.986 }
+        { "name": 3.88 },
+        { "name": 10.20 },
+        { "name": 36.67 },
+        { "name": 20.55 },
+        { "name": 25.12 },
+        { "name": 41.98 }
       ],
       [
         {

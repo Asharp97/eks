@@ -37,7 +37,7 @@
             </div>
           </div>
           <swiper :freeMode="true" :slidesPerView="count" :spaceBetween="44" :navigation="true" :modules="moduleLand"
-            :scrollbar="{ hide: true }" class="swiper">
+            :scrollbar="{ hide: true }" class="swiper mpi">
             <swiper-slide v-for="(x, n) in ilanlar" class="landSlider">
               <NuxtLink class="landWrapper" :to="`listings/${x.id}`">
                 <div class="land">
@@ -181,6 +181,8 @@ const getCount = (x) => {
 
 
 <style lang="scss" scoped>
+
+
 .gold {
   color: gold !important;
 }

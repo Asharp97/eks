@@ -103,6 +103,11 @@
     }
   }
 }
+.home {
+  .swiper-wrapper {
+    padding-inline: 33px;
+  }
+}
 
 //compnents
 .navbar {
@@ -647,10 +652,11 @@
         }
       }
       .landSlider {
-        width: fit-content !important;
+        //Fix padding slider
+        // width: fit-content !important;
         .landWrapper {
           display: flex;
-          width: fit-content;
+          // width: fit-content;
           .land {
             width: 357px !important;
             border-radius: 7px;
@@ -926,6 +932,8 @@
               text-overflow: ellipsis;
               overflow: hidden;
               white-space: nowrap;
+              flex: 1 0 149px;
+              width: 149px;
               .gray {
                 color: $darkGray;
               }
@@ -1395,9 +1403,10 @@
     display: flex;
     justify-content: space-between;
     gap: 50px;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     .img {
       width: 100%;
+      object-fit: cover;
     }
     .sector {
       display: flex;
