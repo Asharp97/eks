@@ -40,21 +40,19 @@
       </section>
 
       <section>
-        <div class="closer-look container">
+        <div class="closer-look mpi container">
           <h1>Araziye yakından bakın</h1>
-          <swiper :navigation="true" :loop="true" class="swiper noNav" @slideNextTransitionStart="nextEnd"
+          <swiper :navigation="true" :loop="true" class="swiper  noNav" @slideNextTransitionStart="nextEnd"
             :spaceBetween="30" @slidePrevTransitionStart="prevEnd">
             <swiper-slide v-for="n in land.imgURL" class="slide">
               <!-- <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="img" src="closer-look.png" /> -->
               <img :src="n" class="img" alt="">
             </swiper-slide>
           </swiper>
-
           <div class="pagination">
             <div class="dots" v-for="(pag, n) in  land.imgURL.length" :class="{ 'active-pagination': n == activePag }">
             </div>
           </div>
-
         </div>
       </section>
 
@@ -78,7 +76,7 @@
               sunan gelecek için <b> yatırım</b> fırsatları barındıran bir şehirdi.
             </div>
           </div>
-          <slider :swiper="swipedata" space="0" />
+          <slider :swiper="swipedata" space="90" :size1="true" />
         </div>
       </section>
       <section class="container">
@@ -127,13 +125,13 @@ const activePag = ref(0)
 
 const nextEnd = () => {
   activePag.value += 1
-  if (activePag.value == land.value.imgURL.length)
+  if (activePag.value > land.value.imgURL.length-1)
     activePag.value = 0
 }
 const prevEnd = () => {
   activePag.value -= 1
-  if (activePag.value == 0)
-    activePag.value = land.value.imgURL.length
+  if (activePag.value < 0)
+    activePag.value = land.value.imgURL.length-1
 }
 
 definePageMeta({ layout: 'invert-nav-color' })

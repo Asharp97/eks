@@ -1,11 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Varela+Round&display=swap");
+
 @import "./variables";
 
-//general
-// html {
-//   scroll-snap-type: y mandatory;
-//   scroll-padding-top: $navHeight;
-// }
 * {
   padding: 0;
   margin: 0;
@@ -103,11 +100,6 @@
     }
   }
 }
-.home {
-  .swiper-wrapper {
-    padding-inline: 33px;
-  }
-}
 
 //compnents
 .navbar {
@@ -180,8 +172,8 @@
             // text-align: start;
             padding: 10px;
             span {
-              font-size: 15px;
-              font-weight: 500;
+              font-size: 17px;
+              font-weight: 400;
             }
           }
         }
@@ -699,6 +691,7 @@
                 display: flex;
                 width: 100%;
                 justify-content: space-between;
+                min-width: max-content;
                 // margin-top: 24px;
 
                 button {
@@ -1337,20 +1330,29 @@
     flex-direction: column;
     gap: 50px;
     .social {
-      border-radius: 20px;
+      border-radius: 10px;
       padding: 4px 24px;
       display: flex;
       align-items: center;
       gap: 18px;
-      font-size: 30px;
     }
     .zoomlink {
       background: #0b5cff;
+      padding-block: 10px !important;
       color: white;
+      .t2 {
+        font-family: "Varela Round", sans-serif;
+      }
+      .icon {
+        font-size: clamp(1.8375rem, 0.841rem + 0.5149vw, 1.25rem);
+      }
     }
     .whatsapp {
       border: 2px solid #34b93e;
       color: #34b93e;
+      .icon {
+        font-size: 35px;
+      }
     }
     .display {
       text-align: center;
@@ -1372,7 +1374,7 @@
       .btns {
         display: flex;
         justify-content: space-evenly;
-        align-items: flex-start;
+        align-items: center;
         gap: 10px;
         flex-wrap: wrap;
         max-width: 520px;
@@ -1407,7 +1409,8 @@
   .thirdstep {
     display: flex;
     justify-content: space-between;
-    gap: 50px;
+    // gap: 50px;
+    margin-top: -100px;
     // flex-wrap: wrap;
     .img {
       width: 100%;
@@ -1621,6 +1624,7 @@
     padding-block: 40px;
     h1 {
       color: $gray;
+      margin-bottom: 25px;
     }
   }
   .manufacture {

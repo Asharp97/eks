@@ -26,7 +26,7 @@ button {
   color: white;
   width: 100%;
   padding: 10px 20px;
-  border-radius: 7px;
+  border-radius: 10px;
   font-size: clamp(0.9375rem, 0.841rem + 0.5149vw, 1.25rem);
   font-weight: 500;
   white-space: nowrap;
@@ -34,9 +34,9 @@ button {
 
 button {
   &:active {
-    background-color: $gray;
-    border: 2px solid $gray;
-
+    background-color: $lightGray;
+    border: 2px solid $lightGray;
+    color: white;
   }
 
 }

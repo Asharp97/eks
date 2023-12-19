@@ -29,13 +29,15 @@
             <btn2 text="destek@eksland.com.tr" />
             <!-- </a> -->
             <button class="social zoomlink">
-              <Icon name="bx:bxl-zoom" />
-              zoom
+              <Icon name="bx:bxl-zoom" class="icon" />
+              <div class="t2"> zoom </div>
             </button>
             <btn2 :inv="true" text="Form Doldur" destination="invest#form" />
             <button class="social whatsapp">
-              <Icon name="logos:whatsapp-icon" />
-              WhatsApp
+              <Icon name="logos:whatsapp-icon" class="icon" />
+              <div class="t2">
+                WhatsApp
+              </div>
             </button>
           </div>
         </div>
@@ -68,10 +70,11 @@
 
           <div class="sector">
             <nuxt-img sizes="588px" class="img" src="own1.png" />
-            <div class="p1 mobile-hide">Satış işleminizi randevu tarihinde gerçekleştirip tapunuzu sizlere teslim edeceğiz.
+            <div class="p1 mobile-hide">Satış işleminizi randevu tarihinde gerçekleştirip tapunuzu sizlere teslim
+              edeceğiz.
               Artık arsa
               sahibi oldunuz! İstediğiniz gibi değerlendirmeye hazırsınız. Şimdi form doldurun!</div>
-            <btn2 :inv="true" text="form doldur" destination="invest#form" class="mobile-hide" />
+            <btn2 :inv="true" text="Form Doldur" destination="invest#form" class="mobile-hide" />
           </div>
           <div class="sector2">
             <nuxt-img sizes="433px" class="img" src="own2.png" />
@@ -90,7 +93,7 @@
             sahibi oldunuz! İstediğiniz gibi değerlendirmeye hazırsınız.
             <b> Şimdi form doldurun!</b>
           </div>
-          <btn2 :inv="true" text="form doldur" destination="invest#form" />
+          <btn2 :inv="true" text="Form Doldur" destination="invest#form" />
         </div>
       </section>
 

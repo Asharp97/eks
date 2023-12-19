@@ -7,6 +7,14 @@
 }
 
 @media screen and (max-width: 450px) {
+  .smallScreenHide{
+    display: none !important;
+  }
+  .home {
+    .swiper-wrapper {
+      padding-inline: 33px;
+    }
+  }
   .listings {
     .filter-listing-row {
       .listing {
@@ -182,6 +190,11 @@
           }
         }
       }
+      .why-Eskisehir {
+        .text {
+          gap: 18px;
+        }
+      }
     }
   }
   .listings {
@@ -271,6 +284,7 @@
       }
     }
   }
+
   .hero {
     overflow: hidden;
     .landing-image {
@@ -319,7 +333,7 @@
         }
         .btns {
           width: 100%;
-          max-width: 300px;
+          max-width: 327px;
           flex-direction: row;
           margin-inline: auto;
 
@@ -340,6 +354,7 @@
       gap: 10px;
       justify-content: space-between;
       height: fit-content;
+      margin-top: -50px;
 
       .sector,
       .sector2 {
@@ -528,12 +543,17 @@
   //compnonet
   .tapu-steps {
     .steps-img-container {
+      h1 {
+        margin-block: 36px;
+      }
       border-radius: 0 !important;
       padding-block: 12px;
       .images {
         flex-wrap: nowrap;
-        .img {
-          // width: 50%;
+        div {
+          .img {
+            height: 117px;
+          }
         }
       }
     }
