@@ -1,12 +1,10 @@
 <template>
   <div class="admin container">
-    <!-- <h1 @click="signup">sign ali up</h1> -->
     <form v-if="!store.user" action="" class="form ">
       <input type="email" v-model="mail" placeholder="email" name="email" />
       <input type="password" v-model="pass" placeholder="pass" name="password" />
       <btn2 text="sign in" @click="signin" />
     </form>
-
     <div v-if="store.user" class="content">
 
       <div class="admin-nav">
@@ -184,14 +182,10 @@
               </div>
             </div>
           </q-card-section>
-
-          <q-separator />
-
           <q-card-actions align="right">
-            <div class="gapH">
-              <btn2 text="Submit" @click="editIlan(ilan.id)" />
+
               <btn2 :inv="true" text="Okay" @click="overlay = false" />
-            </div>
+
           </q-card-actions>
         </q-card>
       </q-dialog>
@@ -266,12 +260,6 @@ const signout = async () => {
   await supabase.auth.signOut()
   store.token = ''
   store.user = false
-}
-const signup = async () => {
-  const { data, error } = await supabase.auth.signUp({
-    email: '',
-    password: '',
-  })
 }
 
 //Tabs
@@ -422,9 +410,23 @@ const getImgURL = async (name, i) => {
 }
 </script>
 
-<style>
+<style lang="scss">
+@import '../../assets/style/variables.scss';
+
 .hide {
   display: none;
+}
+
+.clients,
+.ads {
+  th{
+    background-color: $offwhite;
+  }
+  tr {
+    &:nth-child(odd) {
+      background-color: white;
+    }
+  }
 }
 
 .edit {

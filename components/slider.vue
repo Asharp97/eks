@@ -1,4 +1,4 @@
-r<template>
+<template>
   <div class="slider">
     <swiper :space-between="space ? space : -200" :scrollbar="{ hide: true }" :slidesPerView="2" :modules="modules"
       :navigation="true" :loop="true" class="swiper">
@@ -11,7 +11,7 @@ r<template>
 </template>
 
 <script setup>
-defineProps(['swiper', 'space']);
+defineProps(['swiper', 'space', 'width', 'height']);
 
 import { Swiper, SwiperSlide } from 'swiper/vue';
 import 'swiper/css';
@@ -20,6 +20,12 @@ import 'swiper/css/scrollbar';
 import { Scrollbar, Navigation } from 'swiper/modules';
 const modules = [Scrollbar, Navigation]
 
+
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+.img {
+  height: v-bind(height);
+  width: v-bind(width);
+}
+</style>

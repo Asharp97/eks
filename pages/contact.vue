@@ -1,7 +1,7 @@
 <template>
   <div class="contact ">
     <section>
-      <hero img="hero-contactus" text="Biz Ulaşın." />
+      <hero img="hero-contactus" text="Bize Ulaşın." />
     </section>
 
     <div class="gap">

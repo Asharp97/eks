@@ -184,7 +184,7 @@
     },
     {
       "icon": "material-symbols:factory",
-      "param": "Sanayı Bülgesıne Mesafe"
+      "param": "Sanayi Bölgesine Uzaklık"
     },
     {
       "icon": "mdi:city",
@@ -374,7 +374,7 @@
       [
         { "icon": "logos:bitcoin", "name": "Bitcoin", "color": "inherit" },
         { "name": 3.88 },
-        { "name": 10.20 },
+        { "name": 10.2 },
         { "name": 36.67 },
         { "name": 20.55 },
         { "name": 25.12 },
@@ -440,16 +440,16 @@
     "daha goster"
   ],
   "eskisehirDistricts": [
-    "Günyüzü",
-    "Han",
-    "Mahmudiye",
-    "Mihalgazi",
-    "Mihalıççık",
-    "Odunpazarı",
-    "Sarıcakaya",
-    "Seyitgazi",
-    "Sivrihisar",
-    "Tepebaşı"
+    "Eskişehir",
+    "Bursa",
+    "İstanbul",
+    "Kocaeli",
+    "Kütahya",
+    "Afyon",
+    "Kırklareli",
+    "Trabzon",
+    "Rize",
+    "Yalova"
   ],
   "sort": [
     {

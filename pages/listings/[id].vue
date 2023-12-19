@@ -78,7 +78,7 @@
               sunan gelecek için <b> yatırım</b> fırsatları barındıran bir şehirdi.
             </div>
           </div>
-          <slider :swiper="swipedata" space="32" />
+          <slider :swiper="swipedata" space="0" />
         </div>
       </section>
       <section class="container">

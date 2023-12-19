@@ -112,7 +112,7 @@
           </h1>
           <div class="display">Her yerden
             kolayca ulaşın</div>
-          <slider :swiper="trans" space="100" />
+          <slider :swiper="trans" space="100" width="844px" height="499px"/>
         </div>
       </section>
 

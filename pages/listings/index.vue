@@ -64,7 +64,7 @@
           <q-range :step='1000' v-model="km" :min="0" :max="1300" color="black" thumb-color="black" label />
 
           <div class="t2">
-            İlçeler
+            Şehirler
           </div>
           <div class="checklist">
             <div class="input-wrapper" v-for="x in  cities">
@@ -201,7 +201,7 @@ let getCount = async () => {
   // .lte('squareMeters', km.value.max)
 
   if (city.value.length > 0)
-    query = query.in('districtLocation', city.value)
+    query = query.in('cityLocation', city.value)
 
   let { count, error } = await query
   totalIlanlar.value = count
@@ -225,7 +225,7 @@ let getIlanlar = async () => {
   // .range(adPerPage * (page.value - 1), page.value * adPerPage)
 
   if (city.value.length > 0)
-    query = query.in('districtLocation', city.value)
+    query = query.in('cityLocation', city.value)
 
   if (order.value)
     query = query.order(order.value.obj.col, { ascending: order.value.obj.asc })

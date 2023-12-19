@@ -108,7 +108,7 @@ const postInfo = async () => {
     if (name && email && telephone && country)
       loading.value = true
 
-    const { data, err } = await supabase
+    const { status, error } = await supabase
       .from('contact')
       .insert({
         name: name.value,
@@ -116,8 +116,7 @@ const postInfo = async () => {
         telephone: code.value.concat(telephone.value),
         country: country.value
       })
-      .select()
-    if (data) {
+    if (status == 201) {
       dialog.value = true
       name.value = ''
       email.value = ''
@@ -126,12 +125,12 @@ const postInfo = async () => {
       country.value = null
       errorMsg.value = false
     }
-    if (err) throw err
+    if (error) throw error
   }
-  catch (error) {
+  catch (e) {
     errorMsg.value = true
     setTimeout(() => { errorMsg.value = false }, 3000);
-    console.log(error)
+    console.log(e)
   }
   finally {
     loading.value = false

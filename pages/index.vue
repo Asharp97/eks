@@ -36,7 +36,7 @@
               </div>
             </div>
           </div>
-          <swiper :freeMode="true" :slidesPerView="count" :spaceBetween="44" :navigation="true" :modules="moduleLand"
+          <swiper :freeMode="true" :slidesPerView="count" :spaceBetween="-100" :navigation="true" :modules="moduleLand"
             :scrollbar="{ hide: true }" class="swiper mpi">
             <swiper-slide v-for="(x, n) in ilanlar" class="landSlider">
               <NuxtLink class="landWrapper" :to="`listings/${x.id}`">
@@ -102,9 +102,11 @@
             </tbody>
           </table>
           <div class="p2">Arazi verileri
-            <span>
-              Endeksa’dan
-            </span>
+            <NuxtLink to="https://www.endeksa.com/tr/analiz/turkiye/eskisehir/endeks/satilik/arsa" class="link">
+              <span>
+                Endeksa’dan
+              </span>
+            </NuxtLink>
             alınmıştır.
           </div>
         </div>
@@ -181,8 +183,6 @@ const getCount = (x) => {
 
 
 <style lang="scss" scoped>
-
-
 .gold {
   color: gold !important;
 }

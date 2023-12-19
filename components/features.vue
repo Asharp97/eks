@@ -1,5 +1,5 @@
 <template>
-  <div class="container" id="container">
+  <div class="container" id="container" ref="el">
     <div class="mpi">
       <div class="features white-bg">
         <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="features-img" src="features.png" />
@@ -68,10 +68,17 @@ const nextEnd = () => {
     activePag.value = 0
 }
 
-onMounted(() => {
-  let containerWidth = document.getElementById('container').offsetWidth
-  getCount(containerWidth)
-})
+import { useElementSize } from '@vueuse/core'
+
+const el = ref(null)
+const { width, height } = useElementSize(el)
+
+watch(
+  () => width.value,
+  () => {
+    getCount(width.value)
+  }
+)
 
 const getCount = (width) => {
   let num = Math.floor(width / 141)
