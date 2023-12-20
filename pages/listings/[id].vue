@@ -4,38 +4,38 @@
     <div class="listing-details gap ">
       <section>
         <div class="white-bg">
-          <div class="container mpi">
+          <div class="container">
             <div class="details">
               <div class="imgDiv">
-                <h2>EKSLAND güvencesiyle yatırım fırsatı</h2>
                 <!-- <nuxt-img sizes="xs:640px sm:768px md:784px lg:877px" class="img" src="listing-img.png" /> -->
                 <img :src="land.imgURL[0]" alt="" class="img">
               </div>
-              <div class="textDiv">
+              <div class="textDiv mpi">
                 <h4>Arazi fiyatı: {{ land.landPrice }}.00 €</h4>
-                <p>Satın almak için hemen iletişime geçin.</p>
-
+                <div class="p2">Satın almak için hemen iletişime geçin.</div>
                 <hr>
                 <div class="params">
                   <div class="title" v-for="(x, n, q) in section1">
-                    {{ params[q] }}:
+                    <div class="p2">
+                      {{ params[q] }}:
+                    </div>
                     <div class="param">
-                      &nbsp;{{ x }}
-                      <span class="measure" v-if="q == 2"> m&sup2; </span>
-                      <span class="measure" v-if="q == 3"> € </span>
+                      <div class="p2">
+                        &nbsp;{{ x }}
+                        <span class="measure" v-if="q == 2"> m&sup2; </span>
+                        <span class="measure" v-if="q == 3"> € </span>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <btn2 text="Hemen Satın Al" />
+                <btn2 class="button" :destination="`listings/${id}/#fillform`">
+                  <h6>
+                    Hemen Satın Al
+                  </h6>
+                </btn2>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-
-      <section>
-        <div>
-          <features :data="section2" />
         </div>
       </section>
 
@@ -56,6 +56,12 @@
         </div>
       </section>
 
+      <section>
+        <div>
+          <features :data="section2" />
+        </div>
+      </section>
+
       <section class="container mpi">
         <onetwolayout :text="lookcloser[0].text" :title="lookcloser[0].title" :titlesub="lookcloser[0].subtitle"
           :img1="land.imgURL[land.imgURL.length - 1]" :img2="img2" />
@@ -65,18 +71,24 @@
         <metrekare />
       </section>
 
-      <section>
-        <div class="container">
+      <section class="rich-history ">
+        <div class="container mpi">
           <div class="title ">
-            <div class="display">
+            <h1>
               Eskişehir
-            </div>
-            <div class="p1">
+            </h1>
+            <div class="p1 mobile-hide">
               <b> Eskişehir</b>, tarihi zenginliği, kültürel mirası ve modern yaşam tarzının mükemmel bir birleşimini
               sunan gelecek için <b> yatırım</b> fırsatları barındıran bir şehirdi.
             </div>
           </div>
-          <slider :swiper="swipedata" space="90" :size1="true" />
+          <slider :swiper="swipedata" :space="10" :size1="true" />
+          <div class="title mobile-show ">
+            <div class="p2">
+              <b> Eskişehir</b>, tarihi zenginliği, kültürel mirası ve modern yaşam tarzının mükemmel bir birleşimini
+              sunan gelecek için <b> yatırım</b> fırsatları barındıran bir şehirdi.
+            </div>
+          </div>
         </div>
       </section>
       <section class="container">
@@ -125,13 +137,13 @@ const activePag = ref(0)
 
 const nextEnd = () => {
   activePag.value += 1
-  if (activePag.value > land.value.imgURL.length-1)
+  if (activePag.value > land.value.imgURL.length - 1)
     activePag.value = 0
 }
 const prevEnd = () => {
   activePag.value -= 1
   if (activePag.value < 0)
-    activePag.value = land.value.imgURL.length-1
+    activePag.value = land.value.imgURL.length - 1
 }
 
 definePageMeta({ layout: 'invert-nav-color' })

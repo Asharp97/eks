@@ -7,7 +7,7 @@
 }
 
 @media screen and (max-width: 450px) {
-  .smallScreenHide{
+  .smallScreenHide {
     display: none !important;
   }
   .home {
@@ -69,6 +69,8 @@
     font-size: 21.8px;
   }
   .navbar {
+    position: fixed;
+    z-index: 100;
     .header {
       justify-content: center !important;
       height: $navHeightMob !important;
@@ -88,16 +90,21 @@
     display: flex !important;
   }
   .onetwolayout {
+    margin-block: 0;
+    h1 {
+      margin-bottom: 0;
+    }
     .imgH {
       height: 264px;
     }
     .imgs {
       .imgV {
-        height: 230px;
+        height: 150px;
       }
     }
     .text {
       .p1 {
+        text-align: left;
         width: 100%;
       }
     }
@@ -274,12 +281,51 @@
     }
   }
   .listing-details {
+    h4 {
+      font-weight: 600;
+    }
+    .details {
+      gap: 35px;
+      .imgDiv {
+        .img {
+          height: 265px;
+        }
+      }
+      .textDiv {
+        .p2 {
+          font-weight: 400;
+        }
+
+        hr {
+          margin-block: 36px;
+        }
+        .button {
+          margin-top: 20px;
+        }
+      }
+    }
     .closer-look {
+      h1 {
+        text-align: center;
+      }
+
       .swiper {
         .slide {
           .img {
             height: 260px;
           }
+        }
+      }
+    }
+    .rich-history {
+      .swiper-button-next{
+        &:after{
+          font-size: 15px;
+        }
+      }
+      .title {
+        .display {
+          margin-bottom: 30px;
         }
       }
     }
@@ -542,27 +588,39 @@
   }
   //compnonet
   .tapu-steps {
+    padding-block: 41px;
+    gap: 0;
     .steps-img-container {
+      padding: 0;
       h1 {
-        margin-block: 36px;
+        margin-top: 0;
+        margin-bottom: 36px;
       }
       border-radius: 0 !important;
-      padding-block: 12px;
+      // padding-block: 12px;
       .images {
         flex-wrap: nowrap;
         div {
+          width: 50%;
           .img {
             height: 117px;
+            flex-grow: 1;
           }
         }
+      }
+      .thirdImage {
+        width: 100%;
+        height: 179px;
+        object-fit: cover;
+        object-position: right bottom;
       }
     }
     .steps {
       .step {
         padding-top: 20px;
         max-width: 100%;
-        text-align: center;
-        h3 {
+        text-align: left;
+        h6 {
           margin-bottom: 10px;
           margin-top: 30px;
         }
@@ -573,9 +631,17 @@
     margin-top: 90px;
   }
   .graph1 {
+    padding-block: 90px;
+    h4 {
+      margin-block: -12px;
+    }
     .footer {
       justify-content: center;
       gap: 40px;
+    }
+    .roi{
+      gap: 10px;
+      padding: 10px;
     }
   }
   .padded-form {
@@ -583,7 +649,7 @@
   }
   .slider {
     .swiper {
-      padding-block: 55px;
+      padding-block: 0;
     }
     .swiper-slide {
       // width: 90% !important;

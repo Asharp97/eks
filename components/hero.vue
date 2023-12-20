@@ -20,8 +20,10 @@ defineProps(['text', 'img', 'mb']);
 </script>
 
 <style lang="scss" scoped>
+@import '../assets/style/variables.scss';
+
 .marginbot {
-  margin-bottom: 50px;
+  margin-bottom: $sectionGap;
 }
 </style>
 

@@ -36,7 +36,7 @@
               </div>
             </div>
           </div>
-          <swiper :freeMode="true" :slidesPerView="count" :spaceBetween="-100" :navigation="true" :modules="moduleLand"
+          <swiper :freeMode="true" :slidesPerView="count" :spaceBetween="0" :navigation="true" :modules="moduleLand"
             :scrollbar="{ hide: true }" class="swiper mpi">
             <swiper-slide v-for="(x, n) in ilanlar" class="landSlider">
               <NuxtLink class="landWrapper" :to="`listings/${x.id}`">
@@ -119,7 +119,7 @@
             <h4> EKSLAND ile </h4>
             <div class="display"> Geleceğin Yatırımı Arsa </div>
           </div>
-          <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="why-image" src="whyeskisehir.png" />
+          <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="why-image mpi" src="whyeskisehir.png" />
         </div>
       </section>
 
@@ -133,6 +133,8 @@
 </template>
 
 <script setup>
+
+
 const supabase = useSupabaseClient()
 let ilanlar = ref()
 const getPopularIlan = async () => {
@@ -157,24 +159,30 @@ const faq = content.faq
 const table = content.table
 
 let count = ref(3)
-let containerWidth = ref(null)
+
+import { useWindowSize } from '@vueuse/core'
+const { width, height } = useWindowSize()
+
 onMounted(() => {
-  let containerWidth = document.getElementById('container').offsetWidth
-  getCount(containerWidth)
+  getCount(width.value)
   getPopularIlan()
 })
 
 
 watch(
-  () => containerWidth,
+  () => width.value,
   () => {
-    getCount(containerWidth)
-    console.log(containerWidth)
+    getCount(width.value)
   }
 )
 
 const getCount = (x) => {
-  count.value = Math.floor(x / 340)
+  console.log(x)
+  if (x > 450)
+    count.value = x / 450
+  else
+    count.value = x / 400
+  console.log(count.value)
 }
 
 

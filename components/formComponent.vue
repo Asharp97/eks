@@ -22,7 +22,7 @@
     </q-dialog>
 
     <div class="text">
-      <h3>{{ title }}</h3>
+      <h4>{{ title }}</h4>
       <div class="p2">{{ subtitle }}</div>
     </div>
 

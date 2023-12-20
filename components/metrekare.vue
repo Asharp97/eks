@@ -8,7 +8,7 @@
       <div class="display">
         Metrekare başına arsa fiyat endeksi
       </div>
-      <div class="p1" style="max-width:1200px">
+      <div class="p2" style="max-width:1200px">
         Metrekare başına arsa fiyat endeksi, her sene artış gösteren bu özel araziyi yatırımcılar için vazgeçilmez
         kılıyor. Bu dinamik endeks, yatırımınızın gelecekteki getirisini garanti altına alıyor.
       </div>
