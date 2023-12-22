@@ -1,6 +1,7 @@
 export default defineNuxtConfig({
   devtools: { enabled: false },
   modules: [
+    "nuxt-swiper",
     "nuxt-icon",
     "@nuxt/image",
     "@nuxtjs/supabase",

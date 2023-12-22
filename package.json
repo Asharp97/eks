@@ -25,7 +25,7 @@
     "@quasar/extras": "^1.16.7",
     "@supabase/supabase-js": "^2.38.0",
     "@vueuse/nuxt": "^10.6.1",
-    "quasar": "^2.13.0",
-    "swiper": "^10.2.0"
+    "nuxt-swiper": "^1.2.2",
+    "quasar": "^2.13.0"
   }
 }

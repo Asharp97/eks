@@ -36,8 +36,24 @@
               </div>
             </div>
           </div>
-          <swiper :freeMode="true" :slidesPerView="count" :spaceBetween="0" :navigation="true" :modules="moduleLand"
-            :scrollbar="{ hide: true }" class="swiper mpi">
+          <swiper :slidesPerView="3" :breakpoints="{
+            '0': {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            '640': {
+              slidesPerView: 1,
+              spaceBetween: 20,
+            },
+            '768': {
+              slidesPerView: 2,
+              spaceBetween: 40,
+            },
+            '1024': {
+              slidesPerView: 3,
+              spaceBetween: 50,
+            },
+          }" :freeMode="true" :navigation="true" :modules="moduleLand" :scrollbar="{ hide: true }" class="swiper mpi">
             <swiper-slide v-for="(x, n) in ilanlar" class="landSlider">
               <NuxtLink class="landWrapper" :to="`listings/${x.id}`">
                 <div class="land">

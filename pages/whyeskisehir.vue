@@ -11,9 +11,7 @@
             Eskişehir’de öne çıkan başlıklar
           </div>
           <div class="title">
-            <div class="display">Eskişehir’de
-              kaliteli nüfus
-              oranı</div>
+            <div class="display">Eskişehir’de kaliteli nüfus </div>
             <div class="p1">
               İstikrarlı nüfus artış oranı, şehrin büyüme ve gelişme potansiyelinin yüksek olduğunu gösteriyor, aynı
               zamanda
@@ -43,7 +41,6 @@
         </div>
       </section>
 
-
       <section class="gray-bg">
         <div class="container minerals">
           <onetwolayout :img1="layout[0].img1" :img2="layout[0].img2" :text="layout[0].text" :title="layout[0].title"
@@ -51,7 +48,6 @@
         </div>
         <!-- {{ layout[0][0].title }} -->
       </section>
-
 
       <section class="white-bg">
         <div class="young container">
@@ -112,7 +108,7 @@
           </h1>
           <div class="display">Her yerden
             kolayca ulaşın</div>
-          <slider :swiper="trans" space="0" width="844px" height="499px"/>
+          <slider :swiper="trans" space="0" width="844px" height="499px" />
         </div>
       </section>
 
@@ -161,6 +157,7 @@
           <div class="text">
             <h1>03. Eskişehir</h1>
             <div class="display">Sanayi</div>
+            <nuxt-img sizes="xs:320px sm:384px md:512px lg:635.5px" class="img mobile-show" src="nuclear.png" />
             <div class="p1">Eskişehir, son yıllarda hızla gelişen bir sanayi merkezi haline gelmiştir. Ülkemizin tek Uçak
               Motor Fabrikası <strong> (TUSAŞ)</strong> ile Dizel Lokomotif motoru üreten <strong> tek</strong> fabrikası
               <strong> (TÜLOMSAŞ)</strong>
@@ -177,7 +174,7 @@
               ve destek sunmaktadır.
             </div>
           </div>
-          <nuxt-img sizes="xs:320px sm:384px md:512px lg:635.5px" class="img" src="nuclear.png" />
+          <nuxt-img sizes="xs:320px sm:384px md:512px lg:635.5px" class="img mobile-hide" src="nuclear.png" />
         </div>
 
 
@@ -198,7 +195,7 @@
               <div class="faqwrapper">
                 <faqComponent :faq="faq" class="Faqcontainer" @toggle="toggle" />
               </div>
-              <div class="listed-images">
+              <div class="listed-images mobile-hide">
                 <span id="scroll1" class="scrolled">
                   <nuxt-img sizes="200px" class="img" v-for="n in 7" :src='`listed-imgs/${n}.jfif`' />
                 </span>
@@ -210,8 +207,6 @@
           </div>
         </div>
       </section>
-
-      
     </div>
   </div>
 </template>

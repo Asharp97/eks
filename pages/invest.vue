@@ -30,14 +30,12 @@
             <!-- </a> -->
             <button class="social zoomlink">
               <Icon name="bx:bxl-zoom" class="icon" />
-              <div class="t2"> zoom </div>
+              Zoom
             </button>
             <btn2 :inv="true" text="Form Doldur" destination="invest#form" />
             <button class="social whatsapp">
               <Icon name="logos:whatsapp-icon" class="icon" />
-              <div class="t2">
-                WhatsApp
-              </div>
+              WhatsApp
             </button>
           </div>
         </div>
@@ -57,19 +55,17 @@
           <div class="part2">
 
             <div class="display">Arsa Sahibi Olun</div>
-            <div class="p2">Evrak işlemleri ardından sizin için tapu dairesinde randevu oluşturacağız. </div>
+            <div class="p1">Evrak işlemleri ardından sizin için tapu dairesinde randevu oluşturacağız. </div>
           </div>
           <div class="number">2</div>
         </div>
 
       </section>
 
-
-      <section class=" big-container">
-        <div class="thirdstep mpi">
-
+      <section class="big-container white-bg">
+        <div class="thirdstep">
           <div class="sector">
-            <nuxt-img sizes="588px" class="img" src="own1.png" />
+            <nuxt-img sizes="588px" class="img " src="own1.png" />
             <div class="p1 mobile-hide">Satış işleminizi randevu tarihinde gerçekleştirip tapunuzu sizlere teslim
               edeceğiz.
               Artık arsa
@@ -86,17 +82,15 @@
             </div>
           </div>
         </div>
-        <div class="text-btn mpi mobile-show">
+        <div class="text-btn mobile-show">
           <div class="p1">
             <b> Satış işleminizi randevu tarihinde gerçekleştirip tapunuzu sizlere teslim edeceğiz.</b>
             Artık arsa
             sahibi oldunuz! İstediğiniz gibi değerlendirmeye hazırsınız.
             <b> Şimdi form doldurun!</b>
           </div>
-          <btn2 :inv="true" text="Form Doldur" destination="invest#form" />
         </div>
       </section>
-
 
       <section class="decks big-container">
         <div class="deck">
@@ -107,7 +101,7 @@
               <div class="p2">{{ card.details }}</div>
             </swiper-slide>
           </swiper>
-          <div class="p1 subtitle">
+          <div class="p2 subtitle">
             Arazi yatırımı, uzun vadeli bir yatırım stratejisi olarak dikkat çekiyor. Doğru seçilen bir arazi, <b>
               gelecekte değer kazanabilir ve farklı kullanım amaçlarına hizmet edebilir.</b>
           </div>
