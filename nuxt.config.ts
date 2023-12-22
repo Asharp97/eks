@@ -21,6 +21,7 @@ export default defineNuxtConfig({
     "@/assets/style/design-system.scss",
     "@/assets/style/style.scss",
     "@/assets/style/variables.scss",
+    "@/assets/style/animations.scss",
   ],
   image: {
     provider: "imagekit",

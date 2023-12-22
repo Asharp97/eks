@@ -7,7 +7,7 @@
       <section class="titles white-bg">
         <div class="title" id="nav">
           <div class="p1">Arazi yatırımınız EKSLAND ayrıcalığı ile yapın.</div>
-          <h3>3 adımda yatırımınızı kolayca gerçekleştirebilirsiniz.</h3>
+          <!-- <h3>3 adımda yatırımınızı kolayca gerçekleştirebilirsiniz.</h3> -->
         </div>
       </section>
       <section class="firststep container mpi">

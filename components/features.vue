@@ -5,7 +5,7 @@
         <nuxt-img sizes="xs:640px sm:768px md:1024px lg:1271px" class="smallScreenHide features-img" src="features.png" />
         <div class="vertical-separator smallScreenHide"></div>
         <Swiper @swiper="onSwiper" :loopedSlides="4" :centeredSlides="true" :slideToClickedSlide="true" :slidesPerView="9"
-          class="swiper" :breakpoints="{
+          class="swiper" :loop="true" :breakpoints="{
             '0': {
               slidesPerView: 1,
               loop: false
@@ -24,7 +24,7 @@
             },
             '1300': {
               slidesPerView: 9,
-              loop: true
+              loop: false
             },
           }">
           <SwiperSlide @click="activePagination = q" v-for="(x, n, q) in data" class="slide" :key="q">
@@ -68,16 +68,10 @@
 </template>
 
 <script setup>
-let swiper = ref(null)
-let index = ref(1)
 let swiperInstance = ref()
 function onSwiper(swiper) {
   swiperInstance.value = swiper
 }
-
-onMounted(() => {
-  swiper = document.querySelector(".swiper").swiper;
-})
 
 let activePagination = ref(0)
 
@@ -89,27 +83,6 @@ const paginationHanlde = (x) => {
 defineProps(['data'])
 import content from "../assets/content.json"
 const sliders = content.sliders
-
-let count = ref(4)
-
-import { useElementSize } from '@vueuse/core'
-const el = ref(null)
-const { width, height } = useElementSize(el)
-
-watch(
-  () => width.value,
-  () => {
-    getCount(width.value)
-  }
-)
-
-const getCount = (width) => {
-  let num = Math.floor(width / 141)
-  if (num % 2 == 0)
-    count.value = num + 1
-  else
-    count.value = num
-}
 </script>
 
 <style lang="scss" scoped></style>

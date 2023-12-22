@@ -13,7 +13,7 @@
         v-if="static" />
     </div>
     <div class="text">
-      <div class="p2" v-for="t in text">{{ t }}</div>
+      <div class="p1" v-for="t in text">{{ t }}</div>
     </div>
   </div>
 </template>

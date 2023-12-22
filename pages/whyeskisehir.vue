@@ -104,7 +104,7 @@
       <section>
         <div class="transport container">
           <h1>
-            02.Eskişehir
+            02. Eskişehir
           </h1>
           <div class="display">Her yerden
             kolayca ulaşın</div>

@@ -73,7 +73,7 @@
                         <div class="t1"> 10.000 € </div>
                       </button>
                       <button class="seeDetail">
-                        <div class="p2"> Detayları Gör </div>
+                        <div class="t2"> Detayları Gör </div>
                       </button>
                     </div>
                   </div>
@@ -131,7 +131,7 @@
       <section>
         <div class="why-Eskisehir big-container">
           <div class="text">
-            <h2 class="orange">Dolar Euro Altın Borsa</h2>
+            <h2>Dolar Euro Altın Borsa</h2>
             <h4> EKSLAND ile </h4>
             <div class="display"> Geleceğin Yatırımı Arsa </div>
           </div>
@@ -193,12 +193,10 @@ watch(
 )
 
 const getCount = (x) => {
-  console.log(x)
   if (x > 450)
     count.value = x / 450
   else
     count.value = x / 400
-  console.log(count.value)
 }
 
 
